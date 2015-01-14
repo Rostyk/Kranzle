@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
+		914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35981A65D4B300899924 /* PDFImagePage1.png */; };
+		914A359B1A65D4B300899924 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35991A65D4B300899924 /* PDFImagePage2.png */; };
+		914A359D1A65D4BD00899924 /* customers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 914A359C1A65D4BD00899924 /* customers.csv */; };
+		914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 914A35A01A65DEB100899924 /* ScrollViewToPDF.m */; };
+		914A35A61A65DEC700899924 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 914A35A31A65DEC700899924 /* license.txt */; };
+		914A35A71A65DEC700899924 /* PDFImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 914A35A51A65DEC700899924 /* PDFImageConverter.m */; };
+		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
+		9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56A1A65AD7D0097B892 /* Main.storyboard */; };
+		9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56D1A65AD7D0097B892 /* Images.xcassets */; };
+		9164F5711A65AD7D0097B892 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56F1A65AD7D0097B892 /* LaunchScreen.xib */; };
+		9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5911A65AEA70097B892 /* AppDelegate.m */; };
+		9164F59E1A65AEE10097B892 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5961A65AEE10097B892 /* CHCSVParser.m */; };
+		9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F59A1A65AEE10097B892 /* DataProvider.m */; };
+		9164F5A01A65AEE10097B892 /* PDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F59D1A65AEE10097B892 /* PDFRenderer.m */; };
+		9164F5A61A65B7EB0097B892 /* login-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9164F5A51A65B7EB0097B892 /* login-button@2x.png */; };
+		9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */; };
+		9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */; };
+		9164F5B41A65BBC50097B892 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5B31A65BBC50097B892 /* Customer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		914A35951A65D41E00899924 /* Fachhandelspartner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fachhandelspartner.pdf; sourceTree = "<group>"; };
+		914A35981A65D4B300899924 /* PDFImagePage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage1.png; sourceTree = "<group>"; };
+		914A35991A65D4B300899924 /* PDFImagePage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage2.png; sourceTree = "<group>"; };
+		914A359C1A65D4BD00899924 /* customers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customers.csv; sourceTree = "<group>"; };
+		914A359F1A65DEB100899924 /* ScrollViewToPDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewToPDF.h; sourceTree = "<group>"; };
+		914A35A01A65DEB100899924 /* ScrollViewToPDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewToPDF.m; sourceTree = "<group>"; };
+		914A35A31A65DEC700899924 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		914A35A41A65DEC700899924 /* PDFImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFImageConverter.h; sourceTree = "<group>"; };
+		914A35A51A65DEC700899924 /* PDFImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFImageConverter.m; sourceTree = "<group>"; };
+		9164F55D1A65AD7D0097B892 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9164F5611A65AD7D0097B892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9164F5621A65AD7D0097B892 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9164F56B1A65AD7D0097B892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9164F56D1A65AD7D0097B892 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9164F5701A65AD7D0097B892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9164F5901A65AEA70097B892 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9164F5911A65AEA70097B892 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9164F5951A65AEE10097B892 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		9164F5961A65AEE10097B892 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		9164F5981A65AEE10097B892 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9164F5991A65AEE10097B892 /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
+		9164F59A1A65AEE10097B892 /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
+		9164F59C1A65AEE10097B892 /* PDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFRenderer.h; sourceTree = "<group>"; };
+		9164F59D1A65AEE10097B892 /* PDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFRenderer.m; sourceTree = "<group>"; };
+		9164F5A51A65B7EB0097B892 /* login-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button@2x.png"; sourceTree = "<group>"; };
+		9164F5AB1A65BA3B0097B892 /* SalesLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesLoginViewController.h; sourceTree = "<group>"; };
+		9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesLoginViewController.m; sourceTree = "<group>"; };
+		9164F5AE1A65BA6E0097B892 /* CollectDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectDataViewController.h; sourceTree = "<group>"; };
+		9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataViewController.m; sourceTree = "<group>"; };
+		9164F5B21A65BBC50097B892 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		9164F5B31A65BBC50097B892 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9164F55A1A65AD7D0097B892 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		914A359E1A65DEB100899924 /* ScrollViewToPDF */ = {
+			isa = PBXGroup;
+			children = (
+				914A359F1A65DEB100899924 /* ScrollViewToPDF.h */,
+				914A35A01A65DEB100899924 /* ScrollViewToPDF.m */,
+			);
+			path = ScrollViewToPDF;
+			sourceTree = "<group>";
+		};
+		914A35A21A65DEC700899924 /* PDFImageConverter */ = {
+			isa = PBXGroup;
+			children = (
+				914A35A31A65DEC700899924 /* license.txt */,
+				914A35A41A65DEC700899924 /* PDFImageConverter.h */,
+				914A35A51A65DEC700899924 /* PDFImageConverter.m */,
+			);
+			path = PDFImageConverter;
+			sourceTree = "<group>";
+		};
+		9164F5541A65AD7D0097B892 = {
+			isa = PBXGroup;
+			children = (
+				9164F55F1A65AD7D0097B892 /* KranzlePDF */,
+				9164F55E1A65AD7D0097B892 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9164F55E1A65AD7D0097B892 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9164F55D1A65AD7D0097B892 /* KranzlePDF.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9164F55F1A65AD7D0097B892 /* KranzlePDF */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5861A65AE4D0097B892 /* Classes */,
+				9164F5A11A65B0C70097B892 /* Resources */,
+				9164F56A1A65AD7D0097B892 /* Main.storyboard */,
+				9164F56D1A65AD7D0097B892 /* Images.xcassets */,
+				9164F56F1A65AD7D0097B892 /* LaunchScreen.xib */,
+				9164F5601A65AD7D0097B892 /* Supporting Files */,
+			);
+			path = KranzlePDF;
+			sourceTree = "<group>";
+		};
+		9164F5601A65AD7D0097B892 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5611A65AD7D0097B892 /* Info.plist */,
+				9164F5621A65AD7D0097B892 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9164F5861A65AE4D0097B892 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5B11A65BBC50097B892 /* Model */,
+				9164F5931A65AEE10097B892 /* Vendor */,
+				9164F58F1A65AEA70097B892 /* AppDelegate */,
+				9164F5891A65AE4D0097B892 /* Controller */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9164F5891A65AE4D0097B892 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5A91A65BA3B0097B892 /* CollectData */,
+				9164F5AA1A65BA3B0097B892 /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9164F58F1A65AEA70097B892 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5901A65AEA70097B892 /* AppDelegate.h */,
+				9164F5911A65AEA70097B892 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9164F5931A65AEE10097B892 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				914A35A21A65DEC700899924 /* PDFImageConverter */,
+				914A359E1A65DEB100899924 /* ScrollViewToPDF */,
+				9164F5941A65AEE10097B892 /* CHCSVParser */,
+				9164F5971A65AEE10097B892 /* DataProvider */,
+				9164F59B1A65AEE10097B892 /* PDFRenderer */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		9164F5941A65AEE10097B892 /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5951A65AEE10097B892 /* CHCSVParser.h */,
+				9164F5961A65AEE10097B892 /* CHCSVParser.m */,
+			);
+			path = CHCSVParser;
+			sourceTree = "<group>";
+		};
+		9164F5971A65AEE10097B892 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5981A65AEE10097B892 /* Constants.h */,
+				9164F5991A65AEE10097B892 /* DataProvider.h */,
+				9164F59A1A65AEE10097B892 /* DataProvider.m */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		9164F59B1A65AEE10097B892 /* PDFRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				9164F59C1A65AEE10097B892 /* PDFRenderer.h */,
+				9164F59D1A65AEE10097B892 /* PDFRenderer.m */,
+			);
+			path = PDFRenderer;
+			sourceTree = "<group>";
+		};
+		9164F5A11A65B0C70097B892 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				914A359C1A65D4BD00899924 /* customers.csv */,
+				914A35951A65D41E00899924 /* Fachhandelspartner.pdf */,
+				9164F5A41A65B7EB0097B892 /* Assets */,
+			);
+			name = Resources;
+			path = KranzlePDF/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		9164F5A41A65B7EB0097B892 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				914A35981A65D4B300899924 /* PDFImagePage1.png */,
+				914A35991A65D4B300899924 /* PDFImagePage2.png */,
+				9164F5A51A65B7EB0097B892 /* login-button@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9164F5A91A65BA3B0097B892 /* CollectData */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5AE1A65BA6E0097B892 /* CollectDataViewController.h */,
+				9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */,
+			);
+			path = CollectData;
+			sourceTree = "<group>";
+		};
+		9164F5AA1A65BA3B0097B892 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5AB1A65BA3B0097B892 /* SalesLoginViewController.h */,
+				9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9164F5B11A65BBC50097B892 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9164F5B21A65BBC50097B892 /* Customer.h */,
+				9164F5B31A65BBC50097B892 /* Customer.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9164F55C1A65AD7D0097B892 /* KranzlePDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9164F5801A65AD7D0097B892 /* Build configuration list for PBXNativeTarget "KranzlePDF" */;
+			buildPhases = (
+				9164F5591A65AD7D0097B892 /* Sources */,
+				9164F55A1A65AD7D0097B892 /* Frameworks */,
+				9164F55B1A65AD7D0097B892 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KranzlePDF;
+			productName = KranzlePDF;
+			productReference = 9164F55D1A65AD7D0097B892 /* KranzlePDF.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9164F5551A65AD7D0097B892 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Ross;
+				TargetAttributes = {
+					9164F55C1A65AD7D0097B892 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 9164F5581A65AD7D0097B892 /* Build configuration list for PBXProject "KranzlePDF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9164F5541A65AD7D0097B892;
+			productRefGroup = 9164F55E1A65AD7D0097B892 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9164F55C1A65AD7D0097B892 /* KranzlePDF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9164F55B1A65AD7D0097B892 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */,
+				914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */,
+				9164F5711A65AD7D0097B892 /* LaunchScreen.xib in Resources */,
+				914A35A61A65DEC700899924 /* license.txt in Resources */,
+				9164F5A61A65B7EB0097B892 /* login-button@2x.png in Resources */,
+				914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */,
+				914A359D1A65D4BD00899924 /* customers.csv in Resources */,
+				914A359B1A65D4B300899924 /* PDFImagePage2.png in Resources */,
+				9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9164F5591A65AD7D0097B892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9164F59E1A65AEE10097B892 /* CHCSVParser.m in Sources */,
+				9164F5A01A65AEE10097B892 /* PDFRenderer.m in Sources */,
+				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
+				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
+				9164F5631A65AD7D0097B892 /* main.m in Sources */,
+				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
+				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,
+				914A35A71A65DEC700899924 /* PDFImageConverter.m in Sources */,
+				9164F5B41A65BBC50097B892 /* Customer.m in Sources */,
+				914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9164F56A1A65AD7D0097B892 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9164F56B1A65AD7D0097B892 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9164F56F1A65AD7D0097B892 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9164F5701A65AD7D0097B892 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9164F57E1A65AD7D0097B892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9164F57F1A65AD7D0097B892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9164F5811A65AD7D0097B892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KranzlePDF/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9164F5821A65AD7D0097B892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KranzlePDF/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9164F5581A65AD7D0097B892 /* Build configuration list for PBXProject "KranzlePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9164F57E1A65AD7D0097B892 /* Debug */,
+				9164F57F1A65AD7D0097B892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9164F5801A65AD7D0097B892 /* Build configuration list for PBXNativeTarget "KranzlePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9164F5811A65AD7D0097B892 /* Debug */,
+				9164F5821A65AD7D0097B892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9164F5551A65AD7D0097B892 /* Project object */;
+}
