@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^FetchCSVRecordSuccess)(NSArray *record);
+typedef void (^FetchCSVRecordsSuccess)(NSArray *records);
 
 @interface DataProvider : NSObject
+@property (nonatomic, strong) NSArray *rows;
+
 + (instancetype)sharedProvider;
-- (void)fetchRecordForCustomerNumber:(NSString*)number sucess:(FetchCSVRecordSuccess)successBlock;
+- (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock;
+
 @end

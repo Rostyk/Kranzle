@@ -7,7 +7,7 @@
 //
 
 #import "SalesLoginViewController.h"
-#import "CollectDataViewController.h"
+#import "CustomerListViewController.h"
 #import "DataProvider.h"
 #import "Customer.h"
 
@@ -34,15 +34,14 @@
     
     __weak typeof(self) weakSelf = self;
     NSString *customerNumber = self.salesIDTextfield.text;
-    [[DataProvider sharedProvider] fetchRecordForCustomerNumber:customerNumber
-        sucess:^(NSArray *record) {
+    [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber
+        sucess:^(NSArray *records) {
         
-            if(!record) {
-                [weakSelf alert:[ NSString stringWithFormat:@"Customer with number %@ not found in our database", customerNumber]];
+            if(!records || records.count == 0) {
+                [weakSelf alert: @"Customers with this sales number not found in our database"];
             }
             else {
-                 Customer *customer = [[Customer alloc] initWithRecord: record];
-                 [weakSelf showCollectDataViewControllerForCustomer: customer];
+                 [weakSelf showCustomerList];
             }
     }];
 }
@@ -50,10 +49,9 @@
 
 #pragma mark open collect data view controller
 
--(void) showCollectDataViewControllerForCustomer:(Customer *)customer {
+-(void) showCustomerList{
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    CollectDataViewController *controller = (CollectDataViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"CollectDataViewControllerID"];
-    controller.customer = customer;
+    CustomerListViewController *controller = (CustomerListViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"CustomerListViewControllerID"];
     [self.navigationController pushViewController: controller animated:YES];
 }
 

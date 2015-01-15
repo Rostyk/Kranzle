@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */; };
 		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
 		914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35981A65D4B300899924 /* PDFImagePage1.png */; };
 		914A359B1A65D4B300899924 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35991A65D4B300899924 /* PDFImagePage2.png */; };
@@ -22,13 +23,18 @@
 		9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */; };
 		9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */; };
 		9164F5B41A65BBC50097B892 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5B31A65BBC50097B892 /* Customer.m */; };
+		916ACC9A1A6831B6007BC7BE /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916ACC991A6831B6007BC7BE /* CustomerListViewController.m */; };
+		916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916ACC9D1A68353B007BC7BE /* CustomerCell.m */; };
 		91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */; };
 		91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F71A66A6EE00DCD4CD /* KRScrollView.m */; };
 		91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */; };
 		91B4027F1A67298000CFBCB4 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027E1A67298000CFBCB4 /* CSVParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		91DDCFCB1A6884C30033B042 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDCFCA1A6884C30033B042 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableLabel.h; path = Label/DuplicatableLabel.h; sourceTree = "<group>"; };
+		9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableLabel.m; path = Label/DuplicatableLabel.m; sourceTree = "<group>"; };
 		914A35951A65D41E00899924 /* Fachhandelspartner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fachhandelspartner.pdf; sourceTree = "<group>"; };
 		914A35981A65D4B300899924 /* PDFImagePage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage1.png; sourceTree = "<group>"; };
 		914A35991A65D4B300899924 /* PDFImagePage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage2.png; sourceTree = "<group>"; };
@@ -53,6 +59,10 @@
 		9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataViewController.m; sourceTree = "<group>"; };
 		9164F5B21A65BBC50097B892 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		9164F5B31A65BBC50097B892 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		916ACC981A6831B6007BC7BE /* CustomerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerListViewController.h; path = CustomerListViewController/CustomerListViewController.h; sourceTree = "<group>"; };
+		916ACC991A6831B6007BC7BE /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerListViewController.m; path = CustomerListViewController/CustomerListViewController.m; sourceTree = "<group>"; };
+		916ACC9C1A68353B007BC7BE /* CustomerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerCell.h; path = CustomerListViewController/CustomerCell/CustomerCell.h; sourceTree = "<group>"; };
+		916ACC9D1A68353B007BC7BE /* CustomerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerCell.m; path = CustomerListViewController/CustomerCell/CustomerCell.m; sourceTree = "<group>"; };
 		91A906F21A669DB800DCD4CD /* CollectDataPopoverContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectDataPopoverContentViewController.h; sourceTree = "<group>"; };
 		91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataPopoverContentViewController.m; sourceTree = "<group>"; };
 		91A906F61A66A6EE00DCD4CD /* KRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KRScrollView.h; path = ScrollView/KRScrollView.h; sourceTree = "<group>"; };
@@ -61,6 +71,7 @@
 		91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13Checkbox.m; sourceTree = "<group>"; };
 		91B4027D1A67298000CFBCB4 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
 		91B4027E1A67298000CFBCB4 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
+		91DDCFCA1A6884C30033B042 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +79,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DDCFCB1A6884C30033B042 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9105075A1A685C5000DAC6FB /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */,
+				9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */,
+			);
+			name = Label;
+			sourceTree = "<group>";
+		};
 		914A359E1A65DEB100899924 /* ScrollViewToPDF */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +107,7 @@
 		9164F5541A65AD7D0097B892 = {
 			isa = PBXGroup;
 			children = (
+				91DDCFCA1A6884C30033B042 /* MessageUI.framework */,
 				9164F55F1A65AD7D0097B892 /* KranzlePDF */,
 				9164F55E1A65AD7D0097B892 /* Products */,
 			);
@@ -134,6 +156,7 @@
 		9164F5891A65AE4D0097B892 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				916ACC971A683196007BC7BE /* CustomerList */,
 				9164F5A91A65BA3B0097B892 /* CollectData */,
 				9164F5AA1A65BA3B0097B892 /* Login */,
 			);
@@ -194,6 +217,7 @@
 		9164F5A91A65BA3B0097B892 /* CollectData */ = {
 			isa = PBXGroup;
 			children = (
+				9105075A1A685C5000DAC6FB /* Label */,
 				91B402781A670C1E00CFBCB4 /* CheckBox */,
 				91A906F51A66A6AF00DCD4CD /* ScrollView */,
 				91A906F11A669D8400DCD4CD /* Popover */,
@@ -219,6 +243,25 @@
 				9164F5B31A65BBC50097B892 /* Customer.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		916ACC971A683196007BC7BE /* CustomerList */ = {
+			isa = PBXGroup;
+			children = (
+				916ACC9B1A6834F9007BC7BE /* CusstomerCell */,
+				916ACC981A6831B6007BC7BE /* CustomerListViewController.h */,
+				916ACC991A6831B6007BC7BE /* CustomerListViewController.m */,
+			);
+			name = CustomerList;
+			sourceTree = "<group>";
+		};
+		916ACC9B1A6834F9007BC7BE /* CusstomerCell */ = {
+			isa = PBXGroup;
+			children = (
+				916ACC9C1A68353B007BC7BE /* CustomerCell.h */,
+				916ACC9D1A68353B007BC7BE /* CustomerCell.m */,
+			);
+			name = CusstomerCell;
 			sourceTree = "<group>";
 		};
 		91A906F01A669CB900DCD4CD /* UI */ = {
@@ -343,12 +386,15 @@
 			files = (
 				91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
+				9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
 				9164F5631A65AD7D0097B892 /* main.m in Sources */,
 				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
+				916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */,
 				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,
 				91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */,
 				91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */,
+				916ACC9A1A6831B6007BC7BE /* CustomerListViewController.m in Sources */,
 				91B4027F1A67298000CFBCB4 /* CSVParser.m in Sources */,
 				9164F5B41A65BBC50097B892 /* Customer.m in Sources */,
 				914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */,

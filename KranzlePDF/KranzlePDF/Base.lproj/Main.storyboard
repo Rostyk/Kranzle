@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebk-hk-MFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-912" y="208.5"/>
+            <point key="canvasLocation" x="-1436" y="202.5"/>
         </scene>
         <!--Sales Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -57,7 +57,7 @@
                                     <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIc-5E-59H"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18205" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dil-RR-YZT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dil-RR-YZT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Deq-45-OeG"/>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200" y="208.5"/>
+            <point key="canvasLocation" x="-624" y="214.5"/>
         </scene>
         <!--Collect Data Popover Content View Controller-->
         <scene sceneID="e5V-5b-Puw">
@@ -218,7 +218,149 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ao8-J3-n0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="-975.75"/>
+            <point key="canvasLocation" x="1139" y="-1065.75"/>
+        </scene>
+        <!--Customer List View Controller-->
+        <scene sceneID="2Dp-DE-dkS">
+            <objects>
+                <viewController storyboardIdentifier="CustomerListViewControllerID" id="Aer-q0-Y5V" customClass="CustomerListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lGX-dF-0Sv"/>
+                        <viewControllerLayoutGuide type="bottom" id="0tU-hD-wEx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nlF-in-Dbf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-mA-Igp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="Egp-zP-7lc"/>
+                                    <constraint firstAttribute="height" constant="44" id="ke0-Na-Y2S"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Egp-zP-7lc"/>
+                                        <exclude reference="ke0-Na-Y2S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Egp-zP-7lc"/>
+                                        <include reference="ke0-Na-Y2S"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="Aer-q0-Y5V" id="wCe-PI-uDc"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="izv-0p-dYg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomerCellID" rowHeight="58" id="Xpq-IS-L2H" customClass="CustomerCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xpq-IS-L2H" id="CZZ-pc-5KG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rostyslav" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTM-1a-zdU">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="45" y="8" width="400" height="18"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stryjska Street" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-oc-gMA">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="45" y="28" width="400" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="HTM-1a-zdU"/>
+                                                    <exclude reference="Cgk-oc-gMA"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular">
+                                                <mask key="subviews">
+                                                    <include reference="HTM-1a-zdU"/>
+                                                    <include reference="Cgk-oc-gMA"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="HTM-1a-zdU" id="gwG-sY-Z6e"/>
+                                            <outlet property="streetLabel" destination="Cgk-oc-gMA" id="68k-bl-4Qi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Aer-q0-Y5V" id="Lj4-Sz-C0N"/>
+                                    <outlet property="delegate" destination="Aer-q0-Y5V" id="t6b-QN-bxc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0tU-hD-wEx" firstAttribute="top" secondItem="izv-0p-dYg" secondAttribute="bottom" id="3ZE-kt-KeM"/>
+                            <constraint firstItem="IJa-mA-Igp" firstAttribute="leading" secondItem="nlF-in-Dbf" secondAttribute="leading" id="ABs-BE-wst"/>
+                            <constraint firstItem="izv-0p-dYg" firstAttribute="top" secondItem="IJa-mA-Igp" secondAttribute="bottom" id="T6o-OE-tFi">
+                                <variation key="heightClass=regular" constant="10"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="izv-0p-dYg" secondAttribute="trailing" id="fll-z0-z13"/>
+                            <constraint firstItem="IJa-mA-Igp" firstAttribute="top" secondItem="lGX-dF-0Sv" secondAttribute="bottom" id="gze-SV-gpn"/>
+                            <constraint firstItem="izv-0p-dYg" firstAttribute="leading" secondItem="nlF-in-Dbf" secondAttribute="leading" id="hKE-Zx-jXr"/>
+                            <constraint firstAttribute="trailing" secondItem="IJa-mA-Igp" secondAttribute="trailing" id="zMe-1t-Vs1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="IJa-mA-Igp"/>
+                                <exclude reference="izv-0p-dYg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3ZE-kt-KeM"/>
+                                <exclude reference="ABs-BE-wst"/>
+                                <exclude reference="gze-SV-gpn"/>
+                                <exclude reference="zMe-1t-Vs1"/>
+                                <exclude reference="T6o-OE-tFi"/>
+                                <exclude reference="fll-z0-z13"/>
+                                <exclude reference="hKE-Zx-jXr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="IJa-mA-Igp"/>
+                                <include reference="izv-0p-dYg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3ZE-kt-KeM"/>
+                                <include reference="ABs-BE-wst"/>
+                                <include reference="gze-SV-gpn"/>
+                                <include reference="zMe-1t-Vs1"/>
+                                <include reference="T6o-OE-tFi"/>
+                                <include reference="fll-z0-z13"/>
+                                <include reference="hKE-Zx-jXr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="customerTableView" destination="izv-0p-dYg" id="BQ7-el-kgw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHk-BE-f2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="129.75"/>
         </scene>
         <!--Collect Data View Controller-->
         <scene sceneID="txW-U4-6dz">
@@ -244,19 +386,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="768" height="1087"/>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6542" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-1x-vQ4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6542" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-1x-vQ4" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
                                                     <rect key="frame" x="159" y="260" width="118" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5237" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEV-ol-t0z">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5237" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEV-ol-t0z" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
                                                     <rect key="frame" x="552" y="260" width="154" height="19"/>
@@ -372,71 +514,86 @@
                                                     <rect key="frame" x="0.0" y="1087" width="768" height="1087"/>
                                                 </variation>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4k-zD-FuL">
-                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="160" y="307" width="209" height="22"/>
-                                                </variation>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-Ua-cvE">
-                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="488" y="307" width="222" height="22"/>
-                                                </variation>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ross" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-l5-onc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fachhandelsvertrag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7B-FT-p9A">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="161" y="1439" width="206" height="24"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4k-zD-FuL">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="160" y="306" width="209" height="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="Rry-2Z-fau"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-Ua-cvE">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="488" y="306" width="222" height="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="CUT-aW-Ljz"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ross" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-l5-onc" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
                                                     <rect key="frame" x="164" y="140" width="319" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepanyak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWs-G8-GeW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepanyak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWs-G8-GeW" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="164" y="164" width="319" height="19"/>
+                                                    <rect key="frame" x="164" y="163" width="319" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stryjska street 78/141" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJj-IZ-D5X">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stryjska street 78/141" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJj-IZ-D5X" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="164" y="188" width="319" height="19"/>
+                                                    <rect key="frame" x="164" y="187" width="319" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45472" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvi-Na-mwH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45472" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvi-Na-mwH" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="164" y="213" width="113" height="19"/>
+                                                    <rect key="frame" x="164" y="212" width="113" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velbert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmP-We-hJC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velbert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmP-We-hJC" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="338" y="213" width="145" height="19"/>
+                                                    <rect key="frame" x="338" y="212" width="145" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ros.aphex@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMq-1u-cPu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ros.aphex@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000000000000009" translatesAutoresizingMaskIntoConstraints="NO" id="FMq-1u-cPu" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
                                                     <rect key="frame" x="552" y="235" width="154" height="19"/>
@@ -455,29 +612,22 @@
                                                     <action selector="formButtonClicked:" destination="eqD-mx-Wkc" eventType="touchUpInside" id="5JV-IM-Mwj"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6K-SK-AVl">
-                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="160" y="1438" width="209" height="26"/>
-                                                </variation>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Een-wV-G4t">
-                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="488" y="1438" width="222" height="26"/>
-                                                </variation>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dynamoit@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SX-D4-PxV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dynamoit@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000000000000009" translatesAutoresizingMaskIntoConstraints="NO" id="7SX-D4-PxV" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
                                                     <rect key="frame" x="552" y="283" width="154" height="19"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konditionsvereinbarung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Iu-Ro-e25">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="488" y="1439" width="222" height="24"/>
                                                 </variation>
                                             </label>
                                         </subviews>
@@ -500,6 +650,7 @@
                                                 <exclude reference="uTm-Hd-rDo"/>
                                                 <exclude reference="Frd-Pb-8tm"/>
                                                 <exclude reference="SRF-8a-FrS"/>
+                                                <exclude reference="J7B-FT-p9A"/>
                                                 <exclude reference="S4k-zD-FuL"/>
                                                 <exclude reference="sgD-Ua-cvE"/>
                                                 <exclude reference="dwV-l5-onc"/>
@@ -509,9 +660,8 @@
                                                 <exclude reference="HmP-We-hJC"/>
                                                 <exclude reference="FMq-1u-cPu"/>
                                                 <exclude reference="Mi0-wR-wHQ"/>
-                                                <exclude reference="V6K-SK-AVl"/>
-                                                <exclude reference="Een-wV-G4t"/>
                                                 <exclude reference="7SX-D4-PxV"/>
+                                                <exclude reference="9Iu-Ro-e25"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="10z-0w-4dB"/>
@@ -532,6 +682,7 @@
                                                 <include reference="uTm-Hd-rDo"/>
                                                 <include reference="Frd-Pb-8tm"/>
                                                 <include reference="SRF-8a-FrS"/>
+                                                <include reference="J7B-FT-p9A"/>
                                                 <include reference="S4k-zD-FuL"/>
                                                 <include reference="sgD-Ua-cvE"/>
                                                 <include reference="dwV-l5-onc"/>
@@ -541,9 +692,8 @@
                                                 <include reference="HmP-We-hJC"/>
                                                 <include reference="FMq-1u-cPu"/>
                                                 <include reference="Mi0-wR-wHQ"/>
-                                                <include reference="V6K-SK-AVl"/>
-                                                <include reference="Een-wV-G4t"/>
                                                 <include reference="7SX-D4-PxV"/>
+                                                <include reference="9Iu-Ro-e25"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="10z-0w-4dB"/>
@@ -622,6 +772,10 @@
                         <outlet property="contentView" destination="cJZ-j7-BhM" id="lDs-aZ-2Jb"/>
                         <outlet property="emailLabel" destination="FMq-1u-cPu" id="agy-ZJ-Kib"/>
                         <outlet property="emailVertreterLabel" destination="7SX-D4-PxV" id="ajp-r5-xX7"/>
+                        <outlet property="fachhandelsvertragLabel" destination="J7B-FT-p9A" id="OxU-5K-U7B"/>
+                        <outlet property="fachhandelsvertragTextField" destination="S4k-zD-FuL" id="9K2-oB-NtL"/>
+                        <outlet property="konditionsvereinbarungLabel" destination="9Iu-Ro-e25" id="Xin-iH-hH7"/>
+                        <outlet property="konditionsvereinbarungTextField" destination="sgD-Ua-cvE" id="Rcy-yt-Vim"/>
                         <outlet property="name2Label" destination="gWs-G8-GeW" id="2Vb-Hm-ptD"/>
                         <outlet property="nameLabel" destination="dwV-l5-onc" id="Y8d-0l-tPm"/>
                         <outlet property="ortLabel" destination="HmP-We-hJC" id="NBh-lr-jSH"/>
@@ -630,11 +784,20 @@
                         <outlet property="streetLabel" destination="DJj-IZ-D5X" id="ni5-4k-KE6"/>
                         <outlet property="verbandLabel" destination="JFp-1x-vQ4" id="WXr-Tz-p8o"/>
                         <outlet property="verbandsNumberLabel" destination="jEV-ol-t0z" id="pao-Sm-oMy"/>
+                        <outletCollection property="labels" destination="dwV-l5-onc" id="5eT-hd-n4s"/>
+                        <outletCollection property="labels" destination="gWs-G8-GeW" id="aob-hV-Yvp"/>
+                        <outletCollection property="labels" destination="DJj-IZ-D5X" id="rYe-p9-emI"/>
+                        <outletCollection property="labels" destination="cvi-Na-mwH" id="7Nc-J5-lwx"/>
+                        <outletCollection property="labels" destination="JFp-1x-vQ4" id="tLD-ic-71a"/>
+                        <outletCollection property="labels" destination="HmP-We-hJC" id="2o9-zV-UsU"/>
+                        <outletCollection property="labels" destination="FMq-1u-cPu" id="KCb-Zn-Sh7"/>
+                        <outletCollection property="labels" destination="jEV-ol-t0z" id="EqW-qH-A3n"/>
+                        <outletCollection property="labels" destination="7SX-D4-PxV" id="9dP-yX-u38"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifF-TY-qNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="536" y="37.5"/>
+            <point key="canvasLocation" x="960" y="31.5"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,8 @@
 //
 
 #import "CSVParser.h"
+#import "Customer.h"
+#import "Constants.h"
 
 @interface CSVParser()
 + (NSArray *)trimComponents:(NSArray *)array withCharacters:(NSString *)characters;
@@ -115,8 +117,14 @@
     NSArray *rows = [content componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\r"]];
     NSString *trimStr = (quote != nil) ? [quote stringByAppendingString:@"\n\r "] : @"\n\r ";
     [rows enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [mutableArray addObject:[CSVParser trimComponents:[obj componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:character]]
-                                           withCharacters:trimStr]];
+        NSArray *record = [CSVParser trimComponents:[obj componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:character]]
+                                     withCharacters:trimStr];
+        
+        if([record count] > COLUMN_VERBANDS_NUMBER) {
+            Customer *customer = [[Customer alloc] initWithRecord:record];
+            [mutableArray addObject: customer];
+        }
+       
     }];
     return mutableArray;
 }

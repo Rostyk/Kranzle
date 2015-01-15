@@ -10,9 +10,7 @@
 #import "Constants.h"
 #import "CSVParser.h"
 
-@interface DataProvider()
-@property (nonatomic, strong) NSArray *rows;
-@end
+
 
 @implementation DataProvider
 
@@ -40,9 +38,9 @@
 
 #pragma mark search records
 
-- (void)fetchRecordForCustomerNumber:(NSString*)number sucess:(FetchCSVRecordSuccess)successBlock {
+- (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock {
     if(self.rows) {
-        [self searchrecordNumber:number success:successBlock];
+        [self fetchRecordsForSalesmenNumber:number success:successBlock];
     }
     else {
         [self parseAndSearchRecordNumber:number succes:successBlock];
@@ -50,25 +48,17 @@
     
 }
 
-- (void)searchrecordNumber:(NSString *)number success:(FetchCSVRecordSuccess)successBlock {
-    for(NSArray *record in self.rows) {
-        int cloumnNumber = 0;
-        for(NSString *value in record) {
-            if(cloumnNumber == COLUMN_NUMBER)  {
-                if([value isEqualToString:number])
-                { successBlock(record); return; }
-                
-            }
-            cloumnNumber++;
-        }
-    }
+- (void)fetchRecordsForSalesmenNumber:(NSString *)number success:(FetchCSVRecordsSuccess)successBlock {
+   
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"vertreterCode == %@", number];
+    self.rows = [self.rows filteredArrayUsingPredicate:pred];
     
-    successBlock(nil);
+    successBlock(self.rows);
 }
 
 #pragma mark parse csv
 
-- (void)parseAndSearchRecordNumber:(NSString *)number succes:(FetchCSVRecordSuccess)success{
+- (void)parseAndSearchRecordNumber:(NSString *)number succes:(FetchCSVRecordsSuccess)success{
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *path = [[NSBundle mainBundle] pathForResource:@"customers" ofType:@"csv"];
@@ -80,7 +70,7 @@
             NSLog(@"Error constructing data provider");
                 
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf searchrecordNumber:number success:success];
+            [weakSelf fetchRecordsForSalesmenNumber:number success:success];
         });
             
     });
