@@ -10,7 +10,14 @@
 
 @interface Customer : NSObject
 @property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *name2;
 @property (nonatomic, strong, readonly) NSString *street;
+@property (nonatomic, strong, readonly) NSString *plz;
+@property (nonatomic, strong, readonly) NSString *ort;
+@property (nonatomic, strong, readonly) NSString *email;
+@property (nonatomic, strong, readonly) NSString *verband;
+@property (nonatomic, strong, readonly) NSString *emailVertreter;
+@property (nonatomic, strong, readonly) NSString *verbandsNumber;
 
 -(id)initWithRecord:(NSArray*)record;
 @end

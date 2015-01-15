@@ -12,8 +12,6 @@
 		914A359B1A65D4B300899924 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35991A65D4B300899924 /* PDFImagePage2.png */; };
 		914A359D1A65D4BD00899924 /* customers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 914A359C1A65D4BD00899924 /* customers.csv */; };
 		914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 914A35A01A65DEB100899924 /* ScrollViewToPDF.m */; };
-		914A35A61A65DEC700899924 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 914A35A31A65DEC700899924 /* license.txt */; };
-		914A35A71A65DEC700899924 /* PDFImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 914A35A51A65DEC700899924 /* PDFImageConverter.m */; };
 		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
 		9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56A1A65AD7D0097B892 /* Main.storyboard */; };
 		9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56D1A65AD7D0097B892 /* Images.xcassets */; };
@@ -21,11 +19,14 @@
 		9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5911A65AEA70097B892 /* AppDelegate.m */; };
 		9164F59E1A65AEE10097B892 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5961A65AEE10097B892 /* CHCSVParser.m */; };
 		9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F59A1A65AEE10097B892 /* DataProvider.m */; };
-		9164F5A01A65AEE10097B892 /* PDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F59D1A65AEE10097B892 /* PDFRenderer.m */; };
 		9164F5A61A65B7EB0097B892 /* login-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9164F5A51A65B7EB0097B892 /* login-button@2x.png */; };
 		9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */; };
 		9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */; };
 		9164F5B41A65BBC50097B892 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5B31A65BBC50097B892 /* Customer.m */; };
+		91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */; };
+		91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F71A66A6EE00DCD4CD /* KRScrollView.m */; };
+		91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */; };
+		91B4027F1A67298000CFBCB4 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027E1A67298000CFBCB4 /* CSVParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +36,6 @@
 		914A359C1A65D4BD00899924 /* customers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customers.csv; sourceTree = "<group>"; };
 		914A359F1A65DEB100899924 /* ScrollViewToPDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewToPDF.h; sourceTree = "<group>"; };
 		914A35A01A65DEB100899924 /* ScrollViewToPDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewToPDF.m; sourceTree = "<group>"; };
-		914A35A31A65DEC700899924 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
-		914A35A41A65DEC700899924 /* PDFImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFImageConverter.h; sourceTree = "<group>"; };
-		914A35A51A65DEC700899924 /* PDFImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFImageConverter.m; sourceTree = "<group>"; };
 		9164F55D1A65AD7D0097B892 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9164F5611A65AD7D0097B892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9164F5621A65AD7D0097B892 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,8 +49,6 @@
 		9164F5981A65AEE10097B892 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9164F5991A65AEE10097B892 /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		9164F59A1A65AEE10097B892 /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
-		9164F59C1A65AEE10097B892 /* PDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFRenderer.h; sourceTree = "<group>"; };
-		9164F59D1A65AEE10097B892 /* PDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFRenderer.m; sourceTree = "<group>"; };
 		9164F5A51A65B7EB0097B892 /* login-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button@2x.png"; sourceTree = "<group>"; };
 		9164F5AB1A65BA3B0097B892 /* SalesLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesLoginViewController.h; sourceTree = "<group>"; };
 		9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesLoginViewController.m; sourceTree = "<group>"; };
@@ -60,6 +56,14 @@
 		9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataViewController.m; sourceTree = "<group>"; };
 		9164F5B21A65BBC50097B892 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		9164F5B31A65BBC50097B892 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		91A906F21A669DB800DCD4CD /* CollectDataPopoverContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectDataPopoverContentViewController.h; sourceTree = "<group>"; };
+		91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataPopoverContentViewController.m; sourceTree = "<group>"; };
+		91A906F61A66A6EE00DCD4CD /* KRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KRScrollView.h; path = ScrollView/KRScrollView.h; sourceTree = "<group>"; };
+		91A906F71A66A6EE00DCD4CD /* KRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KRScrollView.m; path = ScrollView/KRScrollView.m; sourceTree = "<group>"; };
+		91B402791A670C1E00CFBCB4 /* M13Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13Checkbox.h; sourceTree = "<group>"; };
+		91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13Checkbox.m; sourceTree = "<group>"; };
+		91B4027D1A67298000CFBCB4 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
+		91B4027E1A67298000CFBCB4 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,16 +86,6 @@
 			path = ScrollViewToPDF;
 			sourceTree = "<group>";
 		};
-		914A35A21A65DEC700899924 /* PDFImageConverter */ = {
-			isa = PBXGroup;
-			children = (
-				914A35A31A65DEC700899924 /* license.txt */,
-				914A35A41A65DEC700899924 /* PDFImageConverter.h */,
-				914A35A51A65DEC700899924 /* PDFImageConverter.m */,
-			);
-			path = PDFImageConverter;
-			sourceTree = "<group>";
-		};
 		9164F5541A65AD7D0097B892 = {
 			isa = PBXGroup;
 			children = (
@@ -111,11 +105,10 @@
 		9164F55F1A65AD7D0097B892 /* KranzlePDF */ = {
 			isa = PBXGroup;
 			children = (
+				91A906F01A669CB900DCD4CD /* UI */,
 				9164F5861A65AE4D0097B892 /* Classes */,
 				9164F5A11A65B0C70097B892 /* Resources */,
-				9164F56A1A65AD7D0097B892 /* Main.storyboard */,
 				9164F56D1A65AD7D0097B892 /* Images.xcassets */,
-				9164F56F1A65AD7D0097B892 /* LaunchScreen.xib */,
 				9164F5601A65AD7D0097B892 /* Supporting Files */,
 			);
 			path = KranzlePDF;
@@ -136,17 +129,18 @@
 				9164F5B11A65BBC50097B892 /* Model */,
 				9164F5931A65AEE10097B892 /* Vendor */,
 				9164F58F1A65AEA70097B892 /* AppDelegate */,
-				9164F5891A65AE4D0097B892 /* Controller */,
+				9164F5891A65AE4D0097B892 /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		9164F5891A65AE4D0097B892 /* Controller */ = {
+		9164F5891A65AE4D0097B892 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9164F5A91A65BA3B0097B892 /* CollectData */,
 				9164F5AA1A65BA3B0097B892 /* Login */,
 			);
+			name = Controllers;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -162,11 +156,10 @@
 		9164F5931A65AEE10097B892 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				914A35A21A65DEC700899924 /* PDFImageConverter */,
+				91B4027C1A67298000CFBCB4 /* Parser */,
 				914A359E1A65DEB100899924 /* ScrollViewToPDF */,
 				9164F5941A65AEE10097B892 /* CHCSVParser */,
 				9164F5971A65AEE10097B892 /* DataProvider */,
-				9164F59B1A65AEE10097B892 /* PDFRenderer */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -188,15 +181,6 @@
 				9164F59A1A65AEE10097B892 /* DataProvider.m */,
 			);
 			path = DataProvider;
-			sourceTree = "<group>";
-		};
-		9164F59B1A65AEE10097B892 /* PDFRenderer */ = {
-			isa = PBXGroup;
-			children = (
-				9164F59C1A65AEE10097B892 /* PDFRenderer.h */,
-				9164F59D1A65AEE10097B892 /* PDFRenderer.m */,
-			);
-			path = PDFRenderer;
 			sourceTree = "<group>";
 		};
 		9164F5A11A65B0C70097B892 /* Resources */ = {
@@ -223,6 +207,9 @@
 		9164F5A91A65BA3B0097B892 /* CollectData */ = {
 			isa = PBXGroup;
 			children = (
+				91B402781A670C1E00CFBCB4 /* CheckBox */,
+				91A906F51A66A6AF00DCD4CD /* ScrollView */,
+				91A906F11A669D8400DCD4CD /* Popover */,
 				9164F5AE1A65BA6E0097B892 /* CollectDataViewController.h */,
 				9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */,
 			);
@@ -245,6 +232,51 @@
 				9164F5B31A65BBC50097B892 /* Customer.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		91A906F01A669CB900DCD4CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9164F56F1A65AD7D0097B892 /* LaunchScreen.xib */,
+				9164F56A1A65AD7D0097B892 /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		91A906F11A669D8400DCD4CD /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				91A906F21A669DB800DCD4CD /* CollectDataPopoverContentViewController.h */,
+				91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
+		91A906F51A66A6AF00DCD4CD /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				91A906F61A66A6EE00DCD4CD /* KRScrollView.h */,
+				91A906F71A66A6EE00DCD4CD /* KRScrollView.m */,
+			);
+			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		91B402781A670C1E00CFBCB4 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				91B402791A670C1E00CFBCB4 /* M13Checkbox.h */,
+				91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		91B4027C1A67298000CFBCB4 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				91B4027D1A67298000CFBCB4 /* CSVParser.h */,
+				91B4027E1A67298000CFBCB4 /* CSVParser.m */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +339,6 @@
 				9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */,
 				914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */,
 				9164F5711A65AD7D0097B892 /* LaunchScreen.xib in Resources */,
-				914A35A61A65DEC700899924 /* license.txt in Resources */,
 				9164F5A61A65B7EB0097B892 /* login-button@2x.png in Resources */,
 				914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */,
 				914A359D1A65D4BD00899924 /* customers.csv in Resources */,
@@ -323,14 +354,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */,
 				9164F59E1A65AEE10097B892 /* CHCSVParser.m in Sources */,
-				9164F5A01A65AEE10097B892 /* PDFRenderer.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
 				9164F5631A65AD7D0097B892 /* main.m in Sources */,
 				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
 				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,
-				914A35A71A65DEC700899924 /* PDFImageConverter.m in Sources */,
+				91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */,
+				91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */,
+				91B4027F1A67298000CFBCB4 /* CSVParser.m in Sources */,
 				9164F5B41A65BBC50097B892 /* Customer.m in Sources */,
 				914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */,
 			);
@@ -392,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -428,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;

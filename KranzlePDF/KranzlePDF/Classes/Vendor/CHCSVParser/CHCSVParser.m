@@ -859,10 +859,6 @@ NSArray *_CHCSVParserParse(NSInputStream *inputStream, CHCSVParserOptions option
     return self;
 }
 
-- (instancetype)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
-    return [self initWithObjects:[NSArray arrayWithObjects:objects count:cnt]
-                         forKeys:[NSArray arrayWithObjects:keys count:cnt]];
-}
 
 - (NSArray *)allKeys {
     return _keys;

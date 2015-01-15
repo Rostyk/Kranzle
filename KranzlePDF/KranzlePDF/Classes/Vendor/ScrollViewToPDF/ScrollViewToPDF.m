@@ -1,3 +1,10 @@
+//
+//  ScrollViewToPDF.m
+//  KranzlePDF
+//
+//  Created by Ross on 1/13/15.
+//  Copyright (c) 2015 Ross. All rights reserved.
+//
 
 #import <QuartzCore/QuartzCore.h>
 #import "ScrollViewToPDF.h"
@@ -48,6 +55,7 @@
         // draw the layer to the pdf, ignore the "renderInContext not found" warning.
         [scrollView.layer renderInContext:currentContext];
     }
+    
     // all done with making the pdf
     UIGraphicsEndPDFContext();
     [scrollView setFrame:origFrame];
@@ -62,4 +70,5 @@
     [scrollView setShowsHorizontalScrollIndicator:NO];
     [scrollView setShowsVerticalScrollIndicator:NO];
 }
+
 @end

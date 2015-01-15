@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Customer;
 
 @interface CollectDataViewController : UIViewController
-
+@property (nonatomic, strong) Customer *customer;
 @end
