@@ -7,7 +7,6 @@
 //
 
 #import "DataProvider.h"
-#import "CHCSVParser.h"
 #import "Constants.h"
 #import "CSVParser.h"
 
