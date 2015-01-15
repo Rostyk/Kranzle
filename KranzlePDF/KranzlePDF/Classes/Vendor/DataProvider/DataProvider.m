@@ -74,8 +74,6 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *path = [[NSBundle mainBundle] pathForResource:@"customers" ofType:@"csv"];
         NSURL *url = [NSURL fileURLWithPath:path];
-        
-       // weakSelf.rows = [NSArray arrayWithContentsOfDelimitedURL:url delimiter:';'];
         weakSelf.rows = [CSVParser parseCSVIntoArrayOfArraysFromFile:[url path]
                                         withSeparatedCharacterString:@";"
                                                 quoteCharacterString:nil];

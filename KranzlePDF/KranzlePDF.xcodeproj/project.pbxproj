@@ -17,7 +17,6 @@
 		9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56D1A65AD7D0097B892 /* Images.xcassets */; };
 		9164F5711A65AD7D0097B892 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56F1A65AD7D0097B892 /* LaunchScreen.xib */; };
 		9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5911A65AEA70097B892 /* AppDelegate.m */; };
-		9164F59E1A65AEE10097B892 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5961A65AEE10097B892 /* CHCSVParser.m */; };
 		9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F59A1A65AEE10097B892 /* DataProvider.m */; };
 		9164F5A61A65B7EB0097B892 /* login-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9164F5A51A65B7EB0097B892 /* login-button@2x.png */; };
 		9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AC1A65BA3B0097B892 /* SalesLoginViewController.m */; };
@@ -44,8 +43,6 @@
 		9164F5701A65AD7D0097B892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9164F5901A65AEA70097B892 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9164F5911A65AEA70097B892 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9164F5951A65AEE10097B892 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
-		9164F5961A65AEE10097B892 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		9164F5981A65AEE10097B892 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9164F5991A65AEE10097B892 /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		9164F59A1A65AEE10097B892 /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
@@ -158,19 +155,9 @@
 			children = (
 				91B4027C1A67298000CFBCB4 /* Parser */,
 				914A359E1A65DEB100899924 /* ScrollViewToPDF */,
-				9164F5941A65AEE10097B892 /* CHCSVParser */,
 				9164F5971A65AEE10097B892 /* DataProvider */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		9164F5941A65AEE10097B892 /* CHCSVParser */ = {
-			isa = PBXGroup;
-			children = (
-				9164F5951A65AEE10097B892 /* CHCSVParser.h */,
-				9164F5961A65AEE10097B892 /* CHCSVParser.m */,
-			);
-			path = CHCSVParser;
 			sourceTree = "<group>";
 		};
 		9164F5971A65AEE10097B892 /* DataProvider */ = {
@@ -355,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */,
-				9164F59E1A65AEE10097B892 /* CHCSVParser.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
 				9164F5631A65AD7D0097B892 /* main.m in Sources */,
