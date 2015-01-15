@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectDataPopoverContentViewController.h"
+
 @class Customer;
 
-@interface CollectDataViewController : UIViewController
+@interface CollectDataViewController : UIViewController<CollectDataPopoverDelegate>
 @property (nonatomic, strong) Customer *customer;
 @end

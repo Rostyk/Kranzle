@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CollectDataPopoverContentViewController : UIViewController
+@protocol CollectDataPopoverDelegate <NSObject>
+- (void)defaultValueDidSelect;
+- (void)removeValueDidSelect;
+@end
 
+@interface CollectDataPopoverContentViewController : UIViewController
+@property (nonatomic, weak) id<CollectDataPopoverDelegate> delegate;
 @end

@@ -10,4 +10,12 @@
 
 @implementation CollectDataPopoverContentViewController
 
+- (IBAction)defaulValueButtonClicked:(id)sender {
+    [self.delegate defaultValueDidSelect];
+}
+
+- (IBAction)removeValueDidSelect:(id)sender {
+    [self.delegate removeValueDidSelect];
+}
+
 @end

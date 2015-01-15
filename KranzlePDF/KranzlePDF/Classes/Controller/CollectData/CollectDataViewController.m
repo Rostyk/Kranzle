@@ -8,11 +8,14 @@
 
 #import "CollectDataViewController.h"
 #import "ScrollViewToPDF.h"
-#import "CollectDataPopoverContentViewController.h"
 #import "M13Checkbox.h"
 #import "Customer.h"
+#import "Constants.h"
 
 @interface CollectDataViewController()
+@property (nonatomic, strong) UIButton *selectedButton;
+@property (nonatomic, strong) UIPopoverController *popover;
+
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
 
@@ -77,17 +80,48 @@
 
 #pragma mark collect data button handlers
 
-- (IBAction)rabatButtonClicked:(id)sender {
-   
+- (IBAction)formButtonClicked:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    
+    self.selectedButton = button;
+    [self addPopoverNearButtonFrame:button.frame];
+}
+
+
+#pragma mark add popover
+
+-(void) addPopoverNearButtonFrame:(CGRect)frame {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     CollectDataPopoverContentViewController *contentController = (CollectDataPopoverContentViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"CollectDataPopoverContentViewControllerID"];
+    contentController.delegate = self;
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:contentController];
+    self.popover.popoverContentSize = CGSizeMake(120, 80);
     
-    UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:contentController];
-    popoverController.popoverContentSize = CGSizeMake(120, 80);
-    CGRect frame = ((UIButton *)sender).frame;
-    frame.origin.y += frame.size.height;
+    
     frame.origin.y -= self.scrollView.bounds.origin.y; // you can postion the popover with + and - values
-    [popoverController presentPopoverFromRect:frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    frame.origin.y += frame.size.height/2;
+    [self.popover presentPopoverFromRect:frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+}
+
+#pragma mark popover delegate
+
+- (void)defaultValueDidSelect {
+    int value = [FORM_VALUES[self.selectedButton.tag] integerValue];
+    
+    UILabel *valueLabel = [[UILabel alloc] initWithFrame: self.selectedButton.frame];
+    valueLabel.backgroundColor = [UIColor clearColor];
+    valueLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12.0f];
+    valueLabel.textAlignment = NSTextAlignmentCenter;
+    valueLabel.text = [NSString stringWithFormat:@"%d", value];
+    [self.scrollView addSubview: valueLabel];
+    
+    [self.selectedButton removeFromSuperview];
+    [self.popover dismissPopoverAnimated:YES];
+}
+
+- (void)removeValueDidSelect {
+    [self.selectedButton removeFromSuperview];
+    [self.popover dismissPopoverAnimated:YES];
 }
 
 
