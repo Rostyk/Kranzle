@@ -106,7 +106,7 @@
 #pragma mark popover delegate
 
 - (void)defaultValueDidSelect {
-    int value = [FORM_VALUES[self.selectedButton.tag] integerValue];
+    long value = [FORM_VALUES[self.selectedButton.tag] integerValue];
     
     UILabel *valueLabel = [[UILabel alloc] initWithFrame: self.selectedButton.frame];
     valueLabel.backgroundColor = [UIColor clearColor];
