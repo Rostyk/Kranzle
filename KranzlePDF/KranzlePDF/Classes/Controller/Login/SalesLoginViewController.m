@@ -34,12 +34,12 @@
     [self.salesIDTextfield resignFirstResponder];
     
     //add preload grpahics
-    [self addPreload];
+    //[self addPreload];
     __weak typeof(self) weakSelf = self;
     NSString *customerNumber = self.salesIDTextfield.text;
     [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber
         sucess:^(NSArray *records) {
-            [self removePreload];
+           // [self removePreload];
         
             if(!records || records.count == 0) {
                 [weakSelf alert: @"Customers with this sales number not found in our database"];
@@ -87,7 +87,7 @@
 }
 
 - (void)removePreload {
-    [self.loadingView dismissWithClickedButtonIndex:0 animated:YES];
+    [self.loadingView dismissWithClickedButtonIndex:0 animated:NO];
 }
 
 @end
