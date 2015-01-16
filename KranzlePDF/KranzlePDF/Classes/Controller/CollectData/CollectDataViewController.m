@@ -21,6 +21,10 @@
 
 @property (nonatomic, strong) NSMutableArray *duplicatedLabels;
 @property (nonatomic, strong) IBOutletCollection(DuplicatableLabel) NSArray *labels;
+
+@property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField1;
+@property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField2;
+
 @property (nonatomic, weak) IBOutlet UITextField *fachhandelsvertragTextField;
 @property (nonatomic, weak) IBOutlet UILabel *fachhandelsvertragLabel;
 @property (nonatomic, weak) IBOutlet UITextField *konditionsvereinbarungTextField;
@@ -65,6 +69,7 @@
 #pragma mark display customer data on form
 
 - (void)populateCustomerData {
+    //Fill in customer data
     self.nameLabel.text = self.customer.name;
     self.name2Label.text = self.customer.name2;
     self.streetLabel.text = self.customer.street;
@@ -75,6 +80,12 @@
     self.emailVertreterLabel.text = self.customer.email;
     self.verbandsNumberLabel.text = self.customer.verbandsNumber;
     
+    //Set Ort und datum
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.MM.yyyy"];
+    NSString *stringDate = [formatter stringFromDate: [[NSDate alloc] init]];
+    self.ortAndNameTextField1.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
+    self.ortAndNameTextField2.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
 }
 
 #pragma mark collect data button handlers
@@ -180,7 +191,6 @@
         [self.duplicatedLabels addObject:newLabel];
         [self.contentView addSubview:newLabel];
     }
-    
 }
 
 #pragma mark add check boxes
@@ -223,14 +233,14 @@
 }
 
 - (void)mail {
-    [self mailTo: @"info@cluster-one.eu"];
+    [self mailTo: @[@"konditionsvereinbarung@kraenzle.com", self.customer.email]];
 }
 
-- (void)mailTo:(NSString *)mail {
+- (void)mailTo:(NSArray *)mailAddresses {
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
         [composeViewController setMailComposeDelegate:self];
-        [composeViewController setToRecipients:@[mail]];
+        [composeViewController setToRecipients:mailAddresses];
         [composeViewController setSubject:@"Kranzle Pdf"];
         
         NSString* fileName = @"Form.pdf";

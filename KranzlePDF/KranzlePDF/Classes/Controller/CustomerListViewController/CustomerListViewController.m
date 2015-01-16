@@ -46,15 +46,28 @@
     static NSString *CellIdentifier = @"CustomerCellID";
     CustomerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath: indexPath];
     if(cell == nil) {
-        cell = [[CustomerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CustomerCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     Customer *customer = self.rows[indexPath.row];
-    cell.nameLabel.text = customer.name;
-    cell.streetLabel.text = customer.street;
+    cell.textLabel.text = [self combineStringFromArray:@[customer.number, customer.name, customer.name2, customer.name3]];
+    cell.detailTextLabel.text = [self combineStringFromArray:@[customer.street, customer.plz, customer.ort]];
+    
+    cell.nameLabel.text = @"";
+    cell.streetLabel.text = @"";
     
     return cell;
+}
+
+- (NSString *)combineStringFromArray: (NSArray *)strings {
+    NSString *result = @"";
+    for (NSString *string in strings) {
+        if([string length])
+          result = [result stringByAppendingString: [NSString stringWithFormat:@"%@, ", string]];
+    }
     
+    //truncate @" ," in the end of the string
+    return [result substringToIndex:result.length - 2];
 }
 
 #pragma mark table view delegate
