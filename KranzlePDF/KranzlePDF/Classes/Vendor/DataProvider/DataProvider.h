@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class Customer;
 typedef void (^FetchCSVRecordsSuccess)(NSArray *records);
 typedef void (^FetchError)(NSError *error);
 
@@ -17,6 +17,6 @@ typedef void (^FetchError)(NSError *error);
 + (instancetype)sharedProvider;
 - (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failure;
 - (NSString *)lastUsedVertreterCode;
-- (void)createNewCustomer;
+- (Customer *)createNewCustomer;
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */; };
+		9113A4571A6C6F5C001AFAB7 /* NewCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9113A4561A6C6F5C001AFAB7 /* NewCustomerViewController.m */; };
 		912FEB0E1A6BDAEB00FFDA68 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 912FEB0D1A6BDAEB00FFDA68 /* Customer.m */; };
 		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
 		914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35981A65D4B300899924 /* PDFImagePage1.png */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableLabel.h; path = Label/DuplicatableLabel.h; sourceTree = "<group>"; };
 		9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableLabel.m; path = Label/DuplicatableLabel.m; sourceTree = "<group>"; };
+		9113A4551A6C6F5C001AFAB7 /* NewCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewCustomerViewController.h; path = NewCustomerViewController/NewCustomerViewController.h; sourceTree = "<group>"; };
+		9113A4561A6C6F5C001AFAB7 /* NewCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewCustomerViewController.m; path = NewCustomerViewController/NewCustomerViewController.m; sourceTree = "<group>"; };
 		912FEB0C1A6BDAEB00FFDA68 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		912FEB0D1A6BDAEB00FFDA68 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		914A35951A65D41E00899924 /* Fachhandelspartner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fachhandelspartner.pdf; sourceTree = "<group>"; };
@@ -101,6 +104,15 @@
 				9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */,
 			);
 			name = Label;
+			sourceTree = "<group>";
+		};
+		9113A4541A6C6EC6001AFAB7 /* NewCustomerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9113A4551A6C6F5C001AFAB7 /* NewCustomerViewController.h */,
+				9113A4561A6C6F5C001AFAB7 /* NewCustomerViewController.m */,
+			);
+			name = NewCustomerViewController;
 			sourceTree = "<group>";
 		};
 		912FEB0B1A6BDABA00FFDA68 /* Frameworks */ = {
@@ -174,6 +186,7 @@
 		9164F5891A65AE4D0097B892 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9113A4541A6C6EC6001AFAB7 /* NewCustomerViewController */,
 				916ACC971A683196007BC7BE /* CustomerList */,
 				9164F5A91A65BA3B0097B892 /* CollectData */,
 				9164F5AA1A65BA3B0097B892 /* Login */,
@@ -412,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9113A4571A6C6F5C001AFAB7 /* NewCustomerViewController.m in Sources */,
 				91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */,

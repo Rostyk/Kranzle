@@ -12,10 +12,12 @@
 #import "Customer.h"
 #import "Constants.h"
 #import "CollectDataViewController.h"
+#import "NewCustomerViewController.h"
 #import "AppDelegate.h"
 
 @interface CustomerListViewController ()
 @property (nonatomic) TABLE_MODE tableMode;
+@property (nonatomic) BOOL newCustomerBeingAdded;
 @property (nonatomic, strong) NSArray *rows;
 @property (nonatomic, strong) NSArray *manuallyAddedRows;
 @property (nonatomic, strong) NSArray *parsedRows;
@@ -30,6 +32,29 @@
     
     self.rows = [DataProvider sharedProvider].fetchedRows;
     [self reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if(self.newCustomerBeingAdded) {
+        self.newCustomerBeingAdded = NO;
+        __weak typeof(self) weakSelf = self;
+        
+        /*passing nil as customer number makes the data provider to use last used number*/
+        [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:nil sucess:^(NSArray *records) {
+            weakSelf.rows = records;
+            [weakSelf reloadData];
+        } failure:^(NSError *error) {
+            if(error.code == INVALID_CUSTOMER_NUMBER_SPECIFIED) {
+                /*Generally it means that we hase some iternal app workflow error.
+                 To get to this screen we should have a proper customer number used,
+                 if this number became invalid, most probably it was deallocated or set to nil
+                 from somewhere*/
+                [weakSelf alert:@"Invalid customer number"];
+            }
+        }];
+    }
 }
 
 #pragma mark right navigation button
@@ -193,43 +218,40 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSArray *allCustomers = [DataProvider sharedProvider].fetchedRows;
     
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(number ==[c] %@) OR (street ==[c] %@) OR (name ==[c] %@) OR (name2 ==[c] %@) OR (name3 ==[c] %@) OR (plz ==[c] %@) OR (ort ==[c] %@)", searchText, searchText, searchText, searchText, searchText, searchText, searchText];
-    NSArray *results = [allCustomers filteredArrayUsingPredicate:pred];
-    
-    if(results.count > 0) {
-        self.rows = results;
-        [self reloadData];
-    }
-    else {
-        /*if we previously had some filtering matches, display all list again*/
-        if(self.rows.count != [DataProvider sharedProvider].fetchedRows.count) {
-            self.rows = [DataProvider sharedProvider].fetchedRows;
+    if(searchText.length > 0) {
+        NSArray *allCustomers = [DataProvider sharedProvider].fetchedRows;
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"(number ==[c] %@) OR (street ==[c] %@) OR (name ==[c] %@) OR (name2 ==[c] %@) OR (name3 ==[c] %@) OR (plz ==[c] %@) OR (ort ==[c] %@)", searchText, searchText, searchText, searchText, searchText, searchText, searchText];
+        NSArray *results = [allCustomers filteredArrayUsingPredicate:pred];
+        
+        if(results.count > 0) {
+            self.rows = results;
             [self reloadData];
         }
+        else {
+            /*if we previously had some filtering matches, display all list again*/
+            if(self.rows.count != [DataProvider sharedProvider].fetchedRows.count) {
+                self.rows = [DataProvider sharedProvider].fetchedRows;
+                [self reloadData];
+            }
+        }
     }
+    else {
+        self.rows = [DataProvider sharedProvider].fetchedRows;
+        [self reloadData];
+    }
+    
 }
 
 #pragma mark adding new customer
 
 - (void)addCustomer {
-    [[DataProvider sharedProvider] createNewCustomer];
-    __weak typeof(self) weakSelf = self;
+    self.newCustomerBeingAdded = NO;
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    NewCustomerViewController *controller = (NewCustomerViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"NewCustomerViewControllerID"];
     
-    /*passing nil as customer number makes the data provider to use last used number*/
-   [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:nil sucess:^(NSArray *records) {
-       weakSelf.rows = records;
-       [weakSelf reloadData];
-   } failure:^(NSError *error) {
-       if(error.code == INVALID_CUSTOMER_NUMBER_SPECIFIED) {
-           /*Generally it means that we hase some iternal app workflow error.
-            To get to this screen we should have a proper customer number used,
-            if this number became invalid, most probably it was deallocated or set to nil
-            from somewhere*/
-           [weakSelf alert:@"Invalid customer number"];
-       }
-   }];
+    [self.navigationController pushViewController: controller animated:YES];
+    
 }
 
 #pragma mark display alert

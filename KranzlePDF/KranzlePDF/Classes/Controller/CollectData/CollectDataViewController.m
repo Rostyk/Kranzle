@@ -18,8 +18,10 @@
 @property (nonatomic, strong) UIPopoverController *popover;
 @property (nonatomic, strong) M13Checkbox *lagerwareCheckbox;
 @property (nonatomic, strong) M13Checkbox *exclusivitatCheckbox;
-
 @property (nonatomic, strong) NSMutableArray *duplicatedLabels;
+@property (nonatomic) NSUInteger sum;
+
+@property (nonatomic, strong) IBOutlet UILabel *sumLabel;
 @property (nonatomic, strong) IBOutletCollection(DuplicatableLabel) NSArray *labels;
 
 @property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField1;
@@ -127,6 +129,8 @@
     [self.scrollView addSubview: valueLabel];
     
     [self.selectedButton removeFromSuperview];
+    self.sum += value;
+    self.sumLabel.text = [NSString stringWithFormat:@"%d", self.sum];
     [self.popover dismissPopoverAnimated:YES];
 }
 
