@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    self.rows = [DataProvider sharedProvider].rows;
+    self.rows = [DataProvider sharedProvider].fetchedRows;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +67,10 @@
     }
     
     //truncate @" ," in the end of the string
-    return [result substringToIndex:result.length - 2];
+    if(result.length > 3)
+       return [result substringToIndex:result.length - 2];
+    
+    return @"Invalid customer details";
 }
 
 #pragma mark table view delegate
@@ -104,7 +107,7 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSArray *allCustomers = [DataProvider sharedProvider].rows;
+    NSArray *allCustomers = [DataProvider sharedProvider].fetchedRows;
     
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"(number ==[c] %@) OR (street ==[c] %@) OR (name ==[c] %@) OR (name2 ==[c] %@) OR (name3 ==[c] %@) OR (plz ==[c] %@) OR (ort ==[c] %@)", searchText, searchText, searchText, searchText, searchText, searchText, searchText];
     NSArray *results = [allCustomers filteredArrayUsingPredicate:pred];
@@ -115,8 +118,8 @@
     }
     else {
         /*if we previously had some filtering matches, display all list again*/
-        if(self.rows.count != [DataProvider sharedProvider].rows.count) {
-            self.rows = [DataProvider sharedProvider].rows;
+        if(self.rows.count != [DataProvider sharedProvider].fetchedRows.count) {
+            self.rows = [DataProvider sharedProvider].fetchedRows;
             [self.customerTableView reloadData];
         }
     }

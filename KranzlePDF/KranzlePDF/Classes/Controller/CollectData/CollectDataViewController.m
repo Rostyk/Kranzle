@@ -63,7 +63,8 @@
     self.scrollView.panGestureRecognizer.delaysTouchesBegan = self.scrollView.delaysContentTouches;
     
     [self populateCustomerData];
-    [self addCheckBoxes];
+    /*removed in the lst update */
+    //[self addCheckBoxes];
 }
 
 #pragma mark display customer data on form
@@ -233,7 +234,10 @@
 }
 
 - (void)mail {
-    [self mailTo: @[@"konditionsvereinbarung@kraenzle.com", self.customer.email]];
+    NSArray *mails =  @[@"konditionsvereinbarung@kraenzle.com"];
+    if(self.customer.email.length > 0)
+        mails = @[@"konditionsvereinbarung@kraenzle.com", self.customer.email];
+    [self mailTo: mails];
 }
 
 - (void)mailTo:(NSArray *)mailAddresses {
@@ -241,6 +245,8 @@
         MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
         [composeViewController setMailComposeDelegate:self];
         [composeViewController setToRecipients:mailAddresses];
+        if(self.customer.emailVertreter)
+           [composeViewController setCcRecipients: @[self.customer.emailVertreter]];
         [composeViewController setSubject:@"Kranzle Pdf"];
         
         NSString* fileName = @"Form.pdf";

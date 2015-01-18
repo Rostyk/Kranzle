@@ -35,8 +35,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7K-cq-WgF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="8e3-Jp-KI0"/>
-                                    <constraint firstAttribute="width" constant="436" id="UVu-Cc-1gF"/>
+                                    <constraint firstAttribute="height" constant="94" id="8e3-Jp-KI0">
+                                        <variation key="heightClass=regular" constant="75"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="436" id="UVu-Cc-1gF">
+                                        <variation key="heightClass=regular" constant="240"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" image="login-button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +64,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dil-RR-YZT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="436" id="06F-g8-C3e"/>
+                                    <constraint firstAttribute="width" constant="436" id="06F-g8-C3e">
+                                        <variation key="heightClass=regular" constant="240"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="64" id="YbG-SJ-tdl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="42"/>
@@ -104,12 +110,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="B7K-cq-WgF" secondAttribute="centerX" id="6Gb-4o-gi9"/>
-                            <constraint firstItem="dil-RR-YZT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="181" id="Ai4-Nc-W1i"/>
-                            <constraint firstItem="B7K-cq-WgF" firstAttribute="top" secondItem="dil-RR-YZT" secondAttribute="bottom" constant="24" id="CXs-HB-Ltj"/>
+                            <constraint firstItem="dil-RR-YZT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="181" id="Ai4-Nc-W1i">
+                                <variation key="heightClass=regular" constant="188"/>
+                            </constraint>
+                            <constraint firstItem="B7K-cq-WgF" firstAttribute="top" secondItem="dil-RR-YZT" secondAttribute="bottom" constant="24" id="CXs-HB-Ltj">
+                                <variation key="heightClass=regular" constant="17"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="dil-RR-YZT" secondAttribute="centerX" id="Cqk-MT-zEi"/>
                             <constraint firstItem="dil-RR-YZT" firstAttribute="leading" secondItem="dF5-wS-V3D" secondAttribute="leading" id="YcP-n5-0vN"/>
                             <constraint firstItem="dil-RR-YZT" firstAttribute="top" secondItem="dF5-wS-V3D" secondAttribute="bottom" constant="22" id="fAT-Bg-vMG">
-                                <variation key="heightClass=regular" constant="12"/>
+                                <variation key="heightClass=regular" constant="8"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
@@ -845,10 +855,131 @@
             </objects>
             <point key="canvasLocation" x="960" y="31.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gsg-ec-NoX">
+            <objects>
+                <viewController storyboardIdentifier="NewCustomerViewControllerID" id="RjI-31-wb5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J2y-Pg-C1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="7X2-md-Rvx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n2b-l1-2dz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="2136"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rG-35-Fmv" customClass="KRScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swx-c4-K3e" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PDFImagePage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="v5W-II-ckD">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1087"/>
+                                                </variation>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="768" id="3cz-oc-qHS"/>
+                                            <constraint firstAttribute="height" constant="2198" id="Jsp-MG-xSZ"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="v5W-II-ckD"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="Jsp-MG-xSZ"/>
+                                                <exclude reference="3cz-oc-qHS"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular">
+                                            <mask key="subviews">
+                                                <include reference="v5W-II-ckD"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="Jsp-MG-xSZ"/>
+                                                <include reference="3cz-oc-qHS"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="swx-c4-K3e" firstAttribute="leading" secondItem="1rG-35-Fmv" secondAttribute="leading" id="IzU-rY-XfF"/>
+                                    <constraint firstItem="swx-c4-K3e" firstAttribute="top" secondItem="1rG-35-Fmv" secondAttribute="top" id="Mz5-Rn-nUW"/>
+                                    <constraint firstAttribute="bottom" secondItem="swx-c4-K3e" secondAttribute="bottom" id="SH4-7A-1c3"/>
+                                    <constraint firstAttribute="trailing" secondItem="swx-c4-K3e" secondAttribute="trailing" id="xA8-lv-0uQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="swx-c4-K3e"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="xA8-lv-0uQ"/>
+                                        <exclude reference="SH4-7A-1c3"/>
+                                        <exclude reference="IzU-rY-XfF"/>
+                                        <exclude reference="Mz5-Rn-nUW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="swx-c4-K3e"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="xA8-lv-0uQ"/>
+                                        <include reference="SH4-7A-1c3"/>
+                                        <include reference="IzU-rY-XfF"/>
+                                        <include reference="Mz5-Rn-nUW"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="swx-c4-K3e" secondAttribute="width" id="6Rb-Hi-5RS"/>
+                            <constraint firstItem="7X2-md-Rvx" firstAttribute="top" secondItem="1rG-35-Fmv" secondAttribute="bottom" id="80H-XP-yH9"/>
+                            <constraint firstItem="1rG-35-Fmv" firstAttribute="top" secondItem="J2y-Pg-C1h" secondAttribute="bottom" id="Bcc-Aa-3EO"/>
+                            <constraint firstAttribute="trailing" secondItem="1rG-35-Fmv" secondAttribute="trailing" id="Ef4-NI-CJh"/>
+                            <constraint firstItem="1rG-35-Fmv" firstAttribute="leading" secondItem="n2b-l1-2dz" secondAttribute="leading" id="QSk-Tc-GmH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1rG-35-Fmv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="80H-XP-yH9"/>
+                                <exclude reference="Ef4-NI-CJh"/>
+                                <exclude reference="QSk-Tc-GmH"/>
+                                <exclude reference="Bcc-Aa-3EO"/>
+                                <exclude reference="6Rb-Hi-5RS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="1rG-35-Fmv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="80H-XP-yH9"/>
+                                <include reference="Ef4-NI-CJh"/>
+                                <include reference="QSk-Tc-GmH"/>
+                                <include reference="Bcc-Aa-3EO"/>
+                                <include reference="6Rb-Hi-5RS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="2200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkj-TV-psl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="85.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="PDFImagePage1.png" width="1536" height="2174"/>
         <image name="PDFImagePage2.png" width="1536" height="2174"/>
-        <image name="login-button.png" width="436" height="93"/>
+        <image name="login-button.png" width="240" height="75"/>
     </resources>
 </document>

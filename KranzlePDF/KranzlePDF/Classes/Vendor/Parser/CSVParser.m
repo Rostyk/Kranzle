@@ -9,6 +9,7 @@
 #import "CSVParser.h"
 #import "Customer.h"
 #import "Constants.h"
+#import "AppDelegate.h"
 
 @interface CSVParser()
 + (NSArray *)trimComponents:(NSArray *)array withCharacters:(NSString *)characters;
@@ -110,6 +111,7 @@
                   withSeparatedCharacterString:(NSString *)character
                           quoteCharacterString:(NSString *)quote
 {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSError *error = nil;
     NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
@@ -121,7 +123,21 @@
                                      withCharacters:trimStr];
         
         if([record count] > COLUMN_VERBANDS_NUMBER) {
-            Customer *customer = [[Customer alloc] initWithRecord:record];
+            Customer *customer = [[Customer alloc] initWithEntity:[NSEntityDescription entityForName:@"Customer"  inManagedObjectContext:appDelegate.managedObjectContext]insertIntoManagedObjectContext:appDelegate.managedObjectContext];
+            
+            customer.number = record[COLUMN_NUMBER];
+            customer.name = record[COLUMN_NAME];
+            customer.name2 = record[COLUMN_NAME2];
+            customer.name3 = record[COLUMN_NAME3];
+            customer.street = record[COLUMN_STREET];
+            customer.plz = record[COLUMN_PLZ];
+            customer.ort = record[COLUMN_ORT];
+            customer.email = record[COLUMN_EMAIL];
+            customer.verband = record[COLUMN_VERBAND];
+            customer.emailVertreter = record[COLUMN_EMAIL_VERTRETER];
+            customer.verbandsNumber = record[COLUMN_VERBANDS_NUMBER];
+            customer.vertreterCode = record[COLUMN_VERTRETER_CODE];
+            
             [mutableArray addObject: customer];
         }
        

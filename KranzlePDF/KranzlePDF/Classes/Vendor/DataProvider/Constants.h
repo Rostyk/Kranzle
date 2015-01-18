@@ -23,4 +23,10 @@
 #define COLUMN_VERBANDS_NUMBER   18
 
 #define FORM_VALUES             @[@(20), @(23), @(3), @(6), @(3), @(2), @(4), @(2), @(6)]
+
+typedef enum {
+    PARSER_ERROR = 0,
+    EMPTY_FETCH_RESULT_ERROR
+} ERROR_TYPE;
+
 #endif

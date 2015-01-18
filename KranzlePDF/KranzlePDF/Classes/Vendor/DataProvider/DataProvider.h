@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^FetchCSVRecordsSuccess)(NSArray *records);
+typedef void (^FetchError)(NSError *error);
 
 @interface DataProvider : NSObject
-@property (nonatomic, strong) NSArray *rows;
+@property (nonatomic, strong) NSArray *fetchedRows;
 
 + (instancetype)sharedProvider;
-- (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock;
+- (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failure;
 
 @end

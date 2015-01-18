@@ -10,9 +10,11 @@
 #import "CustomerListViewController.h"
 #import "DataProvider.h"
 #import "Customer.h"
+#import "Constants.h"
+#import "MBProgressHUD.h"
 
 @interface SalesLoginViewController ()
-@property (nonatomic, strong) UIAlertView *loadingView;
+@property (nonatomic, strong) MBProgressHUD *hud;
 @property (nonatomic, weak) IBOutlet UITextField *salesIDTextfield;
 @end
 
@@ -34,19 +36,20 @@
     [self.salesIDTextfield resignFirstResponder];
     
     //add preload grpahics
-    //[self addPreload];
+    [self addPreload];
     __weak typeof(self) weakSelf = self;
     NSString *customerNumber = self.salesIDTextfield.text;
-    [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber
-        sucess:^(NSArray *records) {
-           // [self removePreload];
-        
-            if(!records || records.count == 0) {
-                [weakSelf alert: @"Customers with this sales number not found in our database"];
-            }
-            else {
-                 [weakSelf showCustomerList];
-            }
+    [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber sucess:^(NSArray *records) {
+        [self removePreload];
+        [weakSelf showCustomerList];
+    } failure:^(NSError *error) {
+        [self removePreload];
+        if(error.code == PARSER_ERROR) {
+            [weakSelf alert: @"Cant parse customer. CSV file corrupted"];
+        }
+        if(error.code == EMPTY_FETCH_RESULT_ERROR) {
+            [weakSelf alert:@"No customers found for this sales number"];
+        }
     }];
 }
 
@@ -74,20 +77,15 @@
 #pragma mark preload
 
 - (void)addPreload {
-    self.loadingView = [[UIAlertView alloc] initWithTitle:@"Logging"
-                                                message:nil
-                                               delegate:self
-                                      cancelButtonTitle:nil
-                                      otherButtonTitles:nil];
+    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.hud];
     
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [self.loadingView setValue:spinner forKey:@"accessoryView"];
-    [spinner startAnimating];
-    [self.loadingView show];
+    self.hud.labelText = @"Logging";
+    [self.hud show: YES];
 }
 
 - (void)removePreload {
-    [self.loadingView dismissWithClickedButtonIndex:0 animated:NO];
+    [self.hud hide:YES];
 }
 
 @end
