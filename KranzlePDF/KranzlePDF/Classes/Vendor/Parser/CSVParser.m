@@ -137,6 +137,7 @@
             customer.emailVertreter = record[COLUMN_EMAIL_VERTRETER];
             customer.verbandsNumber = record[COLUMN_VERBANDS_NUMBER];
             customer.vertreterCode = record[COLUMN_VERTRETER_CODE];
+            customer.manuallyCreated = @(NO);
             
             [mutableArray addObject: customer];
         }

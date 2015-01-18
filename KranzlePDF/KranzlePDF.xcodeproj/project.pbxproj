@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */; };
+		912FEB0E1A6BDAEB00FFDA68 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 912FEB0D1A6BDAEB00FFDA68 /* Customer.m */; };
 		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
 		914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35981A65D4B300899924 /* PDFImagePage1.png */; };
 		914A359B1A65D4B300899924 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35991A65D4B300899924 /* PDFImagePage2.png */; };
@@ -30,7 +31,6 @@
 		91B4027F1A67298000CFBCB4 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027E1A67298000CFBCB4 /* CSVParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		91DAC6401A6B049400D1A03D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DAC63F1A6B049400D1A03D /* CoreData.framework */; };
 		91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91DAC64F1A6B124B00D1A03D /* Model.xcdatamodeld */; };
-		91DAC6541A6B12EE00D1A03D /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DAC6531A6B12EE00D1A03D /* Customer.m */; };
 		91DAC6581A6B1A5900D1A03D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DAC6571A6B1A5900D1A03D /* MBProgressHUD.m */; };
 		91DDCFCB1A6884C30033B042 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDCFCA1A6884C30033B042 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,8 @@
 /* Begin PBXFileReference section */
 		9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableLabel.h; path = Label/DuplicatableLabel.h; sourceTree = "<group>"; };
 		9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableLabel.m; path = Label/DuplicatableLabel.m; sourceTree = "<group>"; };
+		912FEB0C1A6BDAEB00FFDA68 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		912FEB0D1A6BDAEB00FFDA68 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		914A35951A65D41E00899924 /* Fachhandelspartner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fachhandelspartner.pdf; sourceTree = "<group>"; };
 		914A35981A65D4B300899924 /* PDFImagePage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage1.png; sourceTree = "<group>"; };
 		914A35991A65D4B300899924 /* PDFImagePage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage2.png; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		91B4027E1A67298000CFBCB4 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
 		91DAC63F1A6B049400D1A03D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		91DAC6501A6B124B00D1A03D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		91DAC6521A6B12EE00D1A03D /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
-		91DAC6531A6B12EE00D1A03D /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		91DAC6561A6B1A5900D1A03D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		91DAC6571A6B1A5900D1A03D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		91DDCFCA1A6884C30033B042 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -103,6 +103,15 @@
 			name = Label;
 			sourceTree = "<group>";
 		};
+		912FEB0B1A6BDABA00FFDA68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91DDCFCA1A6884C30033B042 /* MessageUI.framework */,
+				91DAC63F1A6B049400D1A03D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		914A359E1A65DEB100899924 /* ScrollViewToPDF */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				91DAC64F1A6B124B00D1A03D /* Model.xcdatamodeld */,
-				91DDCFCA1A6884C30033B042 /* MessageUI.framework */,
-				91DAC63F1A6B049400D1A03D /* CoreData.framework */,
+				912FEB0B1A6BDABA00FFDA68 /* Frameworks */,
 				9164F55F1A65AD7D0097B892 /* KranzlePDF */,
 				9164F55E1A65AD7D0097B892 /* Products */,
 			);
@@ -250,8 +258,8 @@
 		9164F5B11A65BBC50097B892 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				91DAC6521A6B12EE00D1A03D /* Customer.h */,
-				91DAC6531A6B12EE00D1A03D /* Customer.m */,
+				912FEB0C1A6BDAEB00FFDA68 /* Customer.h */,
+				912FEB0D1A6BDAEB00FFDA68 /* Customer.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,9 +416,9 @@
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */,
 				9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */,
+				912FEB0E1A6BDAEB00FFDA68 /* Customer.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
 				9164F5631A65AD7D0097B892 /* main.m in Sources */,
-				91DAC6541A6B12EE00D1A03D /* Customer.m in Sources */,
 				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
 				916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */,
 				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,

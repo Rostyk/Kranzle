@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    MANUALLY_CREATED_CUSTOMERS_SECTION = 0,
+    PARSED_CUSTOMERS_SECTION
+} SECTIOM_TYPE;
+
+typedef enum {
+    SINGLE_SECTION_TABLE_MODE = 0,
+    DOUBLE_SECTION_TABLE_MODE
+} TABLE_MODE;
+
 @interface CustomerListViewController : UIViewController<UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end

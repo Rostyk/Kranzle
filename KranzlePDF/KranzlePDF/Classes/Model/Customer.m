@@ -11,17 +11,18 @@
 
 @implementation Customer
 
+@dynamic email;
+@dynamic emailVertreter;
 @dynamic name;
-@dynamic number;
 @dynamic name2;
 @dynamic name3;
-@dynamic street;
-@dynamic plz;
+@dynamic number;
 @dynamic ort;
-@dynamic email;
+@dynamic plz;
+@dynamic street;
 @dynamic verband;
-@dynamic emailVertreter;
 @dynamic verbandsNumber;
 @dynamic vertreterCode;
+@dynamic manuallyCreated;
 
 @end

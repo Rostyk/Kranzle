@@ -10,8 +10,10 @@
 #import "Constants.h"
 #import "CSVParser.h"
 #import "AppDelegate.h"
+#import "Customer.h"
 
 @interface DataProvider()
+@property (nonatomic, strong) NSString *customerNumber;
 @property (nonatomic) NSUInteger totalNumberOfRows;
 @end
 
@@ -55,7 +57,18 @@
 }
 
 - (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failureBlock{
-    [self fetchCustomersForNumber:number completion:successBlock failure:failureBlock];
+    /*remember the customre number to later reload if needed (For example if a new customer added)*/
+    if(number)
+      self.customerNumber = number;
+   
+    if(number)
+       [self fetchCustomersForNumber:number completion:successBlock failure:failureBlock];
+    else {
+        if(self.customerNumber)
+           [self fetchCustomersForNumber:self.customerNumber completion:successBlock failure:failureBlock];
+        else
+            failureBlock([NSError errorWithDomain:@"com.kranzle.invalidcustomernumber" code:INVALID_CUSTOMER_NUMBER_SPECIFIED userInfo:nil]);
+    }
 }
 
 - (void)fetchCustomersForNumber:(NSString *)number completion:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failureBlock {
@@ -131,6 +144,29 @@
         });
             
     });
-   
 }
+
+#pragma mark new customer
+
+- (void)createNewCustomer {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    Customer *customer = [[Customer alloc] initWithEntity:[NSEntityDescription entityForName:@"Customer" inManagedObjectContext:delegate.managedObjectContext] insertIntoManagedObjectContext:delegate.managedObjectContext];
+    customer.number = @"787987";
+    customer.verbandsNumber = @"345";
+    customer.vertreterCode = [[DataProvider sharedProvider] lastUsedVertreterCode];
+    customer.name = @"Ross";
+    customer.name2 = @"Stepanyak";
+    customer.street = @"Stryjska street 78/140";
+    customer.ort = @"Lviv";
+    customer.plz = @"EE375";
+    customer.manuallyCreated = @(YES);
+    [delegate saveContext];
+}
+
+#pragma mark cached vertreter code
+/*vertretercode is called customer number here. == > Rename to avoid confusion */
+- (NSString *)lastUsedVertreterCode {
+    return self.customerNumber;
+}
+
 @end

@@ -16,5 +16,7 @@ typedef void (^FetchError)(NSError *error);
 
 + (instancetype)sharedProvider;
 - (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failure;
+- (NSString *)lastUsedVertreterCode;
+- (void)createNewCustomer;
 
 @end
