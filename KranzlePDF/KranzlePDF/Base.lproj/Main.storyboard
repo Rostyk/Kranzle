@@ -867,10 +867,10 @@
             </objects>
             <point key="canvasLocation" x="960" y="31.5"/>
         </scene>
-        <!--New Customer View Controller-->
+        <!--(Under construction)-->
         <scene sceneID="gsg-ec-NoX">
             <objects>
-                <viewController storyboardIdentifier="NewCustomerViewControllerID" id="RjI-31-wb5" customClass="NewCustomerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCustomerViewControllerID" title="(Under construction)" id="RjI-31-wb5" customClass="NewCustomerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J2y-Pg-C1h"/>
                         <viewControllerLayoutGuide type="bottom" id="7X2-md-Rvx"/>

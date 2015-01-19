@@ -8,16 +8,27 @@
 
 #import "NewCustomerViewController.h"
 #import "DataProvider.h"
+#import "AppDelegate.h"
+#import "Customer.h"
+
 
 @interface NewCustomerViewController ()
-
+@property (nonatomic, strong) Customer *createdCustomer;
 @end
 
 @implementation NewCustomerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.createdCustomer = [[DataProvider sharedProvider] createNewCustomer];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate saveContext];
 }
 
 

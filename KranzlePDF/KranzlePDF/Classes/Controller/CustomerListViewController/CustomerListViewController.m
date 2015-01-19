@@ -249,7 +249,7 @@
     self.newCustomerBeingAdded = NO;
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     NewCustomerViewController *controller = (NewCustomerViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"NewCustomerViewControllerID"];
-    
+    self.newCustomerBeingAdded = YES;
     [self.navigationController pushViewController: controller animated:YES];
     
 }
