@@ -66,11 +66,11 @@
     self.createdCustomer.street = self.streetTextField.text;
     self.createdCustomer.plz = self.plzTextField.text;
     self.createdCustomer.ort = self.ortTextField.text;
-    //self.createdCustomer.land = self.landTextField.text;
-    //self.createdCustomer.telefon = self.telefonTextField.text;
-    //self.createdCustomer.telefax = self.telefaxTextField.text;
+    self.createdCustomer.land = self.landTextField.text;
+    self.createdCustomer.telefon = self.telefonTextField.text;
+    self.createdCustomer.telefax = self.telefaxTextField.text;
     self.createdCustomer.email = self.emailTextField.text;
-    //self.createdCustomer.www = self.wwwTextField.text;
+    self.createdCustomer.www = self.wwwTextField.text;
     self.createdCustomer.verbandsNumber = self.verbandsCodeTextField.text;
     self.createdCustomer.manuallyCreated = @(YES);
     self.createdCustomer.verband = self.verbandTextField.text;

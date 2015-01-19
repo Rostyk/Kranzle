@@ -3,6 +3,7 @@
     <entity name="Customer" representedClassName="Customer" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="emailVertreter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="land" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="manuallyCreated" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name2" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,11 +12,14 @@
         <attribute name="ort" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="plz" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefax" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="verband" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="verbandsNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vertreterCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="www" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Customer" positionX="-54" positionY="-9" width="128" height="240"/>
+        <element name="Customer" positionX="-54" positionY="-9" width="128" height="300"/>
     </elements>
 </model>

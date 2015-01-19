@@ -12,6 +12,8 @@
 #import "Customer.h"
 #import "Constants.h"
 #import "DuplicatableLabel.h"
+#import "SigningViewController.h"
+#import "UIImage+scale.h"
 
 @interface CollectDataViewController()
 @property (nonatomic, strong) UIButton *selectedButton;
@@ -20,8 +22,16 @@
 @property (nonatomic, strong) M13Checkbox *exclusivitatCheckbox;
 @property (nonatomic, strong) NSMutableArray *duplicatedLabels;
 @property (nonatomic) NSUInteger sum;
+@property (nonatomic) NSUInteger keyboardHeight;
 
-@property (nonatomic, strong) IBOutlet UILabel *sumLabel;
+@property (nonatomic, weak) IBOutlet UITextField *bottomName1TextField;
+@property (nonatomic, weak) IBOutlet UITextField *bottomName2TextField;
+
+@property (nonatomic, strong) UIButton *selectedSignButton;
+@property (nonatomic, weak) IBOutlet UIButton *fachhandelsPartnerSignButton;
+@property (nonatomic, weak) IBOutlet UIButton *kranzleSignButton;
+
+@property (nonatomic, weak) IBOutlet UILabel *sumLabel;
 @property (nonatomic, strong) IBOutletCollection(DuplicatableLabel) NSArray *labels;
 
 @property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField1;
@@ -36,12 +46,13 @@
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
 
-
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *kdnLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *nameLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *name2Label;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *streetLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *plzLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *ortLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *wwwLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailVertreterLabel;
@@ -67,6 +78,16 @@
     [self populateCustomerData];
     /*removed in the lst update */
     //[self addCheckBoxes];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:@"UIKeyboardWillShowNotification"
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
 
 #pragma mark display customer data on form
@@ -78,16 +99,18 @@
     self.streetLabel.text = self.customer.street;
     self.plzLabel.text = self.customer.plz;
     self.ortLabel.text = self.customer.ort;
+    self.wwwLabel.text = self.customer.www;
     self.emailLabel.text = self.customer.email;
     self.verbandLabel.text = self.customer.verband;
     self.emailVertreterLabel.text = self.customer.email;
     self.verbandsNumberLabel.text = self.customer.verbandsNumber;
+    self.kdnLabel.text = self.customer.number;
     
     //Set Ort und datum
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd.MM.yyyy"];
     NSString *stringDate = [formatter stringFromDate: [[NSDate alloc] init]];
-    if(self.customer.ort) {
+    if(self.customer.ort.length > 0) {
         self.ortAndNameTextField1.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
         self.ortAndNameTextField2.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
     }
@@ -95,7 +118,6 @@
         self.ortAndNameTextField1.text = [NSString stringWithFormat:@"%@", stringDate];
         self.ortAndNameTextField2.text = [NSString stringWithFormat:@"%@", stringDate];
     }
-   
 }
 
 #pragma mark collect data button handlers
@@ -127,23 +149,54 @@
 
 - (void)defaultValueDidSelect {
     long value = [FORM_VALUES[self.selectedButton.tag] integerValue];
-    
+    /*
     UILabel *valueLabel = [[UILabel alloc] initWithFrame: self.selectedButton.frame];
     valueLabel.backgroundColor = [UIColor clearColor];
     valueLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12.0f];
     valueLabel.textAlignment = NSTextAlignmentCenter;
     valueLabel.text = [NSString stringWithFormat:@"%ld", value];
     [self.scrollView addSubview: valueLabel];
-    
     [self.selectedButton removeFromSuperview];
-    self.sum += value;
-    self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
+     */
+    
+    /*prevent the value to be added to the sum multiple times*/
+    if(![self isNumber:self.selectedButton.currentTitle] || self.selectedButton.currentTitle.length == 0) {
+        [self setTitle:[NSString stringWithFormat:@"%ld", value] forButton:self.selectedButton];
+        self.sum += value;
+        self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
+    }
+    
     [self.popover dismissPopoverAnimated:YES];
 }
 
 - (void)removeValueDidSelect {
-    [self.selectedButton removeFromSuperview];
+    [self.selectedButton setBackgroundColor:[UIColor clearColor]];
+    
+    /*check if it was previously set to the default value.
+     If yes, we need to subtract this value from the sum*/
+    if ([self isNumber:self.selectedButton.currentTitle])
+    {
+        self.sum -= [self.selectedButton.titleLabel.text integerValue];
+    }
+    self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
+    [self setTitle:@"" forButton:self.selectedButton];
     [self.popover dismissPopoverAnimated:YES];
+}
+
+- (void)setTitle:(NSString *)title forButton:(UIButton *)button
+{
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateHighlighted];
+    [button setTitle:title forState:UIControlStateSelected];
+}
+- (BOOL)isNumber:(NSString*)string {
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    if ([self.selectedButton.titleLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
 
@@ -156,11 +209,37 @@
         self.konditionsvereinbarungLabel.text = textField.text;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+-(BOOL)textFieldShouldReturn:(UITextField*)textField
 {
+    if(textField == self.bottomName1TextField || textField == self.bottomName2TextField) {
+        [self.scrollView setContentOffset:CGPointMake(0, 1128) animated:YES];
+    }
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    int y = self.view.bounds.size.height - self.keyboardHeight;
+    
+
+    if(textField == self.bottomName1TextField || textField == self.bottomName2TextField) {
+        [self.scrollView setContentOffset:CGPointMake(0,  [self.contentView convertPoint:textField.frame.origin toView:self.scrollView].y - y + textField.frame.size.height) animated:YES];
+    }
+}
+
+#pragma mark keyboard
+
+-(void)keyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *info  = notification.userInfo;
+    NSValue      *value = info[UIKeyboardFrameEndUserInfoKey];
+    
+    CGRect rawFrame      = [value CGRectValue];
+    CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
+    
+    self.keyboardHeight = keyboardFrame.size.height;
+}
+
 
 #pragma mark duplicate labels
 
@@ -171,12 +250,14 @@
     
     for (DuplicatableLabel *label in self.labels) {
         if(CGRectContainsRect(self.scrollView.bounds, label.frame) && (self.duplicatedLabels.count < self.labels.count)) {
+            [self duplicateLabel:self.kdnLabel withVerticalOffset:1096];
             [self duplicateLabel:self.nameLabel withVerticalOffset:1096];
             [self duplicateLabel:self.name2Label withVerticalOffset:1102];
             [self duplicateLabel:self.streetLabel withVerticalOffset:1107];
             [self duplicateLabel:self.verbandLabel withVerticalOffset:1122];
             [self duplicateLabel:self.ortLabel withVerticalOffset:1112];
             [self duplicateLabel:self.verbandsNumberLabel withVerticalOffset:1122];
+            [self duplicateLabel:self.wwwLabel withVerticalOffset:1112];
             [self duplicateLabel:self.emailLabel withVerticalOffset:1118];
             [self duplicateLabel:self.emailVertreterLabel withVerticalOffset:1128];
         }
@@ -281,6 +362,31 @@
 {
     //Add an alert in case of failure
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark signing delegate
+
+- (void)signingController:(SigningViewController*)signingController didSignWithImage:(UIImage*)image {
+    [self.selectedSignButton setBackgroundImage:[image imageByScalingAndCroppingForSize:self.selectedSignButton.frame.size] forState:UIControlStateNormal];
+}
+
+#pragma mark sign buttons handlers
+- (IBAction)fachhandelsPartnerSignButtonClicked:(id)sender {
+    self.selectedSignButton = self.fachhandelsPartnerSignButton;
+    [self showSigningViewController];
+}
+
+- (IBAction)kranzleSignButtonCliked:(id)sender {
+    self.selectedSignButton = self.kranzleSignButton;
+    [self showSigningViewController];
+}
+
+- (void)showSigningViewController {
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    SigningViewController *controller = (SigningViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"SigningViewControllerID"];
+    controller.delegate = self;
+    controller.drawingView.frame = CGRectMake(0, 0, 500, 500);
+    [self presentViewController:controller animated:YES completion:NULL];
 }
 
 @end

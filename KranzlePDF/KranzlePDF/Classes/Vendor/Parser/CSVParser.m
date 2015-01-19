@@ -132,6 +132,9 @@
             customer.street = record[COLUMN_STREET];
             customer.plz = record[COLUMN_PLZ];
             customer.ort = record[COLUMN_ORT];
+            customer.land = record[COLUMN_LAND];
+            customer.telefon = record[COLUMN_TELEFON];
+            customer.telefax = record[COLUMN_TELEFAX];
             customer.email = record[COLUMN_EMAIL];
             customer.verband = record[COLUMN_VERBAND];
             customer.emailVertreter = record[COLUMN_EMAIL_VERTRETER];

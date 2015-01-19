@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */; };
-		912FEB0E1A6BDAEB00FFDA68 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 912FEB0D1A6BDAEB00FFDA68 /* Customer.m */; };
 		9134DAB01A6C83DC00774277 /* NewCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9134DAAF1A6C83DC00774277 /* NewCustomerViewController.m */; };
 		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
 		914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35981A65D4B300899924 /* PDFImagePage1.png */; };
 		914A359B1A65D4B300899924 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35991A65D4B300899924 /* PDFImagePage2.png */; };
 		914A359D1A65D4BD00899924 /* customers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 914A359C1A65D4BD00899924 /* customers.csv */; };
 		914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 914A35A01A65DEB100899924 /* ScrollViewToPDF.m */; };
+		9151F57A1A6D93AF00E09997 /* SigningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5771A6D93AF00E09997 /* SigningViewController.m */; };
+		9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5791A6D93AF00E09997 /* SigningView.m */; };
+		9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */; };
 		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
 		9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56A1A65AD7D0097B892 /* Main.storyboard */; };
 		9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56D1A65AD7D0097B892 /* Images.xcassets */; };
@@ -26,6 +28,7 @@
 		9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */; };
 		916ACC9A1A6831B6007BC7BE /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916ACC991A6831B6007BC7BE /* CustomerListViewController.m */; };
 		916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916ACC9D1A68353B007BC7BE /* CustomerCell.m */; };
+		917B70FD1A6DC1BF00A8774E /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 917B70FC1A6DC1BF00A8774E /* Customer.m */; };
 		91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */; };
 		91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F71A66A6EE00DCD4CD /* KRScrollView.m */; };
 		91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */; };
@@ -40,8 +43,6 @@
 /* Begin PBXFileReference section */
 		9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableLabel.h; path = Label/DuplicatableLabel.h; sourceTree = "<group>"; };
 		9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableLabel.m; path = Label/DuplicatableLabel.m; sourceTree = "<group>"; };
-		912FEB0C1A6BDAEB00FFDA68 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
-		912FEB0D1A6BDAEB00FFDA68 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		9134DAAE1A6C83DC00774277 /* NewCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCustomerViewController.h; sourceTree = "<group>"; };
 		9134DAAF1A6C83DC00774277 /* NewCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCustomerViewController.m; sourceTree = "<group>"; };
 		914A35951A65D41E00899924 /* Fachhandelspartner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fachhandelspartner.pdf; sourceTree = "<group>"; };
@@ -50,6 +51,12 @@
 		914A359C1A65D4BD00899924 /* customers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customers.csv; sourceTree = "<group>"; };
 		914A359F1A65DEB100899924 /* ScrollViewToPDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewToPDF.h; sourceTree = "<group>"; };
 		914A35A01A65DEB100899924 /* ScrollViewToPDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewToPDF.m; sourceTree = "<group>"; };
+		9151F5761A6D93AF00E09997 /* SigningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigningViewController.h; sourceTree = "<group>"; };
+		9151F5771A6D93AF00E09997 /* SigningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigningViewController.m; sourceTree = "<group>"; };
+		9151F5781A6D93AF00E09997 /* SigningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigningView.h; sourceTree = "<group>"; };
+		9151F5791A6D93AF00E09997 /* SigningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigningView.m; sourceTree = "<group>"; };
+		9151F57D1A6D9E1E00E09997 /* UIImage+scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+scale.h"; path = "UIIMage+scale&crop/UIImage+scale.h"; sourceTree = "<group>"; };
+		9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+scale.m"; path = "UIIMage+scale&crop/UIImage+scale.m"; sourceTree = "<group>"; };
 		9164F55D1A65AD7D0097B892 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9164F5611A65AD7D0097B892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9164F5621A65AD7D0097B892 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +77,8 @@
 		916ACC991A6831B6007BC7BE /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerListViewController.m; path = CustomerListViewController/CustomerListViewController.m; sourceTree = "<group>"; };
 		916ACC9C1A68353B007BC7BE /* CustomerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerCell.h; path = CustomerListViewController/CustomerCell/CustomerCell.h; sourceTree = "<group>"; };
 		916ACC9D1A68353B007BC7BE /* CustomerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerCell.m; path = CustomerListViewController/CustomerCell/CustomerCell.m; sourceTree = "<group>"; };
+		917B70FB1A6DC1BF00A8774E /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		917B70FC1A6DC1BF00A8774E /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		91A906F21A669DB800DCD4CD /* CollectDataPopoverContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectDataPopoverContentViewController.h; sourceTree = "<group>"; };
 		91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataPopoverContentViewController.m; sourceTree = "<group>"; };
 		91A906F61A66A6EE00DCD4CD /* KRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KRScrollView.h; path = ScrollView/KRScrollView.h; sourceTree = "<group>"; };
@@ -135,6 +144,26 @@
 			path = ScrollViewToPDF;
 			sourceTree = "<group>";
 		};
+		9151F5751A6D93AF00E09997 /* SigningViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9151F5761A6D93AF00E09997 /* SigningViewController.h */,
+				9151F5771A6D93AF00E09997 /* SigningViewController.m */,
+				9151F5781A6D93AF00E09997 /* SigningView.h */,
+				9151F5791A6D93AF00E09997 /* SigningView.m */,
+			);
+			path = SigningViewController;
+			sourceTree = "<group>";
+		};
+		9151F57C1A6D9DB600E09997 /* UIIMage+scale&crop */ = {
+			isa = PBXGroup;
+			children = (
+				9151F57D1A6D9E1E00E09997 /* UIImage+scale.h */,
+				9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */,
+			);
+			name = "UIIMage+scale&crop";
+			sourceTree = "<group>";
+		};
 		9164F5541A65AD7D0097B892 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +217,7 @@
 		9164F5891A65AE4D0097B892 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9151F5751A6D93AF00E09997 /* SigningViewController */,
 				9134DAAD1A6C83DC00774277 /* NewCustomerViewController */,
 				916ACC971A683196007BC7BE /* CustomerList */,
 				9164F5A91A65BA3B0097B892 /* CollectData */,
@@ -209,6 +239,7 @@
 		9164F5931A65AEE10097B892 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				9151F57C1A6D9DB600E09997 /* UIIMage+scale&crop */,
 				91DAC6551A6B1A5900D1A03D /* MBProgressHUD */,
 				91B4027C1A67298000CFBCB4 /* Parser */,
 				914A359E1A65DEB100899924 /* ScrollViewToPDF */,
@@ -274,8 +305,8 @@
 		9164F5B11A65BBC50097B892 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				912FEB0C1A6BDAEB00FFDA68 /* Customer.h */,
-				912FEB0D1A6BDAEB00FFDA68 /* Customer.m */,
+				917B70FB1A6DC1BF00A8774E /* Customer.h */,
+				917B70FC1A6DC1BF00A8774E /* Customer.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,15 +462,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9134DAB01A6C83DC00774277 /* NewCustomerViewController.m in Sources */,
+				9151F57A1A6D93AF00E09997 /* SigningViewController.m in Sources */,
+				9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */,
 				91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */,
 				9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */,
-				912FEB0E1A6BDAEB00FFDA68 /* Customer.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
 				9164F5631A65AD7D0097B892 /* main.m in Sources */,
+				9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */,
 				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
 				916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */,
+				917B70FD1A6DC1BF00A8774E /* Customer.m in Sources */,
 				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,
 				91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */,
 				91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */,

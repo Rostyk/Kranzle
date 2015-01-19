@@ -16,7 +16,11 @@
 #define COLUMN_STREET            4
 #define COLUMN_PLZ               5
 #define COLUMN_ORT               6
+#define COLUMN_LAND              7
+#define COLUMN_TELEFON           8
+#define COLUMN_TELEFAX           9
 #define COLUMN_EMAIL             10
+#define COLUMN_WWW               11
 #define COLUMN_EMAIL_VERTRETER   12
 #define COLUMN_VERBAND           13
 #define COLUMN_VERTRETER_CODE    14

@@ -264,10 +264,10 @@
             </objects>
             <point key="canvasLocation" x="1139" y="-1065.75"/>
         </scene>
-        <!--Cusomers-->
+        <!--Kunden-->
         <scene sceneID="2Dp-DE-dkS">
             <objects>
-                <viewController storyboardIdentifier="CustomerListViewControllerID" title="Cusomers" id="Aer-q0-Y5V" customClass="CustomerListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomerListViewControllerID" title="Kunden" id="Aer-q0-Y5V" customClass="CustomerListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lGX-dF-0Sv"/>
                         <viewControllerLayoutGuide type="bottom" id="0tU-hD-wEx"/>
@@ -434,6 +434,7 @@
                                             </label>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-pj-LRs">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -447,6 +448,7 @@
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btr-L3-Bjs">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -460,6 +462,7 @@
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njZ-r1-Xf9">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -473,6 +476,7 @@
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-QU-M3h">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -486,6 +490,7 @@
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJ8-5v-Vln">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -499,6 +504,7 @@
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N44-Nt-L0v">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -512,6 +518,7 @@
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTm-Hd-rDo">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -525,6 +532,7 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-Pb-8tm">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -562,6 +570,17 @@
                                                 </variation>
                                                 <connections>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Nlb-7l-1ns"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-t8-ym0">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="160" y="2015" width="209" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="ryb-M1-1F6"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4k-zD-FuL">
@@ -640,8 +659,18 @@
                                                     <rect key="frame" x="552" y="235" width="154" height="19"/>
                                                 </variation>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.google.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="WYP-2R-wwX" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="552" y="211" width="154" height="19"/>
+                                                </variation>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-wR-wHQ">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -689,6 +718,50 @@
                                                     <rect key="frame" x="618" y="962" width="42" height="21"/>
                                                 </variation>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-8E-5bP">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="185" y="2048" width="182" height="58"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="fachhandelsPartnerSignButtonClicked:" destination="eqD-mx-Wkc" eventType="touchUpInside" id="4Jk-Rm-2yX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OER-V0-v33">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="459" y="2048" width="252" height="59"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="kranzleSignButtonCliked:" destination="eqD-mx-Wkc" eventType="touchUpInside" id="GN7-Ch-ojs"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-TM-v5a">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="488" y="2015" width="223" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="2Zl-T5-ak5"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="537285" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-Rg-UVe" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="552" y="153" width="154" height="19"/>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -711,6 +784,7 @@
                                                 <exclude reference="SRF-8a-FrS"/>
                                                 <exclude reference="8rZ-kG-YnV"/>
                                                 <exclude reference="C2F-O9-C2C"/>
+                                                <exclude reference="qWe-t8-ym0"/>
                                                 <exclude reference="S4k-zD-FuL"/>
                                                 <exclude reference="sgD-Ua-cvE"/>
                                                 <exclude reference="dwV-l5-onc"/>
@@ -719,11 +793,16 @@
                                                 <exclude reference="cvi-Na-mwH"/>
                                                 <exclude reference="HmP-We-hJC"/>
                                                 <exclude reference="FMq-1u-cPu"/>
+                                                <exclude reference="WYP-2R-wwX"/>
                                                 <exclude reference="Mi0-wR-wHQ"/>
                                                 <exclude reference="7SX-D4-PxV"/>
                                                 <exclude reference="J7B-FT-p9A"/>
                                                 <exclude reference="9Iu-Ro-e25"/>
                                                 <exclude reference="eLn-GX-EOt"/>
+                                                <exclude reference="2Ix-8E-5bP"/>
+                                                <exclude reference="OER-V0-v33"/>
+                                                <exclude reference="ZyV-TM-v5a"/>
+                                                <exclude reference="b8y-Rg-UVe"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="10z-0w-4dB"/>
@@ -746,6 +825,7 @@
                                                 <include reference="SRF-8a-FrS"/>
                                                 <include reference="8rZ-kG-YnV"/>
                                                 <include reference="C2F-O9-C2C"/>
+                                                <include reference="qWe-t8-ym0"/>
                                                 <include reference="S4k-zD-FuL"/>
                                                 <include reference="sgD-Ua-cvE"/>
                                                 <include reference="dwV-l5-onc"/>
@@ -754,11 +834,16 @@
                                                 <include reference="cvi-Na-mwH"/>
                                                 <include reference="HmP-We-hJC"/>
                                                 <include reference="FMq-1u-cPu"/>
+                                                <include reference="WYP-2R-wwX"/>
                                                 <include reference="Mi0-wR-wHQ"/>
                                                 <include reference="7SX-D4-PxV"/>
                                                 <include reference="J7B-FT-p9A"/>
                                                 <include reference="9Iu-Ro-e25"/>
                                                 <include reference="eLn-GX-EOt"/>
+                                                <include reference="2Ix-8E-5bP"/>
+                                                <include reference="OER-V0-v33"/>
+                                                <include reference="ZyV-TM-v5a"/>
+                                                <include reference="b8y-Rg-UVe"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="10z-0w-4dB"/>
@@ -834,13 +919,18 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="2200"/>
                     <connections>
+                        <outlet property="bottomName1TextField" destination="qWe-t8-ym0" id="Rp3-OI-lVN"/>
+                        <outlet property="bottomName2TextField" destination="ZyV-TM-v5a" id="DYu-aS-ZW0"/>
                         <outlet property="contentView" destination="cJZ-j7-BhM" id="lDs-aZ-2Jb"/>
                         <outlet property="emailLabel" destination="FMq-1u-cPu" id="agy-ZJ-Kib"/>
                         <outlet property="emailVertreterLabel" destination="7SX-D4-PxV" id="ajp-r5-xX7"/>
+                        <outlet property="fachhandelsPartnerSignButton" destination="2Ix-8E-5bP" id="5Nx-cL-q3R"/>
                         <outlet property="fachhandelsvertragLabel" destination="J7B-FT-p9A" id="OxU-5K-U7B"/>
                         <outlet property="fachhandelsvertragTextField" destination="S4k-zD-FuL" id="9K2-oB-NtL"/>
+                        <outlet property="kdnLabel" destination="b8y-Rg-UVe" id="NQB-bl-4hf"/>
                         <outlet property="konditionsvereinbarungLabel" destination="9Iu-Ro-e25" id="Xin-iH-hH7"/>
                         <outlet property="konditionsvereinbarungTextField" destination="sgD-Ua-cvE" id="Rcy-yt-Vim"/>
+                        <outlet property="kranzleSignButton" destination="OER-V0-v33" id="o6N-Jy-oNx"/>
                         <outlet property="name2Label" destination="gWs-G8-GeW" id="2Vb-Hm-ptD"/>
                         <outlet property="nameLabel" destination="dwV-l5-onc" id="Y8d-0l-tPm"/>
                         <outlet property="ortAndNameTextField1" destination="C2F-O9-C2C" id="SV3-Bq-olO"/>
@@ -852,6 +942,7 @@
                         <outlet property="sumLabel" destination="eLn-GX-EOt" id="2xm-sO-SpO"/>
                         <outlet property="verbandLabel" destination="JFp-1x-vQ4" id="WXr-Tz-p8o"/>
                         <outlet property="verbandsNumberLabel" destination="jEV-ol-t0z" id="pao-Sm-oMy"/>
+                        <outlet property="wwwLabel" destination="WYP-2R-wwX" id="9cN-Y3-5jb"/>
                         <outletCollection property="labels" destination="dwV-l5-onc" id="5eT-hd-n4s"/>
                         <outletCollection property="labels" destination="gWs-G8-GeW" id="aob-hV-Yvp"/>
                         <outletCollection property="labels" destination="DJj-IZ-D5X" id="rYe-p9-emI"/>
@@ -1396,6 +1487,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkj-TV-psl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1796" y="85.5"/>
+        </scene>
+        <!--Signing View Controller-->
+        <scene sceneID="7fd-bT-ABw">
+            <objects>
+                <viewController storyboardIdentifier="SigningViewControllerID" modalPresentationStyle="currentContext" id="aa2-lz-1Bg" customClass="SigningViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LQE-ZV-Ihl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Coz-cG-B5y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ohx-G3-Y1D">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uib-OM-zr5">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <items>
+                                    <navigationItem title="Unterschrift" id="FzZ-nT-XtF">
+                                        <barButtonItem key="leftBarButtonItem" title="Abbrechen" id="iJO-xY-T6b">
+                                            <connections>
+                                                <action selector="closeWindow:" destination="aa2-lz-1Bg" id="SSb-8Y-HMb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Übernehmen" id="yJk-6J-Bgd">
+                                            <connections>
+                                                <action selector="okayAndClose:" destination="aa2-lz-1Bg" id="rPS-UW-Yey"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKq-bt-i9G" customClass="SigningView">
+                                <rect key="frame" x="0.0" y="44" width="768" height="256"/>
+                                <color key="backgroundColor" red="0.83137261870000001" green="0.87450987099999999" blue="0.87843143940000001" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="768" height="300"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="300"/>
+                    <connections>
+                        <outlet property="drawingView" destination="OKq-bt-i9G" id="N9L-yL-pPI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyK-M6-vDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="-1746"/>
         </scene>
     </scenes>
     <resources>

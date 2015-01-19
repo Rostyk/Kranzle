@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CollectDataPopoverContentViewController.h"
 #import <MessageUI/MessageUI.h>
+#import "SigningViewController.h"
 
 @class Customer;
 
-@interface CollectDataViewController : UIViewController<CollectDataPopoverDelegate, UITextFieldDelegate, MFMailComposeViewControllerDelegate>
+@interface CollectDataViewController : UIViewController<CollectDataPopoverDelegate, UITextFieldDelegate, MFMailComposeViewControllerDelegate, SigningDelegate>
 @property (nonatomic, strong) Customer *customer;
 @end
