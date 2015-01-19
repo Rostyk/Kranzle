@@ -112,7 +112,6 @@
             NSLog(@"%@, %@", asynchronousFetchRequestError, asynchronousFetchRequestError.localizedDescription);
         }
     }];
-
 }
 
 #pragma mark parse csv
@@ -148,7 +147,7 @@
 
 #pragma mark new customer
 
-- (void)createNewCustomer {
+- (Customer *)createNewCustomer {
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     Customer *customer = [[Customer alloc] initWithEntity:[NSEntityDescription entityForName:@"Customer" inManagedObjectContext:delegate.managedObjectContext] insertIntoManagedObjectContext:delegate.managedObjectContext];
     customer.number = @"787987";
@@ -160,7 +159,7 @@
     customer.ort = @"Lviv";
     customer.plz = @"EE375";
     customer.manuallyCreated = @(YES);
-    [delegate saveContext];
+    return customer;
 }
 
 #pragma mark cached vertreter code
