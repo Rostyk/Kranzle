@@ -171,7 +171,21 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     CollectDataViewController *controller = (CollectDataViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"CollectDataViewControllerID"];
     
-    Customer *customer = self.rows[indexPath.row];
+    Customer *customer = nil;
+    
+    if(self.tableMode == DOUBLE_SECTION_TABLE_MODE) {
+        if(indexPath.section == MANUALLY_CREATED_CUSTOMERS_SECTION) {
+            customer = self.manuallyAddedRows[indexPath.row];
+        }
+        if(indexPath.section == PARSED_CUSTOMERS_SECTION) {
+            customer = self.parsedRows[indexPath.row];
+        }
+    }
+    
+    if(self.tableMode == SINGLE_SECTION_TABLE_MODE) {
+        customer = self.parsedRows[indexPath.row];
+    }
+    
     controller.customer = customer;
     [self.navigationController pushViewController: controller animated:YES];
     

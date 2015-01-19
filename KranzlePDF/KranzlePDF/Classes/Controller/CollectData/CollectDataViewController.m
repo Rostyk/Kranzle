@@ -87,8 +87,15 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd.MM.yyyy"];
     NSString *stringDate = [formatter stringFromDate: [[NSDate alloc] init]];
-    self.ortAndNameTextField1.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
-    self.ortAndNameTextField2.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
+    if(self.customer.ort) {
+        self.ortAndNameTextField1.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
+        self.ortAndNameTextField2.text = [NSString stringWithFormat:@"%@, %@", self.customer.ort, stringDate];
+    }
+    else {
+        self.ortAndNameTextField1.text = [NSString stringWithFormat:@"%@", stringDate];
+        self.ortAndNameTextField2.text = [NSString stringWithFormat:@"%@", stringDate];
+    }
+   
 }
 
 #pragma mark collect data button handlers
@@ -130,7 +137,7 @@
     
     [self.selectedButton removeFromSuperview];
     self.sum += value;
-    self.sumLabel.text = [NSString stringWithFormat:@"%d", self.sum];
+    self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
     [self.popover dismissPopoverAnimated:YES];
 }
 

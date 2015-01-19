@@ -45,24 +45,24 @@
 
 - (void)getTotalNumberOfParsedRows {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
     if(self.totalNumberOfRows == 0) {
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         [request setEntity:[NSEntityDescription entityForName:@"Customer" inManagedObjectContext:appDelegate.managedObjectContext]];
-        
         [request setIncludesSubentities:NO];
-        
         NSError *err;
         self.totalNumberOfRows = [appDelegate.managedObjectContext countForFetchRequest:request error:&err];
     }
 }
 
 - (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failureBlock{
-    /*remember the customre number to later reload if needed (For example if a new customer added)*/
+    
+    /*remember the customer number to later reload if needed (For example if a new customer added)*/
     if(number)
       self.customerNumber = number;
    
     if(number)
-       [self fetchCustomersForNumber:number completion:successBlock failure:failureBlock];
+        [self fetchCustomersForNumber:number completion:successBlock failure:failureBlock];
     else {
         if(self.customerNumber)
            [self fetchCustomersForNumber:self.customerNumber completion:successBlock failure:failureBlock];
@@ -89,8 +89,9 @@
     NSAsynchronousFetchRequest *asynchronousFetchRequest = [[NSAsynchronousFetchRequest alloc] initWithFetchRequest:fetch completionBlock:^(NSAsynchronousFetchResult *result) {
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.fetchedRows = result.finalResult;
+            
             if(weakSelf.fetchedRows.count > 0)
-               successBlock(weakSelf.fetchedRows);
+                successBlock(weakSelf.fetchedRows);
             else {
                 /*No customers for sales number found*/
                 if(totalNumberOfRows > 0)
@@ -121,13 +122,13 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *path = [[NSBundle mainBundle] pathForResource:@"customers" ofType:@"csv"];
         NSURL *url = [NSURL fileURLWithPath:path];
+        
         weakSelf.fetchedRows = [CSVParser parseCSVIntoArrayOfArraysFromFile:[url path]
                                         withSeparatedCharacterString:@";"
                                                 quoteCharacterString:nil];
         
         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
         [appDelegate saveContext];
-        
         
         dispatch_async(dispatch_get_main_queue(), ^{
             /*Couldn't parse*/
@@ -139,9 +140,7 @@
                 weakSelf.totalNumberOfRows = weakSelf.fetchedRows.count;
                 [weakSelf fetchCustomersForNumber:number completion:success failure:failureBlock];
             }
-            
         });
-            
     });
 }
 
@@ -150,15 +149,17 @@
 - (Customer *)createNewCustomer {
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     Customer *customer = [[Customer alloc] initWithEntity:[NSEntityDescription entityForName:@"Customer" inManagedObjectContext:delegate.managedObjectContext] insertIntoManagedObjectContext:delegate.managedObjectContext];
+    /*
     customer.number = @"787987";
     customer.verbandsNumber = @"345";
     customer.vertreterCode = [[DataProvider sharedProvider] lastUsedVertreterCode];
     customer.name = @"Ross";
     customer.name2 = @"Stepanyak";
-    customer.street = @"Stryjska street 78/140";
+    customer.street = @"Stryjska street 78/141";
     customer.ort = @"Lviv";
     customer.plz = @"EE375";
     customer.manuallyCreated = @(YES);
+     */
     return customer;
 }
 
