@@ -235,7 +235,7 @@
     
     if(searchText.length > 0) {
         NSArray *allCustomers = [DataProvider sharedProvider].fetchedRows;
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"(number ==[c] %@) OR (street ==[c] %@) OR (name ==[c] %@) OR (name2 ==[c] %@) OR (name3 ==[c] %@) OR (plz ==[c] %@) OR (ort ==[c] %@)", searchText, searchText, searchText, searchText, searchText, searchText, searchText];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"(number contains[cd] %@) OR (street contains[cd] %@) OR (name contains[cd] %@) OR (name2 contains[cd] %@) OR (name3 contains[cd] %@) OR (plz contains[cd] %@) OR (ort contains[cd] %@)", searchText, searchText, searchText, searchText, searchText, searchText, searchText];
         NSArray *results = [allCustomers filteredArrayUsingPredicate:pred];
         
         if(results.count > 0) {
