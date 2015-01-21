@@ -219,11 +219,11 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    int y = self.view.bounds.size.height - self.keyboardHeight;
+    int y = 560;
     
 
     if(textField == self.bottomName1TextField || textField == self.bottomName2TextField) {
-        [self.scrollView setContentOffset:CGPointMake(0,  [self.contentView convertPoint:textField.frame.origin toView:self.scrollView].y - y + textField.frame.size.height) animated:YES];
+        [self.scrollView setContentOffset:CGPointMake(0,  ([self.contentView convertPoint:textField.frame.origin toView:self.scrollView].y - y + textField.frame.size.height)) animated:YES];
     }
 }
 
