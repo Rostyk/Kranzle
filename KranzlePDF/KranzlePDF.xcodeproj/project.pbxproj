@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A51DF81A6F9960000CCDB8 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A51DF61A6F9960000CCDB8 /* PDFImagePage2.png */; };
+		37A51DF91A6F9960000CCDB8 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A51DF71A6F9960000CCDB8 /* PDFImagePage1.png */; };
 		9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */; };
 		9134DAB01A6C83DC00774277 /* NewCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9134DAAF1A6C83DC00774277 /* NewCustomerViewController.m */; };
 		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37A51DF61A6F9960000CCDB8 /* PDFImagePage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage2.png; sourceTree = "<group>"; };
+		37A51DF71A6F9960000CCDB8 /* PDFImagePage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage1.png; sourceTree = "<group>"; };
 		9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableLabel.h; path = Label/DuplicatableLabel.h; sourceTree = "<group>"; };
 		9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableLabel.m; path = Label/DuplicatableLabel.m; sourceTree = "<group>"; };
 		9134DAAE1A6C83DC00774277 /* NewCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCustomerViewController.h; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				914A359C1A65D4BD00899924 /* customers.csv */,
+				37A51DF61A6F9960000CCDB8 /* PDFImagePage2.png */,
+				37A51DF71A6F9960000CCDB8 /* PDFImagePage1.png */,
 				914A35951A65D41E00899924 /* Fachhandelspartner.pdf */,
 				9164F5A41A65B7EB0097B892 /* Assets */,
 			);
@@ -443,6 +449,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */,
+				37A51DF91A6F9960000CCDB8 /* PDFImagePage1.png in Resources */,
+				37A51DF81A6F9960000CCDB8 /* PDFImagePage2.png in Resources */,
 				91E1A0881A6D19E2001712BD /* submit-button@2x.png in Resources */,
 				914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */,
 				9164F5711A65AD7D0097B892 /* LaunchScreen.xib in Resources */,

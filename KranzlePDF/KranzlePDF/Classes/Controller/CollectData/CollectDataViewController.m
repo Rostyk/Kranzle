@@ -179,7 +179,7 @@
         self.sum -= [self.selectedButton.titleLabel.text integerValue];
     }
     self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
-    [self setTitle:@"" forButton:self.selectedButton];
+    [self setTitle:@"Select" forButton:self.selectedButton];
     [self.popover dismissPopoverAnimated:YES];
 }
 
