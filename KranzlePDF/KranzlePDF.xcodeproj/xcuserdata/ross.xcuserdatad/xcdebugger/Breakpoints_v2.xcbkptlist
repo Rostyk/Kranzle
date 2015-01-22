@@ -153,7 +153,7 @@
                   symbolName = "-[CustomerListViewController viewWillAppear:]"
                   moduleName = "KranzlePDF"
                   urlString = "file:///Users/ross/Work/iOsProjects/StashKranzle/KranzlePDF/KranzlePDF/Classes/Controller/CustomerListViewController/CustomerListViewController.m"
-                  timestampString = "443657436.251327"
+                  timestampString = "443657732.708268"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -167,7 +167,7 @@
                   symbolName = "__45-[CustomerListViewController viewWillAppear:]_block_invoke"
                   moduleName = "KranzlePDF"
                   urlString = "file:///Users/ross/Work/iOsProjects/StashKranzle/KranzlePDF/KranzlePDF/Classes/Controller/CustomerListViewController/CustomerListViewController.m"
-                  timestampString = "443657436.251636"
+                  timestampString = "443657732.708588"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -302,22 +302,6 @@
             startingLineNumber = "358"
             endingLineNumber = "358"
             landmarkName = "-renderPDF"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KranzlePDF/Classes/Controller/SigningViewController/SigningViewController.m"
-            timestampString = "443657436.134226"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

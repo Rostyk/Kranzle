@@ -1613,6 +1613,10 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uib-OM-zr5">
                                 <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="3jq-4O-gpd"/>
+                                    <constraint firstAttribute="height" constant="44" id="m06-mc-Ylb"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Unterschrift" id="FzZ-nT-XtF">
                                         <barButtonItem key="leftBarButtonItem" title="Abbrechen" id="iJO-xY-T6b">
@@ -1627,13 +1631,69 @@
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3jq-4O-gpd"/>
+                                        <exclude reference="m06-mc-Ylb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="3jq-4O-gpd"/>
+                                        <include reference="m06-mc-Ylb"/>
+                                    </mask>
+                                </variation>
                             </navigationBar>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKq-bt-i9G" customClass="SigningView">
                                 <rect key="frame" x="0.0" y="64" width="768" height="256"/>
                                 <color key="backgroundColor" red="0.83137261870000001" green="0.87450987099999999" blue="0.87843143940000001" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="768" id="26t-3d-Jfo"/>
+                                    <constraint firstAttribute="height" constant="256" id="cSt-Io-sGP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="26t-3d-Jfo"/>
+                                        <exclude reference="cSt-Io-sGP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="26t-3d-Jfo"/>
+                                        <include reference="cSt-Io-sGP"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OKq-bt-i9G" firstAttribute="leading" secondItem="ohx-G3-Y1D" secondAttribute="leading" id="2sc-yF-fgF"/>
+                            <constraint firstItem="uib-OM-zr5" firstAttribute="leading" secondItem="ohx-G3-Y1D" secondAttribute="leading" id="41B-jl-uaO"/>
+                            <constraint firstItem="uib-OM-zr5" firstAttribute="top" secondItem="LQE-ZV-Ihl" secondAttribute="bottom" id="TGu-2t-7jN"/>
+                            <constraint firstAttribute="trailing" secondItem="OKq-bt-i9G" secondAttribute="trailing" id="cAp-uV-oNr"/>
+                            <constraint firstAttribute="trailing" secondItem="uib-OM-zr5" secondAttribute="trailing" id="vQs-l8-O4U"/>
+                            <constraint firstItem="OKq-bt-i9G" firstAttribute="top" secondItem="uib-OM-zr5" secondAttribute="bottom" id="vhy-8a-IFE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="41B-jl-uaO"/>
+                                <exclude reference="TGu-2t-7jN"/>
+                                <exclude reference="vQs-l8-O4U"/>
+                                <exclude reference="2sc-yF-fgF"/>
+                                <exclude reference="cAp-uV-oNr"/>
+                                <exclude reference="vhy-8a-IFE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="41B-jl-uaO"/>
+                                <include reference="TGu-2t-7jN"/>
+                                <include reference="vQs-l8-O4U"/>
+                                <include reference="2sc-yF-fgF"/>
+                                <include reference="cAp-uV-oNr"/>
+                                <include reference="vhy-8a-IFE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="768" height="300"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
