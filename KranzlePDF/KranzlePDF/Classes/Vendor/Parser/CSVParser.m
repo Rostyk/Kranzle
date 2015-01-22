@@ -136,10 +136,14 @@
             customer.telefon = record[COLUMN_TELEFON];
             customer.telefax = record[COLUMN_TELEFAX];
             customer.email = record[COLUMN_EMAIL];
+            customer.www = record[COLUMN_WWW];
+            customer.verbandsCode = record[COLUMN_VERBANDS_CODE];
             customer.verband = record[COLUMN_VERBAND];
+            customer.vertreterCode = record[COLUMN_VERTRETER_CODE];
+            customer.nameVertreter = record[COLUMN_VERTRETER_NAME];
+            customer.telefonVertreter = record[COLUMN_VERTRETER_TELEFON];
             customer.emailVertreter = record[COLUMN_EMAIL_VERTRETER];
             customer.verbandsNumber = record[COLUMN_VERBANDS_NUMBER];
-            customer.vertreterCode = record[COLUMN_VERTRETER_CODE];
             customer.manuallyCreated = @(NO);
             
             [mutableArray addObject: customer];

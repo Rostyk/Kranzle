@@ -46,15 +46,22 @@
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
 
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *rabatLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *bottomRabatLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *kdnLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *nameLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *name2Label;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *streetLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *plzLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *ortLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *wwwLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *telefoneLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *wwwLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandsCodeLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterCodeLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterNameLabel;
+@property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterTelefoneLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailVertreterLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandsNumberLabel;
 @end
@@ -93,16 +100,21 @@
 #pragma mark display customer data on form
 
 - (void)populateCustomerData {
+    
     //Fill in customer data
     self.nameLabel.text = self.customer.name;
     self.name2Label.text = self.customer.name2;
     self.streetLabel.text = self.customer.street;
     self.plzLabel.text = self.customer.plz;
     self.ortLabel.text = self.customer.ort;
-    self.wwwLabel.text = self.customer.www;
+    self.telefoneLabel.text = self.customer.telefon;
     self.emailLabel.text = self.customer.email;
+    self.wwwLabel.text = self.customer.www;
+    self.verbandsCodeLabel.text = self.customer.verbandsCode;
     self.verbandLabel.text = self.customer.verband;
-    self.emailVertreterLabel.text = self.customer.email;
+    self.vertreterNameLabel.text = self.customer.nameVertreter;
+    self.vertreterTelefoneLabel.text = self.customer.telefonVertreter;
+    self.emailVertreterLabel.text = self.customer.emailVertreter;
     self.verbandsNumberLabel.text = self.customer.verbandsNumber;
     self.kdnLabel.text = self.customer.number;
     
@@ -149,15 +161,6 @@
 
 - (void)defaultValueDidSelect {
     long value = [FORM_VALUES[self.selectedButton.tag] integerValue];
-    /*
-    UILabel *valueLabel = [[UILabel alloc] initWithFrame: self.selectedButton.frame];
-    valueLabel.backgroundColor = [UIColor clearColor];
-    valueLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12.0f];
-    valueLabel.textAlignment = NSTextAlignmentCenter;
-    valueLabel.text = [NSString stringWithFormat:@"%ld", value];
-    [self.scrollView addSubview: valueLabel];
-    [self.selectedButton removeFromSuperview];
-     */
     
     /*prevent the value to be added to the sum multiple times*/
     if(![self isNumber:self.selectedButton.currentTitle] || self.selectedButton.currentTitle.length == 0) {
@@ -181,6 +184,12 @@
     self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
     [self setTitle:@"Select" forButton:self.selectedButton];
     [self.popover dismissPopoverAnimated:YES];
+}
+
+- (void)setSum:(NSUInteger)sum {
+    _sum = sum;
+    self.rabatLabel.text = [NSString stringWithFormat:@"l %lu", (unsigned long)self.sum];
+    self.bottomRabatLabel.text = [NSString stringWithFormat:@"l %lu", (unsigned long)self.sum];
 }
 
 - (void)setTitle:(NSString *)title forButton:(UIButton *)button
@@ -250,16 +259,39 @@
     
     for (DuplicatableLabel *label in self.labels) {
         if(CGRectContainsRect(self.scrollView.bounds, label.frame) && (self.duplicatedLabels.count < self.labels.count)) {
+           
+            self.kdnLabel.text = self.customer.number;
+            self.nameLabel.text = self.customer.name;
+            self.name2Label.text = self.customer.name2;
+            self.streetLabel.text = self.customer.street;
+            self.plzLabel.text = self.customer.plz;
+            self.ortLabel.text = self.customer.ort;
+            self.telefoneLabel.text = self.customer.telefon;
+            self.emailLabel.text = self.customer.email;
+            self.wwwLabel.text = self.customer.www;
+            self.verbandsCodeLabel.text = self.customer.verbandsCode;
+            self.verbandLabel.text = self.customer.verband;
+            self.vertreterNameLabel.text = self.customer.nameVertreter;
+            self.vertreterTelefoneLabel.text = self.customer.telefonVertreter;
+            self.emailVertreterLabel.text = self.customer.emailVertreter;
+            self.verbandsNumberLabel.text = self.customer.verbandsNumber;
+            
+            
             [self duplicateLabel:self.kdnLabel withVerticalOffset:1096];
             [self duplicateLabel:self.nameLabel withVerticalOffset:1096];
             [self duplicateLabel:self.name2Label withVerticalOffset:1102];
             [self duplicateLabel:self.streetLabel withVerticalOffset:1107];
             [self duplicateLabel:self.verbandLabel withVerticalOffset:1122];
+            [self duplicateLabel:self.plzLabel withVerticalOffset:1112];
             [self duplicateLabel:self.ortLabel withVerticalOffset:1112];
+            [self duplicateLabel:self.telefoneLabel withVerticalOffset:1118];
             [self duplicateLabel:self.verbandsNumberLabel withVerticalOffset:1122];
             [self duplicateLabel:self.wwwLabel withVerticalOffset:1112];
             [self duplicateLabel:self.emailLabel withVerticalOffset:1118];
-            [self duplicateLabel:self.emailVertreterLabel withVerticalOffset:1128];
+            [self duplicateLabel:self.verbandsCodeLabel withVerticalOffset:1122];
+            [self duplicateLabel:self.vertreterNameLabel withVerticalOffset:1129];
+            [self duplicateLabel:self.vertreterTelefoneLabel withVerticalOffset:1129];
+            [self duplicateLabel:self.emailVertreterLabel withVerticalOffset:1129];
         }
     }
     

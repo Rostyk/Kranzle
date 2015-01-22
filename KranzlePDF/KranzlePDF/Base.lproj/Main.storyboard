@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o0g-cZ-4Ma">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o0g-cZ-4Ma">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -414,6 +414,51 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="768" height="1087"/>
                                                 </variation>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="UJ7-Y6-Pba" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="552" y="187" width="154" height="19"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ralph Isco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5S5-Ae-byx" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="160" y="284" width="102" height="19"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="380676461321" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB4-qf-NKl" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="338" y="284" width="149" height="19"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="380634275234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db1-HD-NrK" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="338" y="236" width="149" height="19"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5237" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9z-8C-5Cl" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="371" y="260" width="116" height="19"/>
+                                                </variation>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6542" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-1x-vQ4" customClass="DuplicatableLabel">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
@@ -715,7 +760,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="618" y="962" width="42" height="21"/>
+                                                    <rect key="frame" x="618" y="963" width="42" height="21"/>
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-8E-5bP">
@@ -762,6 +807,15 @@
                                                     <rect key="frame" x="552" y="153" width="154" height="19"/>
                                                 </variation>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="NBn-ui-1QM" customClass="DuplicatableLabel">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="552" y="1293" width="154" height="19"/>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -771,6 +825,11 @@
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="TUb-bA-Z0O"/>
+                                                <exclude reference="UJ7-Y6-Pba"/>
+                                                <exclude reference="5S5-Ae-byx"/>
+                                                <exclude reference="CB4-qf-NKl"/>
+                                                <exclude reference="db1-HD-NrK"/>
+                                                <exclude reference="i9z-8C-5Cl"/>
                                                 <exclude reference="JFp-1x-vQ4"/>
                                                 <exclude reference="jEV-ol-t0z"/>
                                                 <exclude reference="iKl-pj-LRs"/>
@@ -803,6 +862,7 @@
                                                 <exclude reference="OER-V0-v33"/>
                                                 <exclude reference="ZyV-TM-v5a"/>
                                                 <exclude reference="b8y-Rg-UVe"/>
+                                                <exclude reference="NBn-ui-1QM"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="10z-0w-4dB"/>
@@ -812,6 +872,11 @@
                                         <variation key="heightClass=regular">
                                             <mask key="subviews">
                                                 <include reference="TUb-bA-Z0O"/>
+                                                <include reference="UJ7-Y6-Pba"/>
+                                                <include reference="5S5-Ae-byx"/>
+                                                <include reference="CB4-qf-NKl"/>
+                                                <include reference="db1-HD-NrK"/>
+                                                <include reference="i9z-8C-5Cl"/>
                                                 <include reference="JFp-1x-vQ4"/>
                                                 <include reference="jEV-ol-t0z"/>
                                                 <include reference="iKl-pj-LRs"/>
@@ -844,6 +909,7 @@
                                                 <include reference="OER-V0-v33"/>
                                                 <include reference="ZyV-TM-v5a"/>
                                                 <include reference="b8y-Rg-UVe"/>
+                                                <include reference="NBn-ui-1QM"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="10z-0w-4dB"/>
@@ -921,6 +987,7 @@
                     <connections>
                         <outlet property="bottomName1TextField" destination="qWe-t8-ym0" id="Rp3-OI-lVN"/>
                         <outlet property="bottomName2TextField" destination="ZyV-TM-v5a" id="DYu-aS-ZW0"/>
+                        <outlet property="bottomRabatLabel" destination="NBn-ui-1QM" id="lNZ-Zc-Tgt"/>
                         <outlet property="contentView" destination="cJZ-j7-BhM" id="lDs-aZ-2Jb"/>
                         <outlet property="emailLabel" destination="FMq-1u-cPu" id="agy-ZJ-Kib"/>
                         <outlet property="emailVertreterLabel" destination="7SX-D4-PxV" id="ajp-r5-xX7"/>
@@ -937,11 +1004,16 @@
                         <outlet property="ortAndNameTextField2" destination="8rZ-kG-YnV" id="m8k-uT-rn6"/>
                         <outlet property="ortLabel" destination="HmP-We-hJC" id="NBh-lr-jSH"/>
                         <outlet property="plzLabel" destination="cvi-Na-mwH" id="CG2-Mz-iG1"/>
+                        <outlet property="rabatLabel" destination="UJ7-Y6-Pba" id="Dbh-CB-Pbs"/>
                         <outlet property="scrollView" destination="ho8-WH-8J2" id="Gyc-Og-uA9"/>
                         <outlet property="streetLabel" destination="DJj-IZ-D5X" id="ni5-4k-KE6"/>
                         <outlet property="sumLabel" destination="eLn-GX-EOt" id="2xm-sO-SpO"/>
+                        <outlet property="telefoneLabel" destination="db1-HD-NrK" id="xbK-Hq-i8f"/>
                         <outlet property="verbandLabel" destination="JFp-1x-vQ4" id="WXr-Tz-p8o"/>
+                        <outlet property="verbandsCodeLabel" destination="i9z-8C-5Cl" id="ICt-VT-TpL"/>
                         <outlet property="verbandsNumberLabel" destination="jEV-ol-t0z" id="pao-Sm-oMy"/>
+                        <outlet property="vertreterNameLabel" destination="5S5-Ae-byx" id="Bbm-cj-rWR"/>
+                        <outlet property="vertreterTelefoneLabel" destination="CB4-qf-NKl" id="3PM-Y8-6gs"/>
                         <outlet property="wwwLabel" destination="WYP-2R-wwX" id="9cN-Y3-5jb"/>
                         <outletCollection property="labels" destination="dwV-l5-onc" id="5eT-hd-n4s"/>
                         <outletCollection property="labels" destination="gWs-G8-GeW" id="aob-hV-Yvp"/>
@@ -1465,8 +1537,9 @@
                         <outlet property="plzTextField" destination="KmV-2v-9xw" id="sDO-t9-Ymb"/>
                         <outlet property="streetTextField" destination="JFA-Md-xxk" id="j4F-5W-7eD"/>
                         <outlet property="telefaxTextField" destination="u1F-IZ-ExX" id="9HC-iX-wCW"/>
-                        <outlet property="verbandTextField" destination="GP9-i6-aUf" id="egr-XS-ha4"/>
-                        <outlet property="verbandsCodeTextField" destination="VHf-g3-tKm" id="BDD-sz-bOW"/>
+                        <outlet property="telefonTextField" destination="XIK-FD-AD0" id="8aq-IX-BvD"/>
+                        <outlet property="verbandNumberTextField" destination="GP9-i6-aUf" id="Pc0-cJ-wuE"/>
+                        <outlet property="verbandsCodeTextField" destination="VHf-g3-tKm" id="Jfq-tF-Dpl"/>
                         <outlet property="wwwTextField" destination="WQz-Gl-93O" id="pq2-5Z-Das"/>
                         <outletCollection property="textFields" destination="D4f-wC-Qju" id="yhj-xI-6a0"/>
                         <outletCollection property="textFields" destination="uR3-Ow-t5u" id="XoU-Lc-Gyj"/>

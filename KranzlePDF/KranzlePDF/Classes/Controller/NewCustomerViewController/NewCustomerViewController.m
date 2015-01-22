@@ -28,7 +28,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *emailTextField;
 @property (nonatomic, weak) IBOutlet UITextField *wwwTextField;
 @property (nonatomic, weak) IBOutlet UITextField *verbandsCodeTextField;
-@property (nonatomic, weak) IBOutlet UITextField *verbandTextField;
+@property (nonatomic, weak) IBOutlet UITextField *verbandNumberTextField;
 
 @property (nonatomic, strong) IBOutletCollection(UITextField) NSArray *textFields;
 @end
@@ -73,7 +73,7 @@
     self.createdCustomer.www = self.wwwTextField.text;
     self.createdCustomer.verbandsNumber = self.verbandsCodeTextField.text;
     self.createdCustomer.manuallyCreated = @(YES);
-    self.createdCustomer.verband = self.verbandTextField.text;
+    self.createdCustomer.verband = self.verbandNumberTextField.text;
     self.createdCustomer.vertreterCode = [[DataProvider sharedProvider] lastUsedVertreterCode];
     
 }

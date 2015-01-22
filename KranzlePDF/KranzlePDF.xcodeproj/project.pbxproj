@@ -19,6 +19,7 @@
 		9151F57A1A6D93AF00E09997 /* SigningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5771A6D93AF00E09997 /* SigningViewController.m */; };
 		9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5791A6D93AF00E09997 /* SigningView.m */; };
 		9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */; };
+		91648D481A7183B400BEC1AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91648D471A7183B400BEC1AA /* Customer.m */; };
 		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
 		9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56A1A65AD7D0097B892 /* Main.storyboard */; };
 		9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56D1A65AD7D0097B892 /* Images.xcassets */; };
@@ -30,7 +31,6 @@
 		9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5AF1A65BA6E0097B892 /* CollectDataViewController.m */; };
 		916ACC9A1A6831B6007BC7BE /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916ACC991A6831B6007BC7BE /* CustomerListViewController.m */; };
 		916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916ACC9D1A68353B007BC7BE /* CustomerCell.m */; };
-		917B70FD1A6DC1BF00A8774E /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 917B70FC1A6DC1BF00A8774E /* Customer.m */; };
 		91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */; };
 		91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A906F71A66A6EE00DCD4CD /* KRScrollView.m */; };
 		91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B4027A1A670C1E00CFBCB4 /* M13Checkbox.m */; };
@@ -61,6 +61,8 @@
 		9151F5791A6D93AF00E09997 /* SigningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigningView.m; sourceTree = "<group>"; };
 		9151F57D1A6D9E1E00E09997 /* UIImage+scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+scale.h"; path = "UIIMage+scale&crop/UIImage+scale.h"; sourceTree = "<group>"; };
 		9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+scale.m"; path = "UIIMage+scale&crop/UIImage+scale.m"; sourceTree = "<group>"; };
+		91648D461A7183B400BEC1AA /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		91648D471A7183B400BEC1AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		9164F55D1A65AD7D0097B892 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9164F5611A65AD7D0097B892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9164F5621A65AD7D0097B892 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,8 +83,6 @@
 		916ACC991A6831B6007BC7BE /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerListViewController.m; path = CustomerListViewController/CustomerListViewController.m; sourceTree = "<group>"; };
 		916ACC9C1A68353B007BC7BE /* CustomerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerCell.h; path = CustomerListViewController/CustomerCell/CustomerCell.h; sourceTree = "<group>"; };
 		916ACC9D1A68353B007BC7BE /* CustomerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerCell.m; path = CustomerListViewController/CustomerCell/CustomerCell.m; sourceTree = "<group>"; };
-		917B70FB1A6DC1BF00A8774E /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
-		917B70FC1A6DC1BF00A8774E /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		91A906F21A669DB800DCD4CD /* CollectDataPopoverContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectDataPopoverContentViewController.h; sourceTree = "<group>"; };
 		91A906F31A669DB800DCD4CD /* CollectDataPopoverContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectDataPopoverContentViewController.m; sourceTree = "<group>"; };
 		91A906F61A66A6EE00DCD4CD /* KRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KRScrollView.h; path = ScrollView/KRScrollView.h; sourceTree = "<group>"; };
@@ -311,8 +311,8 @@
 		9164F5B11A65BBC50097B892 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				917B70FB1A6DC1BF00A8774E /* Customer.h */,
-				917B70FC1A6DC1BF00A8774E /* Customer.m */,
+				91648D461A7183B400BEC1AA /* Customer.h */,
+				91648D471A7183B400BEC1AA /* Customer.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 				9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */,
 				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
 				916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */,
-				917B70FD1A6DC1BF00A8774E /* Customer.m in Sources */,
+				91648D481A7183B400BEC1AA /* Customer.m in Sources */,
 				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,
 				91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */,
 				91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */,
