@@ -45,10 +45,10 @@
     } failure:^(NSError *error) {
         [self removePreload];
         if(error.code == PARSER_ERROR) {
-            [weakSelf alert: @"Cant parse customer. CSV file corrupted"];
+            [weakSelf alert: @"Die hinterlegte Datenquelle ist fehlerhaft. Bitte wenden Sie sich an den Support."];
         }
         if(error.code == EMPTY_FETCH_RESULT_ERROR) {
-            [weakSelf alert:@"No customers found for this sales number"];
+            [weakSelf alert:@"Keine Kunden mit dieser Vertreternummer gefunden."];
         }
     }];
 }

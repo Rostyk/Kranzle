@@ -33,6 +33,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *sumLabel;
 @property (nonatomic, strong) IBOutletCollection(DuplicatableLabel) NSArray *labels;
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *selectButtons;
 
 @property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField1;
 @property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField2;
@@ -200,7 +201,7 @@
 }
 - (BOOL)isNumber:(NSString*)string {
     NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-    if ([self.selectedButton.titleLabel.text rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+    if ([string rangeOfCharacterFromSet:notDigits].location == NSNotFound)
     {
         return YES;
     }
@@ -339,7 +340,9 @@
 
 #pragma mark render/mail pdf
 - (void)mailPDF {
+    [self showSelectButtons:NO];
     [self renderPDF];
+    [self showSelectButtons:YES];
     [self mail];
 }
 
@@ -416,9 +419,20 @@
 - (void)showSigningViewController {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     SigningViewController *controller = (SigningViewController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"SigningViewControllerID"];
+    controller.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin |
+    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     controller.delegate = self;
     controller.drawingView.frame = CGRectMake(0, 0, 500, 500);
     [self presentViewController:controller animated:YES completion:NULL];
+}
+
+- (void)showSelectButtons:(BOOL)visibility {
+    for (UIButton *button in self.selectButtons) {
+        /*if the button has any value picked, not a 'Wahlen' text*/
+        if(![self isNumber:button.currentTitle])
+            button.hidden = !visibility;
+    }
 }
 
 @end

@@ -20,6 +20,7 @@
 		9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5791A6D93AF00E09997 /* SigningView.m */; };
 		9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */; };
 		91648D481A7183B400BEC1AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91648D471A7183B400BEC1AA /* Customer.m */; };
+		91648D4A1A71A9AE00BEC1AA /* Kraenzle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */; };
 		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
 		9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56A1A65AD7D0097B892 /* Main.storyboard */; };
 		9164F56E1A65AD7D0097B892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56D1A65AD7D0097B892 /* Images.xcassets */; };
@@ -63,6 +64,7 @@
 		9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+scale.m"; path = "UIIMage+scale&crop/UIImage+scale.m"; sourceTree = "<group>"; };
 		91648D461A7183B400BEC1AA /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		91648D471A7183B400BEC1AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kraenzle@2x.png"; sourceTree = "<group>"; };
 		9164F55D1A65AD7D0097B892 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9164F5611A65AD7D0097B892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9164F5621A65AD7D0097B892 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		9164F5A41A65B7EB0097B892 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */,
 				91E1A0871A6D19E2001712BD /* submit-button@2x.png */,
 				914A35981A65D4B300899924 /* PDFImagePage1.png */,
 				914A35991A65D4B300899924 /* PDFImagePage2.png */,
@@ -448,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91648D4A1A71A9AE00BEC1AA /* Kraenzle@2x.png in Resources */,
 				9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */,
 				37A51DF91A6F9960000CCDB8 /* PDFImagePage1.png in Resources */,
 				37A51DF81A6F9960000CCDB8 /* PDFImagePage2.png in Resources */,

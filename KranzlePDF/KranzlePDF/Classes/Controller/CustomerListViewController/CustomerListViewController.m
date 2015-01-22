@@ -51,7 +51,7 @@
                  To get to this screen we should have a proper customer number used,
                  if this number became invalid, most probably it was deallocated or set to nil
                  from somewhere*/
-                [weakSelf alert:@"Invalid customer number"];
+                [weakSelf alert:@"Die eingegebene Kundennummer ist ungültig."];
             }
         }];
     }

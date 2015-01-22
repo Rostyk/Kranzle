@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
-            timestampString = "443653841.075846"
+            timestampString = "443655696.823081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
             landmarkName = "-viewDidLayoutSubviews"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
-            timestampString = "443653841.075846"
+            timestampString = "443655696.823081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "@implementation CollectDataViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
-            timestampString = "443653841.075846"
+            timestampString = "443655696.823081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "337"
-            endingLineNumber = "337"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
             landmarkName = "-setupRightNavigationItem"
             landmarkType = "5">
          </BreakpointContent>
@@ -153,7 +153,7 @@
                   symbolName = "-[CustomerListViewController viewWillAppear:]"
                   moduleName = "KranzlePDF"
                   urlString = "file:///Users/ross/Work/iOsProjects/StashKranzle/KranzlePDF/KranzlePDF/Classes/Controller/CustomerListViewController/CustomerListViewController.m"
-                  timestampString = "443524211.468203"
+                  timestampString = "443657436.251327"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -167,7 +167,7 @@
                   symbolName = "__45-[CustomerListViewController viewWillAppear:]_block_invoke"
                   moduleName = "KranzlePDF"
                   urlString = "file:///Users/ross/Work/iOsProjects/StashKranzle/KranzlePDF/KranzlePDF/Classes/Controller/CustomerListViewController/CustomerListViewController.m"
-                  timestampString = "443524211.46849"
+                  timestampString = "443657436.251636"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
-            timestampString = "443653841.075846"
+            timestampString = "443655696.823081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
             landmarkName = "-signingController:didSignWithImage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
-            timestampString = "443653841.075846"
+            timestampString = "443655696.823081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-defaultValueDidSelect"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,12 +280,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
-            timestampString = "443653841.075846"
+            timestampString = "443655696.823081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "-textFieldDidBeginEditing:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KranzlePDF/Classes/Controller/CollectData/CollectDataViewController.m"
+            timestampString = "443655681.662466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
+            landmarkName = "-renderPDF"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KranzlePDF/Classes/Controller/SigningViewController/SigningViewController.m"
+            timestampString = "443657436.134226"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -98,16 +98,16 @@
 #pragma mark validate fields
 - (BOOL)validateFields {
     if(self.kdnTextField.text.length < 1) {
-         [self alert:@"Please enter Kdn."];
+         [self alert:@"Bitte geben Sie einen Kundennummer ein."];
         return NO;
     }
     if(self.nameTextField.text.length < 1) {
-        [self alert:@"Please enter Name"];
+        [self alert:@"Bitte geben Sie einen Namen ein."];
         return NO;
     }
     
     if(self.streetTextField.text.length < 1) {
-        [self alert:@"Please enter street"];
+        [self alert:@"Bitte geben Sie eine Strasse ein."];
         return NO;
     }
     

@@ -14,6 +14,13 @@
 
 @implementation SigningViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.drawingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin |
+    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+}
+
 - (IBAction)closeWindow:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -61,7 +61,7 @@
                                     <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIc-5E-59H"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dil-RR-YZT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dil-RR-YZT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="436" id="06F-g8-C3e">
@@ -84,7 +84,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-wS-V3D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertreter-Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-wS-V3D">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="153" id="Kor-Gu-YJz"/>
@@ -106,9 +106,29 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kraenzle.png" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-ey-chr">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Tcm-rn-Q1f"/>
+                                    <constraint firstAttribute="width" constant="76" id="e81-oP-7hV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Tcm-rn-Q1f"/>
+                                        <exclude reference="e81-oP-7hV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Tcm-rn-Q1f"/>
+                                        <include reference="e81-oP-7hV"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ddJ-ey-chr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4E5-LF-8o3"/>
                             <constraint firstAttribute="centerX" secondItem="B7K-cq-WgF" secondAttribute="centerX" id="6Gb-4o-gi9"/>
                             <constraint firstItem="dil-RR-YZT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="181" id="Ai4-Nc-W1i">
                                 <variation key="heightClass=regular" constant="188"/>
@@ -121,14 +141,18 @@
                             <constraint firstItem="dil-RR-YZT" firstAttribute="top" secondItem="dF5-wS-V3D" secondAttribute="bottom" constant="22" id="fAT-Bg-vMG">
                                 <variation key="heightClass=regular" constant="8"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="ddJ-ey-chr" secondAttribute="centerX" id="pUv-Oi-e03"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="B7K-cq-WgF"/>
                                 <exclude reference="dil-RR-YZT"/>
                                 <exclude reference="dF5-wS-V3D"/>
+                                <exclude reference="ddJ-ey-chr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4E5-LF-8o3"/>
+                                <exclude reference="pUv-Oi-e03"/>
                                 <exclude reference="Ai4-Nc-W1i"/>
                                 <exclude reference="Cqk-MT-zEi"/>
                                 <exclude reference="YcP-n5-0vN"/>
@@ -142,8 +166,11 @@
                                 <include reference="B7K-cq-WgF"/>
                                 <include reference="dil-RR-YZT"/>
                                 <include reference="dF5-wS-V3D"/>
+                                <include reference="ddJ-ey-chr"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4E5-LF-8o3"/>
+                                <include reference="pUv-Oi-e03"/>
                                 <include reference="Ai4-Nc-W1i"/>
                                 <include reference="Cqk-MT-zEi"/>
                                 <include reference="YcP-n5-0vN"/>
@@ -480,7 +507,7 @@
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-pj-LRs">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -494,7 +521,7 @@
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btr-L3-Bjs">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -508,7 +535,7 @@
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njZ-r1-Xf9">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -522,7 +549,7 @@
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-QU-M3h">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -536,7 +563,7 @@
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJ8-5v-Vln">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -550,7 +577,7 @@
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N44-Nt-L0v">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -564,7 +591,7 @@
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTm-Hd-rDo">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -578,7 +605,7 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-Pb-8tm">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -716,7 +743,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-wR-wHQ">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Select">
+                                                <state key="normal" title="Wählen">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1024,16 +1051,25 @@
                         <outletCollection property="labels" destination="FMq-1u-cPu" id="KCb-Zn-Sh7"/>
                         <outletCollection property="labels" destination="jEV-ol-t0z" id="EqW-qH-A3n"/>
                         <outletCollection property="labels" destination="7SX-D4-PxV" id="9dP-yX-u38"/>
+                        <outletCollection property="selectButtons" destination="Mi0-wR-wHQ" id="qmj-Nw-SEJ"/>
+                        <outletCollection property="selectButtons" destination="N44-Nt-L0v" id="ueE-tv-NnA"/>
+                        <outletCollection property="selectButtons" destination="Frd-Pb-8tm" id="zRu-jq-Ow8"/>
+                        <outletCollection property="selectButtons" destination="YJ8-5v-Vln" id="M3c-jC-LIj"/>
+                        <outletCollection property="selectButtons" destination="rBX-QU-M3h" id="OYH-vb-Zah"/>
+                        <outletCollection property="selectButtons" destination="njZ-r1-Xf9" id="0TR-lG-T8V"/>
+                        <outletCollection property="selectButtons" destination="Btr-L3-Bjs" id="rYx-xI-15m"/>
+                        <outletCollection property="selectButtons" destination="iKl-pj-LRs" id="PoR-DP-nDR"/>
+                        <outletCollection property="selectButtons" destination="uTm-Hd-rDo" id="1yk-cd-8C6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifF-TY-qNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960" y="31.5"/>
         </scene>
-        <!--New Customer-->
+        <!--Neuen Kunden angelegen-->
         <scene sceneID="gsg-ec-NoX">
             <objects>
-                <viewController storyboardIdentifier="NewCustomerViewControllerID" title="New Customer" id="RjI-31-wb5" customClass="NewCustomerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCustomerViewControllerID" title="Neuen Kunden angelegen" id="RjI-31-wb5" customClass="NewCustomerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J2y-Pg-C1h"/>
                         <viewControllerLayoutGuide type="bottom" id="7X2-md-Rvx"/>
@@ -1072,10 +1108,12 @@
                                                     <outlet property="delegate" destination="RjI-31-wb5" id="b86-zt-HqB"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kdn." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3V-r6-uzw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kundennummer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3V-r6-uzw">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="84" id="4zE-sZ-tiN"/>
+                                                    <constraint firstAttribute="width" constant="84" id="4zE-sZ-tiN">
+                                                        <variation key="heightClass=regular" constant="138"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="height" constant="21" id="vtF-Ew-IV7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -1165,7 +1203,7 @@
                                                     <outlet property="delegate" destination="RjI-31-wb5" id="7NL-DD-HN3"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRn-dZ-EOI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straße " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRn-dZ-EOI">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1185,7 +1223,7 @@
                                                     <outlet property="delegate" destination="RjI-31-wb5" id="OtJ-ul-TpN"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEn-Xm-1VJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEn-Xm-1VJ">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1611,6 +1649,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Kraenzle.png" width="76" height="76"/>
         <image name="PDFImagePage1.png" width="1536" height="2174"/>
         <image name="PDFImagePage2.png" width="1536" height="2174"/>
         <image name="login-button.png" width="240" height="75"/>
