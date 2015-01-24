@@ -298,7 +298,7 @@
 
 -(BOOL) navigationShouldPopOnBackButton {
     if(self.needsPin) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Bitte geben Sie einen Pin ein." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben Sie einen Pin ein." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         alert.tag = 123;
         [alert show];
