@@ -14,8 +14,12 @@
 #import "DuplicatableLabel.h"
 #import "SigningViewController.h"
 #import "UIImage+scale.h"
+#import "ControlCloner.h"
+#import "DuplicatableTextField.h"
+#import "TextCache.h"
 
 @interface CollectDataViewController()
+@property (nonatomic, strong) UITextField *activeField;
 @property (nonatomic, strong) UIButton *selectedButton;
 @property (nonatomic, strong) UIPopoverController *popover;
 @property (nonatomic, strong) M13Checkbox *lagerwareCheckbox;
@@ -32,35 +36,34 @@
 @property (nonatomic, weak) IBOutlet UIButton *kranzleSignButton;
 
 @property (nonatomic, weak) IBOutlet UILabel *sumLabel;
-@property (nonatomic, strong) IBOutletCollection(DuplicatableLabel) NSArray *labels;
+/*all the labels need to be duplicated in the seccond page should be added to this outlet collection(labels)*/
+@property (nonatomic, strong) IBOutletCollection(UIView) NSArray *labels;
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *selectButtons;
 
 @property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField1;
 @property (nonatomic, weak) IBOutlet UITextField *ortAndNameTextField2;
 
 @property (nonatomic, weak) IBOutlet UITextField *fachhandelsvertragTextField;
-@property (nonatomic, weak) IBOutlet UILabel *fachhandelsvertragLabel;
 @property (nonatomic, weak) IBOutlet UITextField *konditionsvereinbarungTextField;
-@property (nonatomic, weak) IBOutlet UILabel *konditionsvereinbarungLabel;
 
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *contentView;
 
+@property (nonatomic, weak) IBOutlet UITextField *ansprechpartnerTextField;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *rabatLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *bottomRabatLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *kdnLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UITextField *nameTextField;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *name2Label;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *streetLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *plzLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *ortLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *telefoneLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *emailLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *wwwLabel;
+@property (nonatomic, weak) IBOutlet UITextField *streetTextField;
+@property (nonatomic, weak) IBOutlet UITextField *plzTextField;
+@property (nonatomic, weak) IBOutlet UITextField *ortTextField;
+@property (nonatomic, weak) IBOutlet UITextField *telefonTextField;
+@property (nonatomic, weak) IBOutlet UITextField *emailTextField;
+@property (nonatomic, weak) IBOutlet UITextField *wwwTextField;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandsCodeLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterCodeLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterNameLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterTelefoneLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailVertreterLabel;
@@ -84,17 +87,18 @@
     self.scrollView.panGestureRecognizer.delaysTouchesBegan = self.scrollView.delaysContentTouches;
     
     [self populateCustomerData];
+    [self registerForKeyboardNotifications];
+    
+    [[TextCache sharedCache] startCachingCustomer:self.customer];
+    [TextCache sharedCache].cacheType = CACHE_TYPE_SINGLE_CUSTOMER;
+    [self restoreFields];
     /*removed in the lst update */
     //[self addCheckBoxes];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillShow:)
-                                                 name:@"UIKeyboardWillShowNotification"
-                                               object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
 
@@ -103,14 +107,14 @@
 - (void)populateCustomerData {
     
     //Fill in customer data
-    self.nameLabel.text = self.customer.name;
+    self.nameTextField.text = self.customer.name;
     self.name2Label.text = self.customer.name2;
-    self.streetLabel.text = self.customer.street;
-    self.plzLabel.text = self.customer.plz;
-    self.ortLabel.text = self.customer.ort;
-    self.telefoneLabel.text = self.customer.telefon;
-    self.emailLabel.text = self.customer.email;
-    self.wwwLabel.text = self.customer.www;
+    self.streetTextField.text = self.customer.street;
+    self.plzTextField.text = self.customer.plz;
+    self.ortTextField.text = self.customer.ort;
+    self.telefonTextField.text = self.customer.telefon;
+    self.emailTextField.text = self.customer.email;
+    self.wwwTextField.text = self.customer.www;
     self.verbandsCodeLabel.text = self.customer.verbandsCode;
     self.verbandLabel.text = self.customer.verband;
     self.vertreterNameLabel.text = self.customer.nameVertreter;
@@ -141,7 +145,6 @@
     self.selectedButton = button;
     [self addPopoverNearButtonFrame:button.frame];
 }
-
 
 #pragma mark add popover
 
@@ -183,7 +186,7 @@
         self.sum -= [self.selectedButton.titleLabel.text integerValue];
     }
     self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
-    [self setTitle:@"Select" forButton:self.selectedButton];
+    [self setTitle:@"Wählen" forButton:self.selectedButton];
     [self.popover dismissPopoverAnimated:YES];
 }
 
@@ -199,6 +202,7 @@
     [button setTitle:title forState:UIControlStateHighlighted];
     [button setTitle:title forState:UIControlStateSelected];
 }
+
 - (BOOL)isNumber:(NSString*)string {
     NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
     if ([string rangeOfCharacterFromSet:notDigits].location == NSNotFound)
@@ -209,14 +213,24 @@
     return NO;
 }
 
-
 #pragma mark text filed delegate
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    if(textField == self.fachhandelsvertragTextField)
-        self.fachhandelsvertragLabel.text = textField.text;
-    if(textField == self.konditionsvereinbarungTextField)
-        self.konditionsvereinbarungLabel.text = textField.text;
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if([self.labels containsObject:textField]) {
+        /*we remove all 16 labels and add duplicate them again.
+         Reafctor it for a single label later*/
+        [self clearDuplicatedLabels];
+        [self duplicateLabels];
+    }
+    
+    [[TextCache sharedCache] saveTexTField:textField];
+    self.activeField = nil;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField*)textField
@@ -224,32 +238,10 @@
     if(textField == self.bottomName1TextField || textField == self.bottomName2TextField) {
         [self.scrollView setContentOffset:CGPointMake(0, 1128) animated:YES];
     }
+    
     [textField resignFirstResponder];
     return YES;
 }
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    int y = 560;
-    
-
-    if(textField == self.bottomName1TextField || textField == self.bottomName2TextField) {
-        [self.scrollView setContentOffset:CGPointMake(0,  ([self.contentView convertPoint:textField.frame.origin toView:self.scrollView].y - y + textField.frame.size.height)) animated:YES];
-    }
-}
-
-#pragma mark keyboard
-
--(void)keyboardWillShow:(NSNotification *)notification
-{
-    NSDictionary *info  = notification.userInfo;
-    NSValue      *value = info[UIKeyboardFrameEndUserInfoKey];
-    
-    CGRect rawFrame      = [value CGRectValue];
-    CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
-    
-    self.keyboardHeight = keyboardFrame.size.height;
-}
-
 
 #pragma mark duplicate labels
 
@@ -258,62 +250,45 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    for (DuplicatableLabel *label in self.labels) {
-        if(CGRectContainsRect(self.scrollView.bounds, label.frame) && (self.duplicatedLabels.count < self.labels.count)) {
-           
-            self.kdnLabel.text = self.customer.number;
-            self.nameLabel.text = self.customer.name;
-            self.name2Label.text = self.customer.name2;
-            self.streetLabel.text = self.customer.street;
-            self.plzLabel.text = self.customer.plz;
-            self.ortLabel.text = self.customer.ort;
-            self.telefoneLabel.text = self.customer.telefon;
-            self.emailLabel.text = self.customer.email;
-            self.wwwLabel.text = self.customer.www;
-            self.verbandsCodeLabel.text = self.customer.verbandsCode;
-            self.verbandLabel.text = self.customer.verband;
-            self.vertreterNameLabel.text = self.customer.nameVertreter;
-            self.vertreterTelefoneLabel.text = self.customer.telefonVertreter;
-            self.emailVertreterLabel.text = self.customer.emailVertreter;
-            self.verbandsNumberLabel.text = self.customer.verbandsNumber;
-            
-            
-            [self duplicateLabel:self.kdnLabel withVerticalOffset:1096];
-            [self duplicateLabel:self.nameLabel withVerticalOffset:1096];
-            [self duplicateLabel:self.name2Label withVerticalOffset:1102];
-            [self duplicateLabel:self.streetLabel withVerticalOffset:1107];
-            [self duplicateLabel:self.verbandLabel withVerticalOffset:1122];
-            [self duplicateLabel:self.plzLabel withVerticalOffset:1112];
-            [self duplicateLabel:self.ortLabel withVerticalOffset:1112];
-            [self duplicateLabel:self.telefoneLabel withVerticalOffset:1118];
-            [self duplicateLabel:self.verbandsNumberLabel withVerticalOffset:1122];
-            [self duplicateLabel:self.wwwLabel withVerticalOffset:1112];
-            [self duplicateLabel:self.emailLabel withVerticalOffset:1118];
-            [self duplicateLabel:self.verbandsCodeLabel withVerticalOffset:1122];
-            [self duplicateLabel:self.vertreterNameLabel withVerticalOffset:1129];
-            [self duplicateLabel:self.vertreterTelefoneLabel withVerticalOffset:1129];
-            [self duplicateLabel:self.emailVertreterLabel withVerticalOffset:1129];
-        }
-    }
-    
-    [self.contentView bringSubviewToFront:self.lagerwareCheckbox];
-    [self.contentView bringSubviewToFront:self.exclusivitatCheckbox];
+    [self duplicateLabels];
 }
 
-- (void)duplicateLabel:(DuplicatableLabel *)label withVerticalOffset:(int)offset {
-    if(label.duplicated == NO) {
-        CGRect frame = [label frame];
-        frame.origin.y += offset;
-        
-        UILabel *newLabel = [[UILabel alloc] initWithFrame:frame];
-        newLabel.backgroundColor = [UIColor clearColor];
-        newLabel.font = label.font;
-        newLabel.textAlignment = label.textAlignment;
-        newLabel.adjustsFontSizeToFitWidth = YES;
-        newLabel.minimumScaleFactor = label.minimumScaleFactor;
-        newLabel.text = label.text;
-        label.duplicated = YES;
-        
+- (void)duplicateLabels {
+    for (DuplicatableLabel *label in self.labels) {
+        if(CGRectContainsRect(self.scrollView.bounds, label.frame) && (self.duplicatedLabels.count < self.labels.count)) {
+            
+            [self duplicateView:self.kdnLabel withVerticalOffset:1096];
+            [self duplicateView:self.nameTextField withVerticalOffset:1096];
+            [self duplicateView:self.name2Label withVerticalOffset:1102];
+            [self duplicateView:self.streetTextField withVerticalOffset:1107];
+            [self duplicateView:self.verbandLabel withVerticalOffset:1122];
+            [self duplicateView:self.plzTextField withVerticalOffset:1112];
+            [self duplicateView:self.ortTextField withVerticalOffset:1112];
+            [self duplicateView:self.telefonTextField withVerticalOffset:1118];
+            [self duplicateView:self.ansprechpartnerTextField withVerticalOffset:1118];
+            [self duplicateView:self.verbandsNumberLabel withVerticalOffset:1122];
+            [self duplicateView:self.wwwTextField withVerticalOffset:1112];
+            [self duplicateView:self.emailTextField withVerticalOffset:1118];
+            [self duplicateView:self.verbandsCodeLabel withVerticalOffset:1122];
+            [self duplicateView:self.vertreterNameLabel withVerticalOffset:1129];
+            [self duplicateView:self.vertreterTelefoneLabel withVerticalOffset:1129];
+            [self duplicateView:self.emailVertreterLabel withVerticalOffset:1129];
+            [self duplicateView:self.fachhandelsvertragTextField withVerticalOffset:1132];
+            [self duplicateView:self.konditionsvereinbarungTextField withVerticalOffset:1132];
+        }
+    }
+}
+
+- (void)clearDuplicatedLabels {
+    for (DuplicatableLabel *label in self.duplicatedLabels) {
+        [label removeFromSuperview];
+    }
+    [self.duplicatedLabels removeAllObjects];
+}
+
+- (void)duplicateView:(UIView *)view withVerticalOffset:(int)offset {
+    UILabel *newLabel = [ControlCloner clone:view withOffset:offset];
+    if(newLabel) {
         [self.duplicatedLabels addObject:newLabel];
         [self.contentView addSubview:newLabel];
     }
@@ -334,16 +309,51 @@
 #pragma mark right navigation button
 
 - (void)setupRightNavigationItem {
-    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(mailPDF)];
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(mailButtonClicked)];
     self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
+#pragma mark action sheet
+- (void)showActionSheet {
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Nicht gesetzte angaben werden mit \"Keine\" bzw. \"nicht vorhanden\" gefüllt." delegate:self cancelButtonTitle:@"Angaben ergänzen" destructiveButtonTitle:nil otherButtonTitles:@"Senden", @"Angaben ergänzen", nil];
+    popup.tag = 1;
+    [popup showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (popup.tag) {
+        case 1: {
+            switch (buttonIndex) {
+                case ACTION_SENDEN: {
+                    [self mail];
+                    break;
+                }
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
+
 #pragma mark render/mail pdf
-- (void)mailPDF {
+
+- (void)mailButtonClicked {
+    if([self checkFieldsAvailableForInput]) {
+        [self mail];
+    }
+    else {
+        [self showActionSheet];
+    }
+}
+
+- (void)mail {
     [self showSelectButtons:NO];
+    [self fillEmptyFieldsWithText:YES];
     [self renderPDF];
     [self showSelectButtons:YES];
-    [self mail];
+    [self fillEmptyFieldsWithText:NO];
+    [self mailPDF];
 }
 
 - (void)renderPDF {
@@ -360,7 +370,7 @@
     [pdfData writeToFile:pdfFileName atomically:NO];
 }
 
-- (void)mail {
+- (void)mailPDF {
     NSArray *mails =  @[@"konditionsvereinbarung@kraenzle.com"];
     if(self.customer.email.length > 0)
         mails = @[@"konditionsvereinbarung@kraenzle.com", self.customer.email];
@@ -388,7 +398,7 @@
         NSURL *url = [NSURL fileURLWithPath:pdfFileName];
         NSData *data = [[NSData alloc] initWithContentsOfURL:url];
         
-        [composeViewController addAttachmentData:data mimeType:@"application/pdf" fileName:@"Form.pdf"];
+        [composeViewController addAttachmentData:data mimeType:@"application/pdf" fileName:[NSString stringWithFormat:@"%@ Konditionsvereinbarung.pdf", self.customer.number]];
         [self presentViewController:composeViewController animated:YES completion:nil];
     }
 }
@@ -406,6 +416,7 @@
 }
 
 #pragma mark sign buttons handlers
+
 - (IBAction)fachhandelsPartnerSignButtonClicked:(id)sender {
     self.selectedSignButton = self.fachhandelsPartnerSignButton;
     [self showSigningViewController];
@@ -422,6 +433,7 @@
     controller.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin |
     UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
     UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    
     controller.delegate = self;
     controller.drawingView.frame = CGRectMake(0, 0, 500, 500);
     [self presentViewController:controller animated:YES completion:NULL];
@@ -433,6 +445,91 @@
         if(![self isNumber:button.currentTitle])
             button.hidden = !visibility;
     }
+}
+
+#pragma mark keyboard
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+        [self.scrollView scrollRectToVisible:self.activeField.frame animated:YES];
+    }
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+#pragma mark cahce
+
+- (void)restoreFields {
+    for(UIView *view in self.labels) {
+        if([view isKindOfClass:[UITextField class]]) {
+            UITextField *field = (UITextField *)view;
+            [[TextCache sharedCache] restoreTextForTextField:field];
+        }
+    }
+    
+    [[TextCache sharedCache] restoreTextForTextField:self.bottomName1TextField];
+    [[TextCache sharedCache] restoreTextForTextField:self.bottomName2TextField];
+    [[TextCache sharedCache] restoreTextForTextField:self.ortAndNameTextField1];
+    [[TextCache sharedCache] restoreTextForTextField:self.ortAndNameTextField2];
+}
+
+#pragma mark check fields
+
+- (BOOL)checkFieldsAvailableForInput {
+    for (UIView *view in self.labels) {
+        if([view isKindOfClass:[UITextField class]]) {
+            UITextField *field = (UITextField *)view;
+            if(field.text.length < 1) {
+                return NO;
+            }
+        }
+    }
+    
+    return YES;
+}
+
+- (void)fillEmptyFieldsWithText:(BOOL)fill {
+    for (UIView *view in self.labels) {
+        if([view isKindOfClass:[UITextField class]]) {
+            UITextField *field = (UITextField *)view;
+            if(field.text.length < 1) {
+                if(fill)
+                    field.text = KEINE_ANGABE;
+            }
+            else if([field.text isEqualToString:KEINE_ANGABE]) {
+                field.text = @"";
+            }
+        }
+    }
+
 }
 
 @end

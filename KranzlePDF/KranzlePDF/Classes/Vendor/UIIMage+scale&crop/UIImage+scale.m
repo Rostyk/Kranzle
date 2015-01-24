@@ -29,7 +29,7 @@
         CGFloat widthFactor = targetWidth / width;
         CGFloat heightFactor = targetHeight / height;
         
-        if (widthFactor > heightFactor)
+        if (widthFactor < heightFactor)
         {
             scaleFactor = widthFactor; // scale to fit height
         }

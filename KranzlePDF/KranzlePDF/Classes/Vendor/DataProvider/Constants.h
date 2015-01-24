@@ -32,6 +32,9 @@
 
 #define FORM_VALUES             @[@(20), @(23), @(3), @(6), @(3), @(2), @(4), @(2), @(6)]
 
+#define PIN                       @"33605"
+#define KEINE_ANGABE              @"Keine Angabe"
+
 typedef enum {
     PARSER_ERROR = 0,
     EMPTY_FETCH_RESULT_ERROR,

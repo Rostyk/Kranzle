@@ -19,6 +19,11 @@
 		9151F57A1A6D93AF00E09997 /* SigningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5771A6D93AF00E09997 /* SigningViewController.m */; };
 		9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5791A6D93AF00E09997 /* SigningView.m */; };
 		9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */; };
+		915ABD9D1A73C7ED00B1EF56 /* DuplicatableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABD9C1A73C7ED00B1EF56 /* DuplicatableTextField.m */; };
+		915ABDA01A73CC1900B1EF56 /* ControlCloner.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABD9F1A73CC1900B1EF56 /* ControlCloner.m */; };
+		915ABDA41A73DC2D00B1EF56 /* TextCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABDA31A73DC2D00B1EF56 /* TextCache.m */; };
+		915ABDA71A73E0CC00B1EF56 /* CacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABDA61A73E0CC00B1EF56 /* CacheItem.m */; };
+		915ABDAB1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABDAA1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m */; };
 		91648D481A7183B400BEC1AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91648D471A7183B400BEC1AA /* Customer.m */; };
 		91648D4A1A71A9AE00BEC1AA /* Kraenzle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */; };
 		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
@@ -62,6 +67,16 @@
 		9151F5791A6D93AF00E09997 /* SigningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigningView.m; sourceTree = "<group>"; };
 		9151F57D1A6D9E1E00E09997 /* UIImage+scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+scale.h"; path = "UIIMage+scale&crop/UIImage+scale.h"; sourceTree = "<group>"; };
 		9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+scale.m"; path = "UIIMage+scale&crop/UIImage+scale.m"; sourceTree = "<group>"; };
+		915ABD9B1A73C7ED00B1EF56 /* DuplicatableTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableTextField.h; path = Label/DuplicatableTextField.h; sourceTree = "<group>"; };
+		915ABD9C1A73C7ED00B1EF56 /* DuplicatableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableTextField.m; path = Label/DuplicatableTextField.m; sourceTree = "<group>"; };
+		915ABD9E1A73CC1900B1EF56 /* ControlCloner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlCloner.h; path = Label/ControlCloner.h; sourceTree = "<group>"; };
+		915ABD9F1A73CC1900B1EF56 /* ControlCloner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControlCloner.m; path = Label/ControlCloner.m; sourceTree = "<group>"; };
+		915ABDA21A73DC2D00B1EF56 /* TextCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextCache.h; sourceTree = "<group>"; };
+		915ABDA31A73DC2D00B1EF56 /* TextCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCache.m; sourceTree = "<group>"; };
+		915ABDA51A73E0CC00B1EF56 /* CacheItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheItem.h; sourceTree = "<group>"; };
+		915ABDA61A73E0CC00B1EF56 /* CacheItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheItem.m; sourceTree = "<group>"; };
+		915ABDA91A73FA1700B1EF56 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		915ABDAA1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		91648D461A7183B400BEC1AA /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		91648D471A7183B400BEC1AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kraenzle@2x.png"; sourceTree = "<group>"; };
@@ -119,6 +134,10 @@
 			children = (
 				9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */,
 				9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */,
+				915ABD9B1A73C7ED00B1EF56 /* DuplicatableTextField.h */,
+				915ABD9C1A73C7ED00B1EF56 /* DuplicatableTextField.m */,
+				915ABD9E1A73CC1900B1EF56 /* ControlCloner.h */,
+				915ABD9F1A73CC1900B1EF56 /* ControlCloner.m */,
 			);
 			name = Label;
 			sourceTree = "<group>";
@@ -168,6 +187,26 @@
 				9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */,
 			);
 			name = "UIIMage+scale&crop";
+			sourceTree = "<group>";
+		};
+		915ABDA11A73DC0E00B1EF56 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				915ABDA21A73DC2D00B1EF56 /* TextCache.h */,
+				915ABDA31A73DC2D00B1EF56 /* TextCache.m */,
+				915ABDA51A73E0CC00B1EF56 /* CacheItem.h */,
+				915ABDA61A73E0CC00B1EF56 /* CacheItem.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		915ABDA81A73FA1700B1EF56 /* UIViewController-BackButtonHandler */ = {
+			isa = PBXGroup;
+			children = (
+				915ABDA91A73FA1700B1EF56 /* UIViewController+BackButtonHandler.h */,
+				915ABDAA1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m */,
+			);
+			path = "UIViewController-BackButtonHandler";
 			sourceTree = "<group>";
 		};
 		9164F5541A65AD7D0097B892 = {
@@ -245,6 +284,8 @@
 		9164F5931A65AEE10097B892 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				915ABDA81A73FA1700B1EF56 /* UIViewController-BackButtonHandler */,
+				915ABDA11A73DC0E00B1EF56 /* Cache */,
 				9151F57C1A6D9DB600E09997 /* UIIMage+scale&crop */,
 				91DAC6551A6B1A5900D1A03D /* MBProgressHUD */,
 				91B4027C1A67298000CFBCB4 /* Parser */,
@@ -474,12 +515,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9134DAB01A6C83DC00774277 /* NewCustomerViewController.m in Sources */,
+				915ABDA71A73E0CC00B1EF56 /* CacheItem.m in Sources */,
 				9151F57A1A6D93AF00E09997 /* SigningViewController.m in Sources */,
 				9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */,
 				91A906F41A669DB800DCD4CD /* CollectDataPopoverContentViewController.m in Sources */,
+				915ABDAB1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */,
 				9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */,
+				915ABD9D1A73C7ED00B1EF56 /* DuplicatableTextField.m in Sources */,
+				915ABDA01A73CC1900B1EF56 /* ControlCloner.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
 				9164F5631A65AD7D0097B892 /* main.m in Sources */,
 				9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */,
@@ -493,6 +538,7 @@
 				91B4027F1A67298000CFBCB4 /* CSVParser.m in Sources */,
 				914A35A11A65DEB100899924 /* ScrollViewToPDF.m in Sources */,
 				91DAC6581A6B1A5900D1A03D /* MBProgressHUD.m in Sources */,
+				915ABDA41A73DC2D00B1EF56 /* TextCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

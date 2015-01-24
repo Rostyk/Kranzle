@@ -14,6 +14,7 @@
 #import "CollectDataViewController.h"
 #import "NewCustomerViewController.h"
 #import "AppDelegate.h"
+#import "UIViewController+BackButtonHandler.h"
 
 @interface CustomerListViewController ()
 @property (nonatomic) TABLE_MODE tableMode;
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) NSArray *manuallyAddedRows;
 @property (nonatomic, strong) NSArray *parsedRows;
 @property (nonatomic, weak) IBOutlet UITableView *customerTableView;
+@property (nonatomic) BOOL needsPin;
 @end
 
 @implementation CustomerListViewController
@@ -29,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupRightNavigationItem];
-    
+    self.needsPin = YES;
     self.rows = [DataProvider sharedProvider].fetchedRows;
     [self reloadData];
 }
@@ -64,6 +66,8 @@
     self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
+#pragma mark reload
+
 - (void)reloadData {
     NSArray *allCustomers = self.rows;
     
@@ -73,7 +77,6 @@
     self.parsedRows = [allCustomers filteredArrayUsingPredicate:pred];
     
     [self.customerTableView reloadData];
-
 }
 
 #pragma mark table view datasource
@@ -200,7 +203,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if(self.tableMode == DOUBLE_SECTION_TABLE_MODE) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 26)];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 3, tableView.frame.size.width, 16)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 4, tableView.frame.size.width, 16)];
         [label setFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:15]];
         
         if(section == MANUALLY_CREATED_CUSTOMERS_SECTION) {
@@ -214,7 +217,19 @@
         return view;
     }
     
-    return nil;
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 0.5)];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if(self.tableMode == DOUBLE_SECTION_TABLE_MODE) {
+        return 24.0;
+    }
+
+    return 0.0000001f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.0000001f;
 }
 
 #pragma mark searchbar delegate
@@ -279,6 +294,29 @@
     [alert show];
 }
 
+#pragma mark pin protection
 
+-(BOOL) navigationShouldPopOnBackButton {
+    if(self.needsPin) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Bitte geben Sie einen Pin ein." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        alert.tag = 123;
+        [alert show];
+        return NO;
+    }
+    return YES;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(alertView.tag == 123) {
+        NSString *enteredPin = [[alertView textFieldAtIndex:0] text];
+        if([enteredPin isEqualToString:PIN]) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        else {
+            [self alert:@"Der eingebene Pin-code ist ungültig."];
+        }
+    }
+}
 
 @end

@@ -11,8 +11,13 @@
 #import <MessageUI/MessageUI.h>
 #import "SigningViewController.h"
 
+typedef enum {
+    ACTION_SENDEN = 0
+} ACTION_SHEET_ACTION;
+
+
 @class Customer;
 
-@interface CollectDataViewController : UIViewController<CollectDataPopoverDelegate, UITextFieldDelegate, MFMailComposeViewControllerDelegate, SigningDelegate>
+@interface CollectDataViewController : UIViewController<CollectDataPopoverDelegate, UITextFieldDelegate, MFMailComposeViewControllerDelegate, SigningDelegate, UIActionSheetDelegate>
 @property (nonatomic, strong) Customer *customer;
 @end

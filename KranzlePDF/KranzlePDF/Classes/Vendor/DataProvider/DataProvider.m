@@ -149,17 +149,7 @@
 - (Customer *)createNewCustomer {
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     Customer *customer = [[Customer alloc] initWithEntity:[NSEntityDescription entityForName:@"Customer" inManagedObjectContext:delegate.managedObjectContext] insertIntoManagedObjectContext:delegate.managedObjectContext];
-    /*
-    customer.number = @"787987";
-    customer.verbandsNumber = @"345";
-    customer.vertreterCode = [[DataProvider sharedProvider] lastUsedVertreterCode];
-    customer.name = @"Ross";
-    customer.name2 = @"Stepanyak";
-    customer.street = @"Stryjska street 78/141";
-    customer.ort = @"Lviv";
-    customer.plz = @"EE375";
-    customer.manuallyCreated = @(YES);
-     */
+    
     return customer;
 }
 

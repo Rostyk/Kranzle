@@ -24,9 +24,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.title = @"";
+}
+
+/*set the title to Einstellungen in order to show the proper back button on the susequent screen*/
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.title = @"Einstellungen";
+}
+
+/*Clear text field*/
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.salesIDTextfield.text = @"";
+}
 
 #pragma mark login
 
