@@ -28,6 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self checkStoredVertreterCode];
     self.title = @"";
 }
 
@@ -49,12 +50,19 @@
     
     //disimss the keyboard
     [self.salesIDTextfield resignFirstResponder];
-    
+    [self loginWitVertreterCode:self.salesIDTextfield.text];
     //add preload grpahics
-    [self addPreload];
+   
+}
+
+- (void)loginWitVertreterCode:(NSString *)code {
     __weak typeof(self) weakSelf = self;
-    NSString *customerNumber = self.salesIDTextfield.text;
+    [self addPreload];
+    NSString *customerNumber = code;
     [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber sucess:^(NSArray *records) {
+        [[NSUserDefaults standardUserDefaults] setObject:code forKey:@"VertreterCode"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
         [self removePreload];
         [weakSelf showCustomerList];
     } failure:^(NSError *error) {
@@ -67,7 +75,6 @@
         }
     }];
 }
-
 
 #pragma mark open collect data view controller
 
@@ -90,10 +97,16 @@
 }
 
 #pragma mark preload
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.view bringSubviewToFront:self.hud];
+}
 
 - (void)addPreload {
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    self.hud.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
     [self.view addSubview:self.hud];
+    [self.view bringSubviewToFront:self.hud];
     
     self.hud.labelText = @"Logging";
     [self.hud show: YES];
@@ -101,6 +114,13 @@
 
 - (void)removePreload {
     [self.hud hide:YES];
+}
+
+- (void)checkStoredVertreterCode {
+    NSString *vertreterCode = [[NSUserDefaults standardUserDefaults] objectForKey:@"VertreterCode"];
+    if(vertreterCode) {
+        [self loginWitVertreterCode:vertreterCode];
+    }
 }
 
 @end
