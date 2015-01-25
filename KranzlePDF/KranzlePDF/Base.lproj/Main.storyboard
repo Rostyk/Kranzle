@@ -776,7 +776,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="618" y="963" width="42" height="21"/>
+                                                    <rect key="frame" x="571" y="963" width="140" height="21"/>
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-8E-5bP">
@@ -1092,7 +1092,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7X2-md-Rvx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n2b-l1-2dz">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="2136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1293"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rG-35-Fmv" customClass="KRScrollView">
@@ -1562,11 +1562,11 @@
                                 <exclude reference="1rG-35-Fmv"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="dQm-XZ-dX1"/>
                                 <exclude reference="Bcc-Aa-3EO"/>
                                 <exclude reference="Ef4-NI-CJh"/>
                                 <exclude reference="QSk-Tc-GmH"/>
                                 <exclude reference="6Rb-Hi-5RS"/>
-                                <exclude reference="dQm-XZ-dX1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -1574,11 +1574,11 @@
                                 <include reference="1rG-35-Fmv"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="dQm-XZ-dX1"/>
                                 <include reference="Bcc-Aa-3EO"/>
                                 <include reference="Ef4-NI-CJh"/>
                                 <include reference="QSk-Tc-GmH"/>
                                 <include reference="6Rb-Hi-5RS"/>
-                                <include reference="dQm-XZ-dX1"/>
                             </mask>
                         </variation>
                     </view>

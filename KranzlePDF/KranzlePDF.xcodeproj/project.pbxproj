@@ -10,6 +10,7 @@
 		37A51DF81A6F9960000CCDB8 /* PDFImagePage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A51DF61A6F9960000CCDB8 /* PDFImagePage2.png */; };
 		37A51DF91A6F9960000CCDB8 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A51DF71A6F9960000CCDB8 /* PDFImagePage1.png */; };
 		9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */; };
+		912F70F11A7551C10030B7C0 /* RabatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 912F70F01A7551C10030B7C0 /* RabatModel.m */; };
 		9134DAB01A6C83DC00774277 /* NewCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9134DAAF1A6C83DC00774277 /* NewCustomerViewController.m */; };
 		914A35961A65D41E00899924 /* Fachhandelspartner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 914A35951A65D41E00899924 /* Fachhandelspartner.pdf */; };
 		914A359A1A65D4B300899924 /* PDFImagePage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914A35981A65D4B300899924 /* PDFImagePage1.png */; };
@@ -53,6 +54,8 @@
 		37A51DF71A6F9960000CCDB8 /* PDFImagePage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFImagePage1.png; sourceTree = "<group>"; };
 		9105075B1A685C9100DAC6FB /* DuplicatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableLabel.h; path = Label/DuplicatableLabel.h; sourceTree = "<group>"; };
 		9105075C1A685C9100DAC6FB /* DuplicatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableLabel.m; path = Label/DuplicatableLabel.m; sourceTree = "<group>"; };
+		912F70EF1A7551C10030B7C0 /* RabatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RabatModel.h; path = RabatModel/RabatModel.h; sourceTree = "<group>"; };
+		912F70F01A7551C10030B7C0 /* RabatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RabatModel.m; path = RabatModel/RabatModel.m; sourceTree = "<group>"; };
 		9134DAAE1A6C83DC00774277 /* NewCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCustomerViewController.h; sourceTree = "<group>"; };
 		9134DAAF1A6C83DC00774277 /* NewCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCustomerViewController.m; sourceTree = "<group>"; };
 		914A35951A65D41E00899924 /* Fachhandelspartner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fachhandelspartner.pdf; sourceTree = "<group>"; };
@@ -140,6 +143,15 @@
 				915ABD9F1A73CC1900B1EF56 /* ControlCloner.m */,
 			);
 			name = Label;
+			sourceTree = "<group>";
+		};
+		912F70EE1A75517C0030B7C0 /* RabatModel */ = {
+			isa = PBXGroup;
+			children = (
+				912F70EF1A7551C10030B7C0 /* RabatModel.h */,
+				912F70F01A7551C10030B7C0 /* RabatModel.m */,
+			);
+			name = RabatModel;
 			sourceTree = "<group>";
 		};
 		912FEB0B1A6BDABA00FFDA68 /* Frameworks */ = {
@@ -284,6 +296,7 @@
 		9164F5931A65AEE10097B892 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				912F70EE1A75517C0030B7C0 /* RabatModel */,
 				915ABDA81A73FA1700B1EF56 /* UIViewController-BackButtonHandler */,
 				915ABDA11A73DC0E00B1EF56 /* Cache */,
 				9151F57C1A6D9DB600E09997 /* UIIMage+scale&crop */,
@@ -522,6 +535,7 @@
 				915ABDAB1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m in Sources */,
 				9164F5921A65AEA70097B892 /* AppDelegate.m in Sources */,
 				91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */,
+				912F70F11A7551C10030B7C0 /* RabatModel.m in Sources */,
 				9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */,
 				915ABD9D1A73C7ED00B1EF56 /* DuplicatableTextField.m in Sources */,
 				915ABDA01A73CC1900B1EF56 /* ControlCloner.m in Sources */,

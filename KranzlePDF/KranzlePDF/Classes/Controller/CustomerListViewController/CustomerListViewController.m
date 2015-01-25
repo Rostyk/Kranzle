@@ -298,7 +298,7 @@
 
 -(BOOL) navigationShouldPopOnBackButton {
     if(self.needsPin) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben Sie einen Pin ein." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben Sie einen PIN-code ein." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         alert.tag = 123;
         [alert show];
@@ -314,7 +314,7 @@
             [self.navigationController popViewControllerAnimated:YES];
         }
         else {
-            [self alert:@"Der eingebene Pin-code ist ungültig."];
+            [self alert:@"Der eingebene PIN-code ist ungültig."];
         }
     }
 }

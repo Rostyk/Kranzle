@@ -17,8 +17,10 @@
 #import "ControlCloner.h"
 #import "DuplicatableTextField.h"
 #import "TextCache.h"
+#import "RabatModel.h"
 
 @interface CollectDataViewController()
+@property (nonatomic, strong) RabatModel *rabatsModel;
 @property (nonatomic, strong) UITextField *activeField;
 @property (nonatomic, strong) UIButton *selectedButton;
 @property (nonatomic, strong) UIPopoverController *popover;
@@ -77,7 +79,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.duplicatedLabels = [[NSMutableArray alloc] init];
+    
     [self setupRightNavigationItem];
+    [self setupRabatsModel];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -170,9 +174,11 @@
     if(![self isNumber:self.selectedButton.currentTitle] || self.selectedButton.currentTitle.length == 0) {
         [self setTitle:[NSString stringWithFormat:@"%ld", value] forButton:self.selectedButton];
         self.sum += value;
-        self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
     }
     
+    //tell the model some rabat is selected
+    [self.rabatsModel rabatSelected:self.selectedButton remove:NO];
+    [self updateSumLabel];
     [self.popover dismissPopoverAnimated:YES];
 }
 
@@ -185,15 +191,20 @@
     {
         self.sum -= [self.selectedButton.titleLabel.text integerValue];
     }
-    self.sumLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.sum];
     [self setTitle:@"Wählen" forButton:self.selectedButton];
+    
+    //tell the model some rabat is selected
+    [self.rabatsModel rabatSelected:self.selectedButton remove:YES];
+    [self updateSumLabel];
     [self.popover dismissPopoverAnimated:YES];
 }
 
-- (void)setSum:(NSUInteger)sum {
-    _sum = sum;
-    self.rabatLabel.text = [NSString stringWithFormat:@"l %lu", (unsigned long)self.sum];
-    self.bottomRabatLabel.text = [NSString stringWithFormat:@"l %lu", (unsigned long)self.sum];
+- (void)updateSumLabel {
+    NSUInteger sum = self.rabatsModel.sum;
+    self.sumLabel.text = [NSString stringWithFormat:@"%lu", sum];
+    self.rabatLabel.text = [NSString stringWithFormat:@"l %lu", sum];
+    self.bottomRabatLabel.text = [NSString stringWithFormat:@"l %lu", sum];
+   
 }
 
 - (void)setTitle:(NSString *)title forButton:(UIButton *)button
@@ -529,7 +540,21 @@
             }
         }
     }
+}
 
+#pragma mark discounts
+
+- (void)setupRabatsModel {
+    self.rabatsModel = [[RabatModel alloc] initWithArrayOfButtons:self.selectButtons];
+    
+    //Set mutual exclusive discounts(see corresponding rabat buttons tags in IB)
+    [self.rabatsModel setMutualExclusiveRabats:@[@(0)] withRabats:@[@(1),@(2),@(3),@(4),@(5),@(6),@(7),@(8)]];
+    [self.rabatsModel setMutualExclusiveRabats:@[@(2)] withRabats:@[@(3)]];
+    [self.rabatsModel setMutualExclusiveRabats:@[@(3)] withRabats:@[@(2)]];
+    
+    
+    [self.rabatsModel setMutualExclusiveRabats:@[@(7)] withRabats:@[@(8)]];
+    [self.rabatsModel setMutualExclusiveRabats:@[@(8)] withRabats:@[@(7)]];
 }
 
 @end
