@@ -15,25 +15,37 @@
 }
 
 // based http://coderchrismills.wordpress.com/2011/06/25/making-a-pdf-from-a-uiwebview/
-#define kDefaultPageHeight 1124
+#define kDefaultPageHeight 1087
 #define kDefaultPageWidth  768
 #define kMargin 0
 + (NSData *)pdfDataOfScrollView:(UIScrollView *)scrollView {
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if(orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight) {
+        [[UIDevice currentDevice] setValue:
+         [NSNumber numberWithInteger: UIInterfaceOrientationPortrait]
+                                    forKey:@"orientation"];
+    }
+    
     CGRect origFrame = scrollView.frame;
     BOOL horizontalScrollIndicator = [scrollView showsHorizontalScrollIndicator];
     BOOL verticalScrollIndicator = [scrollView showsVerticalScrollIndicator];
-    //NSMutableData *pdfFile = [[NSMutableData alloc] init];
-    //CGDataConsumerRef pdfConsumer = CGDataConsumerCreateWithCFData((__bridge CFMutableDataRef) pdfFile);
-    //CGRect mediaBox = CGRectZero;
+   
+    
+    
+    int margin = 70;
     CGFloat maxHeight = kDefaultPageHeight - 2 * kMargin;
     CGFloat maxWidth = kDefaultPageWidth - 2 * kMargin;
-    CGFloat height = scrollView.contentSize.height;
+    
+   
+    
+    CGFloat height = scrollView.contentSize.height*0 + 2 * maxHeight;
     // Set up we the pdf we're going to be generating is
-    [scrollView setFrame:CGRectMake(0.f, 0.f, maxWidth, maxHeight)];
+    [scrollView setFrame:CGRectMake(0.f, 64.f, maxWidth, maxHeight)];
     NSInteger pages = (NSInteger) ceil(height / maxHeight);
 
     NSMutableData *pdfData = [NSMutableData data];
-   
+    
     [self prepareForCapture:scrollView];
     UIGraphicsBeginPDFContextToData(pdfData, CGRectZero, nil);
     for (int i = 0 ;i < pages ;i++){
@@ -44,14 +56,14 @@
             [scrollView setFrame:scrollViewFrame];
         }
         // Specify the size of the pdf page
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, kDefaultPageWidth, kDefaultPageHeight), nil);
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, maxWidth, maxHeight), nil);
         CGContextRef currentContext = UIGraphicsGetCurrentContext();
        
         // Move the context for the margins
         
         CGContextTranslateCTM(currentContext, kMargin, -(maxHeight * i) + kMargin);
        
-        [scrollView setContentOffset:CGPointMake(0, maxHeight * i) animated:NO];
+        [scrollView setContentOffset:CGPointMake(0, maxHeight * i + margin) animated:NO];
         // draw the layer to the pdf, ignore the "renderInContext not found" warning.
         [scrollView.layer renderInContext:currentContext];
     }
