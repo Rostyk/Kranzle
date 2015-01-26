@@ -18,12 +18,12 @@
 		9151F57A1A6D93AF00E09997 /* SigningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5771A6D93AF00E09997 /* SigningViewController.m */; };
 		9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F5791A6D93AF00E09997 /* SigningView.m */; };
 		9151F57F1A6D9E1E00E09997 /* UIImage+scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */; };
+		915A42971A76EF6900EC521B /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A42961A76EF6900EC521B /* Customer.m */; };
 		915ABD9D1A73C7ED00B1EF56 /* DuplicatableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABD9C1A73C7ED00B1EF56 /* DuplicatableTextField.m */; };
 		915ABDA01A73CC1900B1EF56 /* ControlCloner.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABD9F1A73CC1900B1EF56 /* ControlCloner.m */; };
 		915ABDA41A73DC2D00B1EF56 /* TextCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABDA31A73DC2D00B1EF56 /* TextCache.m */; };
 		915ABDA71A73E0CC00B1EF56 /* CacheItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABDA61A73E0CC00B1EF56 /* CacheItem.m */; };
 		915ABDAB1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 915ABDAA1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m */; };
-		91648D481A7183B400BEC1AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91648D471A7183B400BEC1AA /* Customer.m */; };
 		91648D4A1A71A9AE00BEC1AA /* Kraenzle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */; };
 		9164F5631A65AD7D0097B892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9164F5621A65AD7D0097B892 /* main.m */; };
 		9164F56C1A65AD7D0097B892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9164F56A1A65AD7D0097B892 /* Main.storyboard */; };
@@ -66,6 +66,8 @@
 		9151F5791A6D93AF00E09997 /* SigningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigningView.m; sourceTree = "<group>"; };
 		9151F57D1A6D9E1E00E09997 /* UIImage+scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+scale.h"; path = "UIIMage+scale&crop/UIImage+scale.h"; sourceTree = "<group>"; };
 		9151F57E1A6D9E1E00E09997 /* UIImage+scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+scale.m"; path = "UIIMage+scale&crop/UIImage+scale.m"; sourceTree = "<group>"; };
+		915A42951A76EF6900EC521B /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		915A42961A76EF6900EC521B /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		915ABD9B1A73C7ED00B1EF56 /* DuplicatableTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuplicatableTextField.h; path = Label/DuplicatableTextField.h; sourceTree = "<group>"; };
 		915ABD9C1A73C7ED00B1EF56 /* DuplicatableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DuplicatableTextField.m; path = Label/DuplicatableTextField.m; sourceTree = "<group>"; };
 		915ABD9E1A73CC1900B1EF56 /* ControlCloner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlCloner.h; path = Label/ControlCloner.h; sourceTree = "<group>"; };
@@ -76,8 +78,6 @@
 		915ABDA61A73E0CC00B1EF56 /* CacheItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheItem.m; sourceTree = "<group>"; };
 		915ABDA91A73FA1700B1EF56 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		915ABDAA1A73FA1700B1EF56 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
-		91648D461A7183B400BEC1AA /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
-		91648D471A7183B400BEC1AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		91648D491A71A9AE00BEC1AA /* Kraenzle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kraenzle@2x.png"; sourceTree = "<group>"; };
 		9164F55D1A65AD7D0097B892 /* KranzlePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KranzlePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9164F5611A65AD7D0097B892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -362,8 +362,8 @@
 		9164F5B11A65BBC50097B892 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				91648D461A7183B400BEC1AA /* Customer.h */,
-				91648D471A7183B400BEC1AA /* Customer.m */,
+				915A42951A76EF6900EC521B /* Customer.h */,
+				915A42961A76EF6900EC521B /* Customer.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -529,6 +529,7 @@
 				91DAC6511A6B124B00D1A03D /* Model.xcdatamodeld in Sources */,
 				912F70F11A7551C10030B7C0 /* RabatModel.m in Sources */,
 				9105075D1A685C9100DAC6FB /* DuplicatableLabel.m in Sources */,
+				915A42971A76EF6900EC521B /* Customer.m in Sources */,
 				915ABD9D1A73C7ED00B1EF56 /* DuplicatableTextField.m in Sources */,
 				915ABDA01A73CC1900B1EF56 /* ControlCloner.m in Sources */,
 				9164F5AD1A65BA3B0097B892 /* SalesLoginViewController.m in Sources */,
@@ -536,7 +537,6 @@
 				9151F57B1A6D93AF00E09997 /* SigningView.m in Sources */,
 				9164F59F1A65AEE10097B892 /* DataProvider.m in Sources */,
 				916ACC9E1A68353B007BC7BE /* CustomerCell.m in Sources */,
-				91648D481A7183B400BEC1AA /* Customer.m in Sources */,
 				9164F5B01A65BA6E0097B892 /* CollectDataViewController.m in Sources */,
 				91A906F81A66A6EE00DCD4CD /* KRScrollView.m in Sources */,
 				91B4027B1A670C1E00CFBCB4 /* M13Checkbox.m in Sources */,

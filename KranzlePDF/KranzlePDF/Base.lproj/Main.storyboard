@@ -544,33 +544,6 @@
                                                     <rect key="frame" x="338" y="284" width="149" height="19"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5237" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9z-8C-5Cl" customClass="DuplicatableLabel">
-                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="371" y="260" width="116" height="19"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6542" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-1x-vQ4" customClass="DuplicatableLabel">
-                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="159" y="260" width="118" height="19"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5237" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEV-ol-t0z" customClass="DuplicatableLabel">
-                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="552" y="260" width="154" height="19"/>
-                                                </variation>
-                                            </label>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-pj-LRs">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -746,15 +719,6 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="CUT-aW-Ljz"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepanyak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWs-G8-GeW" customClass="DuplicatableLabel">
-                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="164" y="163" width="319" height="19"/>
-                                                </variation>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-wR-wHQ">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -864,6 +828,54 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="te2-cR-Ahk"/>
                                                 </connections>
                                             </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Stepanyak" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCZ-gQ-84p" customClass="DuplicatableTextField">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="159" y="162" width="328" height="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="6ir-6K-IRT"/>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="6NP-pv-Fot"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KG 5648" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-lr-O4f" customClass="DuplicatableTextField">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="159" y="258" width="116" height="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="9Kl-84-nrx"/>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="ifO-je-PS0"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5372" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-28-El1" customClass="DuplicatableTextField">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="370" y="258" width="116" height="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="3YO-Yy-Tvi"/>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="R8l-Rr-6u2"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98757" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDT-Cc-LRP" customClass="DuplicatableTextField">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="548" y="258" width="162" height="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="IyS-pg-eTs"/>
+                                                    <outlet property="delegate" destination="eqD-mx-Wkc" id="tHU-E3-pJt"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -882,9 +894,6 @@
                                                 <exclude reference="UJ7-Y6-Pba"/>
                                                 <exclude reference="5S5-Ae-byx"/>
                                                 <exclude reference="CB4-qf-NKl"/>
-                                                <exclude reference="i9z-8C-5Cl"/>
-                                                <exclude reference="JFp-1x-vQ4"/>
-                                                <exclude reference="jEV-ol-t0z"/>
                                                 <exclude reference="iKl-pj-LRs"/>
                                                 <exclude reference="Btr-L3-Bjs"/>
                                                 <exclude reference="njZ-r1-Xf9"/>
@@ -899,7 +908,6 @@
                                                 <exclude reference="qWe-t8-ym0"/>
                                                 <exclude reference="S4k-zD-FuL"/>
                                                 <exclude reference="sgD-Ua-cvE"/>
-                                                <exclude reference="gWs-G8-GeW"/>
                                                 <exclude reference="Mi0-wR-wHQ"/>
                                                 <exclude reference="7SX-D4-PxV"/>
                                                 <exclude reference="eLn-GX-EOt"/>
@@ -910,6 +918,10 @@
                                                 <exclude reference="NBn-ui-1QM"/>
                                                 <exclude reference="5OH-TM-Mpw"/>
                                                 <exclude reference="GSJ-Yg-rUu"/>
+                                                <exclude reference="uCZ-gQ-84p"/>
+                                                <exclude reference="RbO-lr-O4f"/>
+                                                <exclude reference="fiE-28-El1"/>
+                                                <exclude reference="lDT-Cc-LRP"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="10z-0w-4dB"/>
@@ -928,9 +940,6 @@
                                                 <include reference="UJ7-Y6-Pba"/>
                                                 <include reference="5S5-Ae-byx"/>
                                                 <include reference="CB4-qf-NKl"/>
-                                                <include reference="i9z-8C-5Cl"/>
-                                                <include reference="JFp-1x-vQ4"/>
-                                                <include reference="jEV-ol-t0z"/>
                                                 <include reference="iKl-pj-LRs"/>
                                                 <include reference="Btr-L3-Bjs"/>
                                                 <include reference="njZ-r1-Xf9"/>
@@ -945,7 +954,6 @@
                                                 <include reference="qWe-t8-ym0"/>
                                                 <include reference="S4k-zD-FuL"/>
                                                 <include reference="sgD-Ua-cvE"/>
-                                                <include reference="gWs-G8-GeW"/>
                                                 <include reference="Mi0-wR-wHQ"/>
                                                 <include reference="7SX-D4-PxV"/>
                                                 <include reference="eLn-GX-EOt"/>
@@ -956,6 +964,10 @@
                                                 <include reference="NBn-ui-1QM"/>
                                                 <include reference="5OH-TM-Mpw"/>
                                                 <include reference="GSJ-Yg-rUu"/>
+                                                <include reference="uCZ-gQ-84p"/>
+                                                <include reference="RbO-lr-O4f"/>
+                                                <include reference="fiE-28-El1"/>
+                                                <include reference="lDT-Cc-LRP"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="10z-0w-4dB"/>
@@ -1043,7 +1055,7 @@
                         <outlet property="kdnLabel" destination="b8y-Rg-UVe" id="NQB-bl-4hf"/>
                         <outlet property="konditionsvereinbarungTextField" destination="sgD-Ua-cvE" id="Rcy-yt-Vim"/>
                         <outlet property="kranzleSignButton" destination="OER-V0-v33" id="o6N-Jy-oNx"/>
-                        <outlet property="name2Label" destination="gWs-G8-GeW" id="2Vb-Hm-ptD"/>
+                        <outlet property="name2TextField" destination="uCZ-gQ-84p" id="YwU-ab-Uw8"/>
                         <outlet property="nameTextField" destination="r9n-g9-VHS" id="MUr-HV-uus"/>
                         <outlet property="ortAndNameTextField1" destination="C2F-O9-C2C" id="SV3-Bq-olO"/>
                         <outlet property="ortAndNameTextField2" destination="8rZ-kG-YnV" id="m8k-uT-rn6"/>
@@ -1054,15 +1066,12 @@
                         <outlet property="streetTextField" destination="GSJ-Yg-rUu" id="08J-fG-vBR"/>
                         <outlet property="sumLabel" destination="eLn-GX-EOt" id="2xm-sO-SpO"/>
                         <outlet property="telefonTextField" destination="yzJ-6X-KAi" id="yle-gl-1cD"/>
-                        <outlet property="verbandLabel" destination="JFp-1x-vQ4" id="WXr-Tz-p8o"/>
-                        <outlet property="verbandsCodeLabel" destination="i9z-8C-5Cl" id="ICt-VT-TpL"/>
-                        <outlet property="verbandsNumberLabel" destination="jEV-ol-t0z" id="pao-Sm-oMy"/>
+                        <outlet property="verbandTexField" destination="RbO-lr-O4f" id="ag1-Yi-uug"/>
+                        <outlet property="verbandsCodeTextField" destination="fiE-28-El1" id="nnE-nr-MAQ"/>
+                        <outlet property="verbandsNumberTextField" destination="lDT-Cc-LRP" id="MrG-ce-EuT"/>
                         <outlet property="vertreterNameLabel" destination="5S5-Ae-byx" id="Bbm-cj-rWR"/>
                         <outlet property="vertreterTelefoneLabel" destination="CB4-qf-NKl" id="3PM-Y8-6gs"/>
                         <outlet property="wwwTextField" destination="An1-Gf-Qu6" id="Qqs-fZ-LDw"/>
-                        <outletCollection property="labels" destination="gWs-G8-GeW" id="aob-hV-Yvp"/>
-                        <outletCollection property="labels" destination="JFp-1x-vQ4" id="tLD-ic-71a"/>
-                        <outletCollection property="labels" destination="jEV-ol-t0z" id="EqW-qH-A3n"/>
                         <outletCollection property="labels" destination="7SX-D4-PxV" id="9dP-yX-u38"/>
                         <outletCollection property="selectButtons" destination="Mi0-wR-wHQ" id="qmj-Nw-SEJ"/>
                         <outletCollection property="selectButtons" destination="N44-Nt-L0v" id="ueE-tv-NnA"/>
@@ -1081,12 +1090,15 @@
                         <outletCollection property="labels" destination="An1-Gf-Qu6" id="blX-Ou-ka9"/>
                         <outletCollection property="labels" destination="Kk4-6H-uP9" id="CNG-nZ-OOY"/>
                         <outletCollection property="labels" destination="CB4-qf-NKl" id="Vpy-WK-l50"/>
-                        <outletCollection property="labels" destination="i9z-8C-5Cl" id="EFX-SC-lhb"/>
                         <outletCollection property="labels" destination="5S5-Ae-byx" id="Fch-7o-t7Y"/>
                         <outletCollection property="labels" destination="b8y-Rg-UVe" id="m9c-Pn-GAF"/>
                         <outletCollection property="labels" destination="5OH-TM-Mpw" id="hmv-bx-jha"/>
                         <outletCollection property="labels" destination="S4k-zD-FuL" id="OVa-kG-NG9"/>
                         <outletCollection property="labels" destination="sgD-Ua-cvE" id="a3I-mi-Eqh"/>
+                        <outletCollection property="labels" destination="uCZ-gQ-84p" id="QVZ-8R-0VK"/>
+                        <outletCollection property="labels" destination="RbO-lr-O4f" id="QKs-HW-eir"/>
+                        <outletCollection property="labels" destination="fiE-28-El1" id="QzM-a6-MDD"/>
+                        <outletCollection property="labels" destination="lDT-Cc-LRP" id="BUX-WA-Tp6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifF-TY-qNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1210,7 +1222,7 @@
                                                     <outlet property="delegate" destination="RjI-31-wb5" id="OIt-Ck-SWC"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEE-5X-q5q">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbandsnummer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEE-5X-q5q">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1419,13 +1431,93 @@
                                                     <rect key="frame" x="204" y="1114" width="180" height="21"/>
                                                 </variation>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPA-Ow-GUG">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1220" width="361" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="RjI-31-wb5" id="O1U-NO-ILB"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ansprechpartner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfo-Au-irI">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1194" width="180" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PpI-PA-fq8">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1300" width="361" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="RjI-31-wb5" id="ziX-FP-4eP"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gebietsverkaufsleiter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-wC-Xh8">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1274" width="180" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-Fo-CHw">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1380" width="361" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="RjI-31-wb5" id="6jf-e1-ES0"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durchwahl Gebietsverkaufsleiter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMg-21-3Ds">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1354" width="280" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yq8-Cu-cV4">
+                                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1460" width="361" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="RjI-31-wb5" id="8qO-M9-iaR"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Gebietsverkaufsleiter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvP-83-GeB">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="204" y="1434" width="280" height="21"/>
+                                                </variation>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12n-tH-Kic">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <state key="normal" backgroundImage="submit-button.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="204" y="1213" width="360" height="42"/>
+                                                    <rect key="frame" x="204" y="1545" width="360" height="42"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="submitButtonClicked:" destination="RjI-31-wb5" eventType="touchUpInside" id="Ipv-jP-KkX"/>
@@ -1436,7 +1528,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="768" id="3cz-oc-qHS"/>
                                             <constraint firstAttribute="height" constant="2198" id="Jsp-MG-xSZ">
-                                                <variation key="heightClass=regular" constant="1293"/>
+                                                <variation key="heightClass=regular" constant="1652"/>
                                             </constraint>
                                             <constraint firstAttribute="centerX" secondItem="FjO-Qn-uaL" secondAttribute="centerX" id="L5Q-pK-ffu"/>
                                             <constraint firstItem="FjO-Qn-uaL" firstAttribute="top" secondItem="a3V-r6-uzw" secondAttribute="bottom" constant="5" id="aR0-Og-GeG"/>
@@ -1473,6 +1565,14 @@
                                                 <exclude reference="7fi-YW-8tx"/>
                                                 <exclude reference="GP9-i6-aUf"/>
                                                 <exclude reference="SWm-0n-VD9"/>
+                                                <exclude reference="SPA-Ow-GUG"/>
+                                                <exclude reference="Lfo-Au-irI"/>
+                                                <exclude reference="PpI-PA-fq8"/>
+                                                <exclude reference="OEp-wC-Xh8"/>
+                                                <exclude reference="6Ra-Fo-CHw"/>
+                                                <exclude reference="hMg-21-3Ds"/>
+                                                <exclude reference="yq8-Cu-cV4"/>
+                                                <exclude reference="hvP-83-GeB"/>
                                                 <exclude reference="12n-tH-Kic"/>
                                             </mask>
                                             <mask key="constraints">
@@ -1514,6 +1614,14 @@
                                                 <include reference="7fi-YW-8tx"/>
                                                 <include reference="GP9-i6-aUf"/>
                                                 <include reference="SWm-0n-VD9"/>
+                                                <include reference="SPA-Ow-GUG"/>
+                                                <include reference="Lfo-Au-irI"/>
+                                                <include reference="PpI-PA-fq8"/>
+                                                <include reference="OEp-wC-Xh8"/>
+                                                <include reference="6Ra-Fo-CHw"/>
+                                                <include reference="hMg-21-3Ds"/>
+                                                <include reference="yq8-Cu-cV4"/>
+                                                <include reference="hvP-83-GeB"/>
                                                 <include reference="12n-tH-Kic"/>
                                             </mask>
                                             <mask key="constraints">
@@ -1594,13 +1702,13 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="768" height="1357"/>
+                    <size key="freeformSize" width="768" height="1716"/>
                     <connections>
+                        <outlet property="ansprechpartnerTextField" destination="SPA-Ow-GUG" id="kC0-0f-8BV"/>
                         <outlet property="emailTextField" destination="3KY-UE-RyP" id="aLc-on-8Y4"/>
                         <outlet property="kdnTextField" destination="FjO-Qn-uaL" id="OXd-O3-IrC"/>
                         <outlet property="landTextField" destination="e1G-SD-pOv" id="5hp-d8-RW9"/>
                         <outlet property="name2TextField" destination="D4f-wC-Qju" id="oDw-Xk-lCV"/>
-                        <outlet property="name3TextField" destination="k7k-R1-CMo" id="MqZ-1h-PCw"/>
                         <outlet property="nameTextField" destination="uR3-Ow-t5u" id="wGj-WZ-fgL"/>
                         <outlet property="ortTextField" destination="0pO-cp-9sf" id="ApT-yB-iFm"/>
                         <outlet property="plzTextField" destination="KmV-2v-9xw" id="sDO-t9-Ymb"/>
@@ -1610,6 +1718,10 @@
                         <outlet property="telefonTextField" destination="XIK-FD-AD0" id="8aq-IX-BvD"/>
                         <outlet property="verbandNumberTextField" destination="GP9-i6-aUf" id="Pc0-cJ-wuE"/>
                         <outlet property="verbandsCodeTextField" destination="VHf-g3-tKm" id="Jfq-tF-Dpl"/>
+                        <outlet property="verbandsNummerTextField" destination="k7k-R1-CMo" id="doF-DN-Ctb"/>
+                        <outlet property="vertreterEmailTextField" destination="yq8-Cu-cV4" id="wIO-ed-HFD"/>
+                        <outlet property="vertreterNameTextField" destination="PpI-PA-fq8" id="ecX-ac-VLc"/>
+                        <outlet property="vertreterTelefonTextField" destination="6Ra-Fo-CHw" id="3oo-P8-RC7"/>
                         <outlet property="wwwTextField" destination="WQz-Gl-93O" id="pq2-5Z-Das"/>
                         <outletCollection property="textFields" destination="D4f-wC-Qju" id="yhj-xI-6a0"/>
                         <outletCollection property="textFields" destination="uR3-Ow-t5u" id="XoU-Lc-Gyj"/>
