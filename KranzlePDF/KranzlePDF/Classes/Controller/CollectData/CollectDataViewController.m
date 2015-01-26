@@ -231,6 +231,18 @@
     self.activeField = textField;
 }
 
+- (IBAction)textFieldDidChange:(id)sender {
+    /*
+    UITextField *textField = (UITextField *)sender;
+    if([self.labels containsObject:textField]) {
+        //we remove all 16 labels and add duplicate them again.
+        // Reafctor it for a single label later
+        [self clearDuplicatedLabels];
+        [self duplicateLabels];
+    }
+*/
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if([self.labels containsObject:textField]) {
@@ -239,7 +251,6 @@
         [self clearDuplicatedLabels];
         [self duplicateLabels];
     }
-    
     [[TextCache sharedCache] saveTexTField:textField];
     self.activeField = nil;
 }
@@ -350,6 +361,8 @@
 #pragma mark render/mail pdf
 
 - (void)mailButtonClicked {
+    [self.activeField resignFirstResponder];
+    
     if([self checkFieldsAvailableForInput]) {
         [self mail];
     }
@@ -361,6 +374,10 @@
 - (void)mail {
     [self showSelectButtons:NO];
     [self fillEmptyFieldsWithText:YES];
+    
+    [self clearDuplicatedLabels];
+    [self duplicateLabels];
+    
     [self renderPDF];
     [self showSelectButtons:YES];
     [self fillEmptyFieldsWithText:NO];

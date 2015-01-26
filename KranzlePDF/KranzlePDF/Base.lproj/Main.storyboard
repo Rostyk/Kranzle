@@ -453,6 +453,7 @@
                                                     <rect key="frame" x="159" y="137" width="328" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="rAP-iT-Og8"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="sxo-Lt-H6P"/>
                                                 </connections>
                                             </textField>
@@ -464,6 +465,7 @@
                                                     <rect key="frame" x="336" y="234" width="150" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="u5L-nZ-IGK"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="2qA-Hn-HS7"/>
                                                 </connections>
                                             </textField>
@@ -475,6 +477,7 @@
                                                     <rect key="frame" x="336" y="210" width="150" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="zne-a6-I66"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Y3x-yg-eXA"/>
                                                 </connections>
                                             </textField>
@@ -486,6 +489,7 @@
                                                     <rect key="frame" x="548" y="210" width="162" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="Vim-UB-znU"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Vf5-fF-evz"/>
                                                 </connections>
                                             </textField>
@@ -497,6 +501,7 @@
                                                     <rect key="frame" x="548" y="234" width="162" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="Bce-Oz-Pmc"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="jzS-bI-bbb"/>
                                                 </connections>
                                             </textField>
@@ -508,6 +513,7 @@
                                                     <rect key="frame" x="159" y="209" width="116" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="tg2-oM-1fn"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Ykv-p4-Qbe"/>
                                                 </connections>
                                             </textField>
@@ -724,6 +730,7 @@
                                                     <rect key="frame" x="160" y="306" width="209" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="u2J-Pc-G8K"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Rry-2Z-fau"/>
                                                 </connections>
                                             </textField>
@@ -735,6 +742,7 @@
                                                     <rect key="frame" x="488" y="306" width="222" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="QHi-vm-HzR"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="CUT-aW-Ljz"/>
                                                 </connections>
                                             </textField>
@@ -840,6 +848,7 @@
                                                     <rect key="frame" x="160" y="234" width="116" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="Jgc-2A-TuH"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="D03-Dj-h2j"/>
                                                 </connections>
                                             </textField>
@@ -851,6 +860,7 @@
                                                     <rect key="frame" x="159" y="185" width="328" height="24"/>
                                                 </variation>
                                                 <connections>
+                                                    <action selector="textFieldDidChange:" destination="eqD-mx-Wkc" eventType="editingChanged" id="gO9-vf-e2z"/>
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="te2-cR-Ahk"/>
                                                 </connections>
                                             </textField>
