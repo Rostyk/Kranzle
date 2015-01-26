@@ -379,7 +379,7 @@
     NSString *path = [arrayPaths objectAtIndex:0];
     NSString* pdfFileName = [path stringByAppendingPathComponent:fileName];
     NSLog(@"%@", pdfFileName);
-    [pdfData writeToFile:pdfFileName atomically:NO];
+    [pdfData writeToFile:pdfFileName atomically:YES];
 }
 
 - (void)mailPDF {
