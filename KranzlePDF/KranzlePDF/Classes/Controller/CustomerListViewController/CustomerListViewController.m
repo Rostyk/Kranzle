@@ -311,6 +311,7 @@
     if(alertView.tag == 123) {
         NSString *enteredPin = [[alertView textFieldAtIndex:0] text];
         if([enteredPin isEqualToString:PIN]) {
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"VertreterCode"];
             [self.navigationController popViewControllerAnimated:YES];
         }
         else {
