@@ -19,7 +19,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *kdnTextField;
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *name2TextField;
-@property (nonatomic, weak) IBOutlet UITextField *name3TextField;
+@property (nonatomic, weak) IBOutlet UITextField *verbandsNummerTextField;
 @property (nonatomic, weak) IBOutlet UITextField *streetTextField;
 @property (nonatomic, weak) IBOutlet UITextField *plzTextField;
 @property (nonatomic, weak) IBOutlet UITextField *ortTextField;
@@ -30,6 +30,10 @@
 @property (nonatomic, weak) IBOutlet UITextField *wwwTextField;
 @property (nonatomic, weak) IBOutlet UITextField *verbandsCodeTextField;
 @property (nonatomic, weak) IBOutlet UITextField *verbandNumberTextField;
+@property (nonatomic, weak) IBOutlet UITextField *ansprechpartnerTextField;
+@property (nonatomic, weak) IBOutlet UITextField *vertreterNameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *vertreterTelefonTextField;
+@property (nonatomic, weak) IBOutlet UITextField *vertreterEmailTextField;
 
 @property (nonatomic, strong) IBOutletCollection(UITextField) NSArray *textFields;
 @end
@@ -45,11 +49,10 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
-   
 }
 
 #pragma mark submit new customer
+
 - (IBAction)submitButtonClicked:(id)sender {
     if([self validateFields]) {
         [self setupCustomer];
@@ -57,14 +60,12 @@
         [delegate saveContext];
         [self.navigationController popViewControllerAnimated:YES];
     }
-    
 }
 
 - (void)setupCustomer {
     self.createdCustomer.number = self.kdnTextField.text;
     self.createdCustomer.name = self.nameTextField.text;
     self.createdCustomer.name2 = self.name2TextField.text;
-    self.createdCustomer.name3 = self.name3TextField.text;
     self.createdCustomer.street = self.streetTextField.text;
     self.createdCustomer.plz = self.plzTextField.text;
     self.createdCustomer.ort = self.ortTextField.text;
@@ -73,11 +74,15 @@
     self.createdCustomer.telefax = self.telefaxTextField.text;
     self.createdCustomer.email = self.emailTextField.text;
     self.createdCustomer.www = self.wwwTextField.text;
-    self.createdCustomer.verbandsNumber = self.verbandsCodeTextField.text;
+    self.createdCustomer.verbandsCode = self.verbandsCodeTextField.text;
     self.createdCustomer.manuallyCreated = @(YES);
     self.createdCustomer.verband = self.verbandNumberTextField.text;
+    self.createdCustomer.verbandsNumber = self.verbandsNummerTextField.text;
+    self.createdCustomer.nameVertreter = self.vertreterNameTextField.text;
+    self.createdCustomer.telefonVertreter = self.vertreterTelefonTextField.text;
+    self.createdCustomer.emailVertreter = self.vertreterEmailTextField.text;
+    self.createdCustomer.ansprechpartner = self.ansprechpartnerTextField.text;
     self.createdCustomer.vertreterCode = [[DataProvider sharedProvider] lastUsedVertreterCode];
-    
 }
 
 #pragma mark textfield delegate
@@ -175,8 +180,5 @@
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
 }
-
-
-
 
 @end

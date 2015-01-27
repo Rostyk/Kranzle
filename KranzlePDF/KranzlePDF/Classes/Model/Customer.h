@@ -2,7 +2,7 @@
 //  Customer.h
 //  KranzlePDF
 //
-//  Created by Ross on 1/22/15.
+//  Created by Ross on 1/26/15.
 //  Copyright (c) 2015 Ross. All rights reserved.
 //
 
@@ -19,18 +19,19 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * name2;
 @property (nonatomic, retain) NSString * name3;
+@property (nonatomic, retain) NSString * nameVertreter;
 @property (nonatomic, retain) NSString * number;
 @property (nonatomic, retain) NSString * ort;
 @property (nonatomic, retain) NSString * plz;
 @property (nonatomic, retain) NSString * street;
 @property (nonatomic, retain) NSString * telefax;
 @property (nonatomic, retain) NSString * telefon;
+@property (nonatomic, retain) NSString * telefonVertreter;
 @property (nonatomic, retain) NSString * verband;
+@property (nonatomic, retain) NSString * verbandsCode;
 @property (nonatomic, retain) NSString * verbandsNumber;
 @property (nonatomic, retain) NSString * vertreterCode;
 @property (nonatomic, retain) NSString * www;
-@property (nonatomic, retain) NSString * verbandsCode;
-@property (nonatomic, retain) NSString * nameVertreter;
-@property (nonatomic, retain) NSString * telefonVertreter;
+@property (nonatomic, retain) NSString * ansprechpartner;
 
 @end

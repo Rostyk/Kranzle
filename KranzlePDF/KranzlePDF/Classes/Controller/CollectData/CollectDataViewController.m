@@ -57,19 +57,19 @@
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *bottomRabatLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *kdnLabel;
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *name2Label;
+@property (nonatomic, weak) IBOutlet UITextField *name2TextField;
 @property (nonatomic, weak) IBOutlet UITextField *streetTextField;
 @property (nonatomic, weak) IBOutlet UITextField *plzTextField;
 @property (nonatomic, weak) IBOutlet UITextField *ortTextField;
 @property (nonatomic, weak) IBOutlet UITextField *telefonTextField;
 @property (nonatomic, weak) IBOutlet UITextField *emailTextField;
 @property (nonatomic, weak) IBOutlet UITextField *wwwTextField;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandsCodeLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandLabel;
+@property (nonatomic, weak) IBOutlet UITextField *verbandsCodeTextField;
+@property (nonatomic, weak) IBOutlet UITextField *verbandTexField;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterNameLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterTelefoneLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailVertreterLabel;
-@property (nonatomic, weak) IBOutlet DuplicatableLabel *verbandsNumberLabel;
+@property (nonatomic, weak) IBOutlet UITextField *verbandsNumberTextField;
 @end
 
 @implementation CollectDataViewController
@@ -112,20 +112,21 @@
     
     //Fill in customer data
     self.nameTextField.text = self.customer.name;
-    self.name2Label.text = self.customer.name2;
+    self.name2TextField.text = self.customer.name2;
     self.streetTextField.text = self.customer.street;
     self.plzTextField.text = self.customer.plz;
     self.ortTextField.text = self.customer.ort;
     self.telefonTextField.text = self.customer.telefon;
     self.emailTextField.text = self.customer.email;
     self.wwwTextField.text = self.customer.www;
-    self.verbandsCodeLabel.text = self.customer.verbandsCode;
-    self.verbandLabel.text = self.customer.verband;
+    self.verbandsCodeTextField.text = self.customer.verbandsCode;
+    self.verbandTexField.text = self.customer.verband;
     self.vertreterNameLabel.text = self.customer.nameVertreter;
     self.vertreterTelefoneLabel.text = self.customer.telefonVertreter;
     self.emailVertreterLabel.text = self.customer.emailVertreter;
-    self.verbandsNumberLabel.text = self.customer.verbandsNumber;
+    self.verbandsNumberTextField.text = self.customer.verbandsNumber;
     self.kdnLabel.text = self.customer.number;
+    self.ansprechpartnerTextField.text = self.customer.ansprechpartner;
     
     //Set Ort und datum
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -158,7 +159,6 @@
     contentController.delegate = self;
     self.popover = [[UIPopoverController alloc] initWithContentViewController:contentController];
     self.popover.popoverContentSize = CGSizeMake(120, 80);
-    
     
     frame.origin.y -= self.scrollView.bounds.origin.y; // you can postion the popover with + and - values
     frame.origin.y += frame.size.height/2;
@@ -281,17 +281,17 @@
             
             [self duplicateView:self.kdnLabel withVerticalOffset:1096];
             [self duplicateView:self.nameTextField withVerticalOffset:1096];
-            [self duplicateView:self.name2Label withVerticalOffset:1102];
+            [self duplicateView:self.name2TextField withVerticalOffset:1102];
             [self duplicateView:self.streetTextField withVerticalOffset:1107];
-            [self duplicateView:self.verbandLabel withVerticalOffset:1122];
+            [self duplicateView:self.verbandTexField withVerticalOffset:1122];
             [self duplicateView:self.plzTextField withVerticalOffset:1112];
             [self duplicateView:self.ortTextField withVerticalOffset:1112];
             [self duplicateView:self.telefonTextField withVerticalOffset:1118];
             [self duplicateView:self.ansprechpartnerTextField withVerticalOffset:1118];
-            [self duplicateView:self.verbandsNumberLabel withVerticalOffset:1122];
+            [self duplicateView:self.verbandsNumberTextField withVerticalOffset:1122];
             [self duplicateView:self.wwwTextField withVerticalOffset:1112];
             [self duplicateView:self.emailTextField withVerticalOffset:1118];
-            [self duplicateView:self.verbandsCodeLabel withVerticalOffset:1122];
+            [self duplicateView:self.verbandsCodeTextField withVerticalOffset:1122];
             [self duplicateView:self.vertreterNameLabel withVerticalOffset:1129];
             [self duplicateView:self.vertreterTelefoneLabel withVerticalOffset:1129];
             [self duplicateView:self.emailVertreterLabel withVerticalOffset:1129];
@@ -367,20 +367,21 @@
         [self mail];
     }
     else {
-        [self showActionSheet];
+        [self alert:@"Bitte füllen Sie alle Eingabefelder aus. Informationen die nicht in Erfahrung zu bringen sind, können mit \"nicht vorhanden\" oder \"Keine\" gesetzt werden. Diese Angaben erscheinen dann nicht auf dem Formular"];
     }
 }
 
 - (void)mail {
-    [self showSelectButtons:NO];
-    [self fillEmptyFieldsWithText:YES];
-    
     [self clearDuplicatedLabels];
     [self duplicateLabels];
     
+    [self showSelectButtons:NO];
+    [self hideEmptyFieldsWithText:YES];
+    
+    
     [self renderPDF];
     [self showSelectButtons:YES];
-    [self fillEmptyFieldsWithText:NO];
+    [self hideEmptyFieldsWithText:NO];
     [self mailPDF];
 }
 
@@ -403,17 +404,21 @@
     NSArray *mails =  @[@"konditionsvereinbarung@kraenzle.com"];
     if(self.customer.email.length > 0)
         mails = @[@"konditionsvereinbarung@kraenzle.com", self.customer.email];
+    if(self.emailTextField.text.length > 0)
+        mails = @[@"konditionsvereinbarung@kraenzle.com", self.emailTextField.text];
     [self mailTo: mails];
 }
 
 - (void)mailTo:(NSArray *)mailAddresses {
     if ([MFMailComposeViewController canSendMail]) {
+        NSString *subjectName = [NSString stringWithFormat:@"%@ Konditionsvereinbarung.pdf", self.customer.number];
+        
         MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
         [composeViewController setMailComposeDelegate:self];
         [composeViewController setToRecipients:mailAddresses];
         if(self.customer.emailVertreter)
            [composeViewController setCcRecipients: @[self.customer.emailVertreter]];
-        [composeViewController setSubject:@"Kranzle Pdf"];
+        [composeViewController setSubject:subjectName];
         
         NSString* fileName = @"Form.pdf";
         
@@ -427,7 +432,7 @@
         NSURL *url = [NSURL fileURLWithPath:pdfFileName];
         NSData *data = [[NSData alloc] initWithContentsOfURL:url];
         
-        [composeViewController addAttachmentData:data mimeType:@"application/pdf" fileName:[NSString stringWithFormat:@"%@ Konditionsvereinbarung.pdf", self.customer.number]];
+        [composeViewController addAttachmentData:data mimeType:@"application/pdf" fileName:subjectName];
         [self presentViewController:composeViewController animated:YES completion:nil];
     }
 }
@@ -545,19 +550,27 @@
     return YES;
 }
 
-- (void)fillEmptyFieldsWithText:(BOOL)fill {
+- (void)hideEmptyFieldsWithText:(BOOL)hide {
     for (UIView *view in self.labels) {
         if([view isKindOfClass:[UITextField class]]) {
             UITextField *field = (UITextField *)view;
-            if(field.text.length < 1) {
-                if(fill)
-                    field.text = KEINE_ANGABE;
+            NSString *string = [field.text lowercaseString];
+            if([self compareNotFilledValue:string]) {
+                field.hidden = hide;
             }
-            else if([field.text isEqualToString:KEINE_ANGABE]) {
-                field.text = @"";
-            }
+            
         }
     }
+    for (UILabel *label in self.duplicatedLabels){
+        NSString *string = [label.text lowercaseString];
+        if([self compareNotFilledValue:string]) {
+            label.hidden = hide;
+        }
+    }
+}
+
+- (BOOL)compareNotFilledValue:(NSString *)string {
+    return ([string isEqualToString:@"keine"] || [string isEqualToString:@"nicht vorhanden"] || [string isEqualToString:@"k.a"] || [string isEqualToString:@"n.a"] || [string isEqualToString:@"keine angabe"]|| [string isEqualToString:@"n.v"]);
 }
 
 #pragma mark discounts
@@ -574,5 +587,17 @@
     [self.rabatsModel setMutualExclusiveRabats:@[@(7)] withRabats:@[@(8)]];
     [self.rabatsModel setMutualExclusiveRabats:@[@(8)] withRabats:@[@(7)]];
 }
+
+#pragma mark display alert
+
+- (void)alert:(NSString *)text {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:text
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end
