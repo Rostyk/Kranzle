@@ -541,6 +541,9 @@
     for (UIView *view in self.labels) {
         if([view isKindOfClass:[UITextField class]]) {
             UITextField *field = (UITextField *)view;
+            if (field == self.name2TextField) {
+                continue;
+            }
             if(field.text.length < 1) {
                 return NO;
             }
