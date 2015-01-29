@@ -59,6 +59,14 @@
     [self.currentItem restoreTextForTextField:textField];
 }
 
+- (void)saveButton:(UIButton *)button withImage:(BOOL)saveImage {
+    [self.currentItem saveButton:button withImage:saveImage];
+}
+
+- (void)restoreButton:(UIButton *)button {
+    [self.currentItem restoreButton:button];
+}
+
 - (void)checkCacheTypeForNumber:(NSString *)number {
     /*if the new object for caching arrives,
      clear the cache (in case its cacheType is set to MULTIPLE)*/

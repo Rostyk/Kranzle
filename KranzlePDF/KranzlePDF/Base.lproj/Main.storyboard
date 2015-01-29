@@ -457,7 +457,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="sxo-Lt-H6P"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="380634275234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yzJ-6X-KAi" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="380634275234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yzJ-6X-KAi" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -469,7 +469,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="2qA-Hn-HS7"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Frankfurt" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pk9-1K-Dui" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Frankfurt" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pk9-1K-Dui" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -481,7 +481,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Y3x-yg-eXA"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="www.google.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="An1-Gf-Qu6" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="www.google.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="An1-Gf-Qu6" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -493,7 +493,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Vf5-fF-evz"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ros.aphex@gmail.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kk4-6H-uP9" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ros.aphex@gmail.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kk4-6H-uP9" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -505,7 +505,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="jzS-bI-bbb"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5372" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-zT-ZFF" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5372" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-zT-ZFF" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -662,7 +662,7 @@
                                                     <rect key="frame" x="0.0" y="1087" width="768" height="1087"/>
                                                 </variation>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8rZ-kG-YnV">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8rZ-kG-YnV">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -673,7 +673,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="qpt-i2-4qg"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-O9-C2C">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-O9-C2C">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -684,7 +684,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Nlb-7l-1ns"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-t8-ym0">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-t8-ym0">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -695,7 +695,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="ryb-M1-1F6"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4k-zD-FuL" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4k-zD-FuL" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -707,7 +707,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="Rry-2Z-fau"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-Ua-cvE" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-Ua-cvE" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -751,7 +751,7 @@
                                                     <rect key="frame" x="571" y="963" width="140" height="21"/>
                                                 </variation>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-8E-5bP">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-8E-5bP">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -763,7 +763,7 @@
                                                     <action selector="fachhandelsPartnerSignButtonClicked:" destination="eqD-mx-Wkc" eventType="touchUpInside" id="4Jk-Rm-2yX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OER-V0-v33">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OER-V0-v33">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -775,7 +775,7 @@
                                                     <action selector="kranzleSignButtonCliked:" destination="eqD-mx-Wkc" eventType="touchUpInside" id="GN7-Ch-ojs"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-TM-v5a">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-TM-v5a">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -804,7 +804,7 @@
                                                     <rect key="frame" x="552" y="1293" width="154" height="19"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OH-TM-Mpw" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OH-TM-Mpw" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -816,7 +816,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="D03-Dj-h2j"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Stryjska street" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSJ-Yg-rUu" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Stryjska street" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSJ-Yg-rUu" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -828,7 +828,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="te2-cR-Ahk"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Stepanyak" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCZ-gQ-84p" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Stepanyak" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCZ-gQ-84p" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -840,7 +840,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="6NP-pv-Fot"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KG 5648" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-lr-O4f" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KG 5648" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-lr-O4f" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -852,7 +852,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="ifO-je-PS0"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5372" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-28-El1" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5372" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-28-El1" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -864,7 +864,7 @@
                                                     <outlet property="delegate" destination="eqD-mx-Wkc" id="R8l-Rr-6u2"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98757" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDT-Cc-LRP" customClass="DuplicatableTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="98757" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDT-Cc-LRP" customClass="DuplicatableTextField">
                                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -1099,6 +1099,10 @@
                         <outletCollection property="labels" destination="RbO-lr-O4f" id="QKs-HW-eir"/>
                         <outletCollection property="labels" destination="fiE-28-El1" id="QzM-a6-MDD"/>
                         <outletCollection property="labels" destination="lDT-Cc-LRP" id="BUX-WA-Tp6"/>
+                        <outletCollection property="labels" destination="C2F-O9-C2C" id="tgg-RU-POv"/>
+                        <outletCollection property="labels" destination="qWe-t8-ym0" id="h7l-Xv-gII"/>
+                        <outletCollection property="labels" destination="8rZ-kG-YnV" id="ScN-mz-Xy2"/>
+                        <outletCollection property="labels" destination="ZyV-TM-v5a" id="JGj-Tx-OEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifF-TY-qNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1114,7 +1118,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7X2-md-Rvx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n2b-l1-2dz">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1293"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1652"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rG-35-Fmv" customClass="KRScrollView">

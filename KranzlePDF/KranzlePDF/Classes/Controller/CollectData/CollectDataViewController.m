@@ -70,6 +70,7 @@
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *vertreterTelefoneLabel;
 @property (nonatomic, weak) IBOutlet DuplicatableLabel *emailVertreterLabel;
 @property (nonatomic, weak) IBOutlet UITextField *verbandsNumberTextField;
+
 @end
 
 @implementation CollectDataViewController
@@ -179,6 +180,11 @@
     //tell the model some rabat is selected
     [self.rabatsModel rabatSelected:self.selectedButton remove:NO];
     [self updateSumLabel];
+    
+    //Cache button value
+    for (UIButton *rabatButton in self.selectButtons) {
+        [[TextCache sharedCache] saveButton:rabatButton withImage:NO];
+    }
     [self.popover dismissPopoverAnimated:YES];
 }
 
@@ -196,6 +202,11 @@
     //tell the model some rabat is selected
     [self.rabatsModel rabatSelected:self.selectedButton remove:YES];
     [self updateSumLabel];
+    
+    //Cache button value
+    for (UIButton *rabatButton in self.selectButtons) {
+        [[TextCache sharedCache] saveButton:rabatButton withImage:NO];
+    }
     [self.popover dismissPopoverAnimated:YES];
 }
 
@@ -446,7 +457,13 @@
 #pragma mark signing delegate
 
 - (void)signingController:(SigningViewController*)signingController didSignWithImage:(UIImage*)image {
-    [self.selectedSignButton setBackgroundImage:[image imageByScalingAndCroppingForSize:self.selectedSignButton.frame.size] forState:UIControlStateNormal];
+    
+    UIImage *bgImage = [image imageByScalingAndCroppingForSize:self.selectedSignButton.frame.size];
+    
+    [self.selectedSignButton setBackgroundImage:bgImage forState:UIControlStateNormal];
+    
+    //Cache button value
+    [[TextCache sharedCache] saveButton:self.selectedSignButton withImage:YES];
 }
 
 #pragma mark sign buttons handlers
@@ -533,6 +550,15 @@
     [[TextCache sharedCache] restoreTextForTextField:self.bottomName2TextField];
     [[TextCache sharedCache] restoreTextForTextField:self.ortAndNameTextField1];
     [[TextCache sharedCache] restoreTextForTextField:self.ortAndNameTextField2];
+    
+    [[TextCache sharedCache] restoreButton:self.kranzleSignButton];
+    [[TextCache sharedCache] restoreButton:self.fachhandelsPartnerSignButton];
+    
+    for (UIButton *rabatButton in self.selectButtons) {
+        [[TextCache sharedCache] restoreButton:rabatButton];
+    }
+    
+    [self updateSumLabel];
 }
 
 #pragma mark check fields
@@ -548,6 +574,10 @@
                 return NO;
             }
         }
+    }
+    
+    if(!self.fachhandelsPartnerSignButton.currentBackgroundImage || !self.kranzleSignButton.currentBackgroundImage) {
+        return NO;
     }
     
     return YES;
