@@ -121,6 +121,18 @@
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *path = [[NSBundle mainBundle] pathForResource:@"customers" ofType:@"csv"];
+        
+        //Check if we have the downloaded file in the documents directory
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        if(basePath) {
+            NSString *newFilePath = [basePath  stringByAppendingPathComponent:@"/customers.csv"];
+            if([[NSFileManager defaultManager]  fileExistsAtPath:newFilePath])   {
+                path = newFilePath;
+            }
+        }
+        
+        
         NSURL *url = [NSURL fileURLWithPath:path];
         
         weakSelf.fetchedRows = [CSVParser parseCSVIntoArrayOfArraysFromFile:[url path]

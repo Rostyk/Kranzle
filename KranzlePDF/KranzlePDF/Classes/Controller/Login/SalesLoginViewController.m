@@ -12,6 +12,7 @@
 #import "Customer.h"
 #import "Constants.h"
 #import "MBProgressHUD.h"
+#import "ServiceAPI.h"
 
 @interface SalesLoginViewController ()
 @property (nonatomic, strong) MBProgressHUD *hud;
@@ -58,15 +59,27 @@
 - (void)loginWitVertreterCode:(NSString *)code {
     __weak typeof(self) weakSelf = self;
     [self addPreload];
-    NSString *customerNumber = code;
-    [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber sucess:^(NSArray *records) {
-        [[NSUserDefaults standardUserDefaults] setObject:code forKey:@"VertreterCode"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
 
-        [self removePreload];
+    [[ServiceAPI sharedInstance] getLisOfVersions:^(id responseObject, ...) {
+         NSString *customerNumber = code;
+        [weakSelf proceedLogin:customerNumber];
+    } failure:^(id responseObject, NSError *error) {
+        [weakSelf alert:error.localizedDescription];
+    } progress:^(float progress) {
+        weakSelf.hud.progress = progress;
+    }];
+}
+
+- (void) proceedLogin:(NSString *)customerNumber {
+    __weak typeof(self) weakSelf = self;
+    [[DataProvider sharedProvider] fetchRecordsForSalesmenNumber:customerNumber sucess:^(NSArray *records) {
+        [[NSUserDefaults standardUserDefaults] setObject:customerNumber forKey:@"VertreterCode"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [weakSelf removePreload];
         [weakSelf showCustomerList];
     } failure:^(NSError *error) {
-        [self removePreload];
+        [weakSelf removePreload];
         if(error.code == PARSER_ERROR) {
             [weakSelf alert: @"Die hinterlegte Datenquelle ist fehlerhaft. Bitte wenden Sie sich an den Support."];
         }
@@ -75,6 +88,7 @@
         }
     }];
 }
+
 
 #pragma mark open collect data view controller
 
@@ -104,6 +118,7 @@
 
 - (void)addPreload {
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    self.hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
     self.hud.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
     [self.view addSubview:self.hud];
     [self.view bringSubviewToFront:self.hud];
