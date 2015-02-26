@@ -10,6 +10,7 @@
 #import "Settings.h"
 #import "NSString+PNAdditions.h"
 #import "NSDateHelper.h"
+#import "Constants.h"
 
 @interface ServiceAPI () <WRRequestDelegate>
 @property (nonatomic, strong) CompletionBlock succsses;
@@ -29,72 +30,35 @@
 - (void)getLisOfVersions:(CompletionBlock)completion
                  failure:(FailureBlock)failure progress:(ProgressFtp)progress{
     __weak typeof(self) weakSelf = self;
+    
     NSMutableURLRequest *request  = [self addValueforHTTPHeaderField:[Settings listServiceURL]];
     [self startAFJSONRequestOperation:request completion:^(id responseObject, ...) {
-        NSLog(@"responseObject:%@",responseObject);
-        NSLog(@"M:%@",responseObject[0][@"m"]);
-
         NSDate *lastModificationDate = [NSDateHelper dateFromUnixTimeStamp:responseObject[0][@"m"]];
-
-        NSLog(@"lastModificationDate:%@",lastModificationDate);
-
         NSDate *lastSavedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastSavedDate"];
         if(!lastSavedDate || ([lastSavedDate compare:lastModificationDate] == NSOrderedAscending)) {
-
-            [weakSelf downloadFile:^(id responseObject, ...) {
-                //Write to file
-                [weakSelf setUpAsynchronousContentSave:responseObject completion:completion error:failure];
+                    [weakSelf startAFHTTPRequestoperation:[self addValueforHTTPHeaderField:[WEBSERVER_URL stringByAppendingString:CUSTOMER_PATH]] success:^(id responseObject, ...) {
                 
-                //Update time stamp
-                [[NSUserDefaults standardUserDefaults] setObject:lastModificationDate forKey:@"lastSavedDate"];
-                [[NSUserDefaults standardUserDefaults] synchronize];
-            } failure:^(WRRequestError *error) {
+                            //Write to file
+                            [weakSelf setUpAsynchronousContentSave:responseObject completion:completion error:failure];
+                
+                            //Update time stamp
+                            [[NSUserDefaults standardUserDefaults] setObject:lastModificationDate forKey:@"lastSavedDate"];
+                            [[NSUserDefaults standardUserDefaults] synchronize];
+                
+            } failure:^(id responseObject, NSError *error) {
                 failure(nil, (id)error);
-            }
-             progress:progress];
-        } else {
-            completion(nil);
+            } progress:^(float downlaodProgress) {
+                progress(downlaodProgress);
+            }];
+        }
+        else {
+                completion(nil);
         }
     } failure:^(id responseObject, NSError *error) {
         failure(responseObject, error);
     }];
 }
 
-- (void)downloadFile:(CompletionBlock)completion
-             failure:(FailureFtp)failure progress:(ProgressFtp)progress{
-
-    self.succsses = completion;
-    self.failure = failure;
-    self.progress = progress;
-
-    WRRequestDownload * downloadFile = [[WRRequestDownload alloc] init];
-    downloadFile.delegate = self;
-    downloadFile.path = @"/customers.xml";
-    downloadFile.hostname = @"kraenzle.mmx.me";
-    downloadFile.username = kUser;
-    downloadFile.password = kPassword;
-    [downloadFile start];
-}
-
-- (void)requestCompleted:(WRRequest *)request {
-    NSLog(@"%@ completed!", request);
-    WRRequestDownload * downloadFile = (WRRequestDownload *)request;
-    NSData * data = downloadFile.receivedData;
-//    NSLog(@"%@ data!", data);
-    self.succsses(data);
-}
-
-- (void)requestFailed:(WRRequest *)request {
-    //called after 'request' ends in error
-    //we can print the error message
-    NSLog(@"%@", request.error.message);
-    self.failure(request.error);
-
-}
-
-- (void)requestProgress:(WRRequest *)request progress:(float)downLoadprogress {
-    self.progress(downLoadprogress);
-}
 
 - (void) setUpAsynchronousContentSave:(NSData *) data completion:(CompletionBlock)sucess error:(FailureBlock)failure{
     
@@ -144,9 +108,30 @@
     [operation start];
 }
 
+
+- (void)startAFHTTPRequestoperation:(NSURLRequest *)request
+                            success:(CompletionBlock)success
+                            failure:(FailureBlock)failure
+                            progress:(ProgressFtp)progress{
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success(responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(nil, error);
+    }];
+    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+        progress(totalBytesRead*1.0 / totalBytesExpectedToRead*1.0);
+    }];
+                                
+    [operation start];
+}
+
+
 - (NSMutableURLRequest *)addValueforHTTPHeaderField:(NSString *)serviceUrl {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:serviceUrl]];
     return request;
 }
+
 
 @end

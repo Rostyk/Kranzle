@@ -7,24 +7,13 @@
 //
 
 #import "Settings.h"
+#import "Constants.h"
 
 @implementation Settings
 
-NSString * const kBaseURL = @"http://kraenzle.mmx.me";
-NSString * const kRootURL = @"kraenzle.mmx.me";
+NSString * const kBaseURL = WEBSERVER_URL;
+NSString * const kList = VERSIONS_PATH;
 
-//ftp://Kraenzle.mmx.me
-//kraenzle-user
-//Qbt11d8%
-//@"ftp://user:password@host:port/path"
-//ftp://kraenzle-user:Qbt11d8%@kraenzle.mmx.me/customers.xml
-
-
-//keys:
-static NSString * const kList = @"list.json";
-
-NSString * const kUser = @"kraenzle-user";
-NSString * const kPassword = @"Qbt11d8%";
 
 + (NSString *)URLStringWithRoot:(NSString *)root path:(NSString const *)path {
     NSUInteger firstSlashIndex = [path rangeOfString:@"/"].location;

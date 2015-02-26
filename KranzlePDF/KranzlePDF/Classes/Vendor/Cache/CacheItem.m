@@ -36,8 +36,6 @@
 
 - (void)saveButton:(UIButton *)button withImage:(BOOL)saveImage{
     if(saveImage) {
-        UIImage *image = [button currentBackgroundImage];
-        
         [self.buttons setObject:@{@"title" : (button.currentTitle) ? button.currentTitle : [NSNull null], @"image" : (button.currentBackgroundImage) ? button.currentBackgroundImage : [NSNull null], @"hidden" : @(button.hidden)} forKey:@(button.tag)];
     }
     else {

@@ -35,6 +35,12 @@
 #define PIN                       @"33605"
 #define KEINE_ANGABE              @"Keine Angabe"
 
+
+#define WEBSERVER_URL             @"http://212.100.42.152:65080/Medien"
+#define CUSTOMER_PATH             @"/customer.xml"
+#define VERSIONS_PATH             @"/list.json"
+
+
 typedef enum {
     PARSER_ERROR = 0,
     EMPTY_FETCH_RESULT_ERROR,
