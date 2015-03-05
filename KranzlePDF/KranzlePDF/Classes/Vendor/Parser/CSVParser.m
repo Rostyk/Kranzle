@@ -114,7 +114,7 @@
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSError *error = nil;
     NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
-    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
+    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     if (!content) return nil;
     NSArray *rows = [content componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\r"]];
     NSString *trimStr = (quote != nil) ? [quote stringByAppendingString:@"\n\r "] : @"\n\r ";
