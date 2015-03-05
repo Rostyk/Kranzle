@@ -313,7 +313,6 @@
 		9164F5861A65AE4D0097B892 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B00F090D1A7EC6380054270B /* Additions */,
 				B00F09011A7EB6770054270B /* Common */,
 				9164F5B11A65BBC50097B892 /* Model */,
 				9164F5931A65AEE10097B892 /* Vendor */,
@@ -532,6 +531,7 @@
 		B00F09011A7EB6770054270B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B00F090D1A7EC6380054270B /* Additions */,
 				B00F09141A7ED3740054270B /* NSDateHelper.h */,
 				B00F09151A7ED3740054270B /* NSDateHelper.m */,
 				B00F09091A7EBA770054270B /* Settings.h */,
@@ -550,7 +550,8 @@
 				B00F090E1A7EC6380054270B /* NSString+PNAdditions.h */,
 				B00F090F1A7EC6380054270B /* NSString+PNAdditions.m */,
 			);
-			path = Additions;
+			name = Additions;
+			path = ../Additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

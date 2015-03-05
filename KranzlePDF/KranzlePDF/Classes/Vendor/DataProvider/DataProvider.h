@@ -18,5 +18,6 @@ typedef void (^FetchError)(NSError *error);
 - (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failure;
 - (NSString *)lastUsedVertreterCode;
 - (Customer *)createNewCustomer;
+- (void)cleanRecords;
 
 @end

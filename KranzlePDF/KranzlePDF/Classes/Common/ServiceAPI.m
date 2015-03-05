@@ -11,6 +11,7 @@
 #import "NSString+PNAdditions.h"
 #import "NSDateHelper.h"
 #import "Constants.h"
+#import "DataProvider.h"
 
 @interface ServiceAPI () <WRRequestDelegate>
 @property (nonatomic, strong) CompletionBlock succsses;
@@ -67,10 +68,11 @@
     if(basePath) {
         NSString *newFilePath = [basePath  stringByAppendingPathComponent:@"/customers.csv"];
         if(![[NSFileManager defaultManager]  fileExistsAtPath:newFilePath]) {
-            
+            [[DataProvider sharedProvider] cleanRecords];
         }
         else {
             [[NSFileManager defaultManager] removeItemAtPath:newFilePath error:NULL];
+            [[DataProvider sharedProvider] cleanRecords];
         }
         
         [[NSFileManager defaultManager] createFileAtPath:newFilePath contents:nil attributes:nil];

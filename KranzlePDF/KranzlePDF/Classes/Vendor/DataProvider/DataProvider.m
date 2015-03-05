@@ -171,4 +171,23 @@
     return self.customerNumber;
 }
 
+#pragma mark clean
+
+- (void)cleanRecords {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Customer"];
+    NSError *error;
+    NSArray *objects = [context executeFetchRequest:request error:&error];
+    if (objects == nil) {
+        // handle error
+    } else {
+        for (NSManagedObject *object in objects) {
+            [context deleteObject:object];
+        }
+        [context save:&error];
+    }
+}
+
 @end
