@@ -97,7 +97,7 @@
 }
 
 + (NSDate *)dateFromUnixTimeStamp:(NSString *)time {
-    double unixTimeStamp = [time doubleValue];
+    double unixTimeStamp = [time doubleValue] / 1000;
     NSTimeInterval _interval=unixTimeStamp;
     return [NSDate dateWithTimeIntervalSince1970:_interval];
 }
