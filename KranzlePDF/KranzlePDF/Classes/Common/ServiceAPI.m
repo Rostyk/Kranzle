@@ -135,6 +135,7 @@
 
 - (NSMutableURLRequest *)addValueforHTTPHeaderField:(NSString *)serviceUrl {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:serviceUrl]];
+    request.cachePolicy = NSURLCacheSto
     return request;
 }
 
