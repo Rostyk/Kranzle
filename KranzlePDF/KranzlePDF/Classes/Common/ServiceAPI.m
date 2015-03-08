@@ -36,6 +36,9 @@
     [self startAFJSONRequestOperation:request completion:^(id responseObject, ...) {
         NSDate *lastModificationDate = [NSDateHelper dateFromUnixTimeStamp:responseObject[0][@"m"]];
         NSDate *lastSavedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastSavedDate"];
+        
+        NSLog(@"%@ // %@", lastModificationDate, lastSavedDate);
+        
         if(!lastSavedDate || ([lastSavedDate compare:lastModificationDate] == NSOrderedAscending)) {
                     [weakSelf startAFHTTPRequestoperation:[self addValueforHTTPHeaderField:[WEBSERVER_URL stringByAppendingString:CUSTOMER_PATH]] success:^(id responseObject, ...) {
                 
