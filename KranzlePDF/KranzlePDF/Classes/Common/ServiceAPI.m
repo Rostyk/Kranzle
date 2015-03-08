@@ -37,26 +37,26 @@
         NSDate *lastModificationDate = [NSDateHelper dateFromUnixTimeStamp:responseObject[0][@"m"]];
         NSDate *lastSavedDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastSavedDate"];
         
-        NSLog(@"%@ // %@", lastModificationDate, lastSavedDate);
+        NSLog(@"%@ // %@", lastSavedDate, lastModificationDate);
         
-        if(!lastSavedDate || ([lastSavedDate compare:lastModificationDate] == NSOrderedAscending)) {
-                    [weakSelf startAFHTTPRequestoperation:[self addValueforHTTPHeaderField:[WEBSERVER_URL stringByAppendingString:CUSTOMER_PATH]] success:^(id responseObject, ...) {
+        if(!lastSavedDate || lastSavedDate.timeIntervalSince1970 < lastModificationDate.timeIntervalSince1970) {
+            [[DataProvider sharedProvider] cleanRecords];
+            
+            [weakSelf startAFHTTPRequestoperation:[self addValueforHTTPHeaderField:[WEBSERVER_URL stringByAppendingString:CUSTOMER_PATH]] success:^(id responseObject, ...) {
                 
-                            //Write to file
-                            [weakSelf setUpAsynchronousContentSave:responseObject completion:completion error:failure];
+                //Write to file
+                [weakSelf setUpAsynchronousContentSave:responseObject completion:completion error:failure];
                 
-                            //Update time stamp
-                            [[NSUserDefaults standardUserDefaults] setObject:lastModificationDate forKey:@"lastSavedDate"];
-                            [[NSUserDefaults standardUserDefaults] synchronize];
-                
+                //Update time stamp
+                [[NSUserDefaults standardUserDefaults] setObject:lastModificationDate forKey:@"lastSavedDate"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
             } failure:^(id responseObject, NSError *error) {
                 failure(nil, (id)error);
             } progress:^(float downlaodProgress) {
                 progress(downlaodProgress);
             }];
-        }
-        else {
-                completion(nil);
+        } else {
+            completion(nil);
         }
     } failure:^(id responseObject, NSError *error) {
         failure(responseObject, error);
@@ -70,14 +70,6 @@
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     if(basePath) {
         NSString *newFilePath = [basePath  stringByAppendingPathComponent:@"/customers.csv"];
-        if(![[NSFileManager defaultManager]  fileExistsAtPath:newFilePath]) {
-            [[DataProvider sharedProvider] cleanRecords];
-        }
-        else {
-            [[NSFileManager defaultManager] removeItemAtPath:newFilePath error:NULL];
-            [[DataProvider sharedProvider] cleanRecords];
-        }
-        
         [[NSFileManager defaultManager] createFileAtPath:newFilePath contents:nil attributes:nil];
         
         self.fileHandle = [NSFileHandle fileHandleForWritingAtPath:newFilePath];
@@ -136,6 +128,7 @@
 - (NSMutableURLRequest *)addValueforHTTPHeaderField:(NSString *)serviceUrl {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:serviceUrl]];
     request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+
     return request;
 }
 
