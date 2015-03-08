@@ -42,20 +42,18 @@
     UINavigationController *nvc = (UINavigationController *)self.window.rootViewController;
     
     if ([nvc.topViewController isKindOfClass:[CustomerListViewController class]]) {
-        [nvc popToRootViewControllerAnimated:NO];
+        [[ServiceAPI sharedInstance] getLisOfVersions:^(id responseObject, ...) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UINavigationController *nvc = (UINavigationController *)self.window.rootViewController;
+                
+                if ([nvc.topViewController isKindOfClass:[CustomerListViewController class]]) {
+                    [nvc popToRootViewControllerAnimated:NO];
+                }
+            });
+        } failure:^(id responseObject, NSError *error) {
+        } progress:^(float progress) {
+        }];
     }
-    
-    [[ServiceAPI sharedInstance] getLisOfVersions:^(id responseObject, ...) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UINavigationController *nvc = (UINavigationController *)self.window.rootViewController;
-            
-            if ([nvc.topViewController isKindOfClass:[CustomerListViewController class]]) {
-                [nvc popToRootViewControllerAnimated:NO];
-            }
-        });
-    } failure:^(id responseObject, NSError *error) {
-    } progress:^(float progress) {
-    }];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
