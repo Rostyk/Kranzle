@@ -14,7 +14,6 @@
 
 @interface DataProvider()
 @property (nonatomic, strong) NSString *customerNumber;
-@property (nonatomic) NSUInteger totalNumberOfRows;
 @end
 
 @implementation DataProvider
@@ -49,6 +48,7 @@
     if(self.totalNumberOfRows == 0) {
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         [request setEntity:[NSEntityDescription entityForName:@"Customer" inManagedObjectContext:appDelegate.managedObjectContext]];
+        request.predicate = [NSPredicate predicateWithFormat:@"manuallyCreated = NO"];
         [request setIncludesSubentities:NO];
         NSError *err;
         self.totalNumberOfRows = [appDelegate.managedObjectContext countForFetchRequest:request error:&err];
@@ -82,6 +82,7 @@
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"vertreterCode == %@", number];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Customer"  inManagedObjectContext: appDelegate.managedObjectContext];
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    fetch.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"number" ascending:YES]];
     [fetch setEntity:entityDescription];
     [fetch setPredicate:pred];
     
@@ -90,7 +91,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.fetchedRows = result.finalResult;
             
-            if(weakSelf.fetchedRows.count > 0)
+            if(totalNumberOfRows > 0)
                 successBlock(weakSelf.fetchedRows);
             else {
                 /*No customers for sales number found*/
@@ -178,6 +179,7 @@
     
     NSManagedObjectContext *context = delegate.managedObjectContext;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Customer"];
+    request.predicate = [NSPredicate predicateWithFormat:@"manuallyCreated = NO"];
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request error:&error];
     if (objects == nil) {

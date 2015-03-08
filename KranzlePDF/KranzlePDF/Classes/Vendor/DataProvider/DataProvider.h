@@ -13,6 +13,7 @@ typedef void (^FetchError)(NSError *error);
 
 @interface DataProvider : NSObject
 @property (nonatomic, strong) NSArray *fetchedRows;
+@property (atomic) NSUInteger totalNumberOfRows;
 
 + (instancetype)sharedProvider;
 - (void)fetchRecordsForSalesmenNumber:(NSString*)number sucess:(FetchCSVRecordsSuccess)successBlock failure:(FetchError)failure;
