@@ -123,7 +123,7 @@
     [self.view addSubview:self.hud];
     [self.view bringSubviewToFront:self.hud];
     
-    self.hud.labelText = @"Logging";
+    self.hud.labelText = @"Lade Daten...";
     [self.hud show: YES];
 }
 
